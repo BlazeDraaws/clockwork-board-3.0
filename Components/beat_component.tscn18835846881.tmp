@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bgjfatmk16mx0"]
+
+[ext_resource type="Script" uid="uid://h4vpcq246o2x" path="res://ComponentScripts/BeatComponent.gd" id="1_fkcj4"]
+[ext_resource type="Script" uid="uid://cdhnhjtt2ebm1" path="res://ComponentScripts/GUIComponent.gd" id="2_fgpgt"]
+[ext_resource type="Texture2D" uid="uid://cnfvmkq1cxfxf" path="res://Assets/GUI/Bars/empty line.png" id="3_uhsat"]
+[ext_resource type="Texture2D" uid="uid://bu53035prpofr" path="res://Assets/GUI/Bars/full line.png" id="4_bidbp"]
+[ext_resource type="Script" uid="uid://cs1gwuqc6oiki" path="res://Components/LineComponent.gd" id="5_r8b0h"]
+[ext_resource type="SpriteFrames" uid="uid://clyb23stkm3di" path="res://SpriteFrames/notes.tres" id="6_bidbp"]
+[ext_resource type="Texture2D" uid="uid://b5lxg43fg5et1" path="res://Assets/GUI/Bars/semi line.png" id="6_lhyys"]
+[ext_resource type="Texture2D" uid="uid://dp8wbh0liikyw" path="res://Assets/GUI/Bars/RingEmpty.png" id="7_uwocq"]
+[ext_resource type="Script" uid="uid://c37wkjsosmoy6" path="res://Components/NoteComponent.gd" id="8_bidbp"]
+[ext_resource type="Texture2D" uid="uid://uyfghmcp4uir" path="res://Assets/GUI/Bars/RingFull.png" id="8_r8b0h"]
+[ext_resource type="Script" uid="uid://i7sf7qu6xrl3" path="res://Components/RingComponent.gd" id="9_r8b0h"]
+
+[node name="BeatComponent" type="Control" unique_id=1557651122 node_paths=PackedStringArray("GUIComp")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fkcj4")
+GUIComp = NodePath("GUIComponent")
+
+[node name="GUIComponent" type="Control" parent="." unique_id=1189417836 node_paths=PackedStringArray("BeatComp")]
+layout_direction = 4
+anchors_preset = 0
+script = ExtResource("2_fgpgt")
+BeatComp = NodePath("..")
+
+[node name="LineComponent" type="TextureProgressBar" parent="GUIComponent" unique_id=456501905 node_paths=PackedStringArray("note")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_right = 2872.0
+offset_bottom = 7.0
+grow_vertical = 2
+max_value = 400.0
+step = 0.01
+allow_greater = true
+allow_lesser = true
+texture_under = ExtResource("3_uhsat")
+texture_progress = ExtResource("4_bidbp")
+script = ExtResource("5_r8b0h")
+note = NodePath("MusicNote")
+texture_secondary = ExtResource("6_lhyys")
+metadata/_edit_use_anchors_ = true
+
+[node name="MusicNote" type="AnimatedSprite2D" parent="GUIComponent/LineComponent" unique_id=1888654401]
+position = Vector2(0, 4)
+sprite_frames = ExtResource("6_bidbp")
+animation = &"Secondary"
+autoplay = "4_loop"
+script = ExtResource("8_bidbp")
+
+[node name="RingComponent" type="TextureProgressBar" parent="GUIComponent" unique_id=262867263]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -200.0
+offset_right = 28.000183
+offset_bottom = -72.0
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+max_value = 160.0
+step = 0.01
+value = 36.89
+allow_greater = true
+allow_lesser = true
+fill_mode = 4
+texture_under = ExtResource("7_uwocq")
+texture_progress = ExtResource("8_r8b0h")
+script = ExtResource("9_r8b0h")
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat" type="Label" parent="GUIComponent" unique_id=1892490856]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 235.0
+offset_bottom = 123.0
+text = "beat"
+metadata/_edit_use_anchors_ = true
+
+[node name="Drag" type="Label" parent="GUIComponent" unique_id=313086553]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 125.0
+offset_right = 236.0
+offset_bottom = 148.0
+text = "drag"
+metadata/_edit_use_anchors_ = true
+
+[node name="Speed" type="Label" parent="GUIComponent" unique_id=1956227233]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 150.0
+offset_right = 247.0
+offset_bottom = 173.0
+text = "speed"
+metadata/_edit_use_anchors_ = true

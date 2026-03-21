@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://gkstp76pgkyu"]
+
+[ext_resource type="PackedScene" uid="uid://low3dqwtnpsn" path="res://Components/EntityComponent.tscn" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://cypu6kcchvlg6" path="res://NonComponentScripts/EnemiesParentContainer.gd" id="2_a814b"]
+[ext_resource type="Script" uid="uid://dn7uxp6pb4w3t" path="res://Components/ComponentScripts/DebugComponent.gd" id="2_epypp"]
+[ext_resource type="Script" uid="uid://c4s4lboe8cwp6" path="res://Components/ComponentScripts/BeatManagerComponent.gd" id="3_rpqi1"]
+[ext_resource type="PackedScene" uid="uid://bgagdnadtqcq0" path="res://Components/DebugEntityRow.tscn" id="3_uxrcv"]
+[ext_resource type="PackedScene" uid="uid://mciaosaynkbm" path="res://Components/DebugBeatCompRow.tscn" id="4_rf2cd"]
+
+[node name="Node2D" type="Node2D" unique_id=1750619247]
+
+[node name="Heroes" type="CenterContainer" parent="." unique_id=595195274]
+offset_left = 84.0
+offset_right = 495.0
+offset_bottom = 993.0
+
+[node name="Container" type="VBoxContainer" parent="Heroes" unique_id=1473160692]
+layout_mode = 2
+
+[node name="Lucille" parent="Heroes/Container" unique_id=1335513801 node_paths=PackedStringArray("DebugComp", "BeatManagerComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+BeatManagerComp = NodePath("../../../BeatManagerComponent")
+
+[node name="Bree" parent="Heroes/Container" unique_id=1715538023 node_paths=PackedStringArray("DebugComp", "BeatManagerComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+BeatManagerComp = NodePath("../../../BeatManagerComponent")
+
+[node name="Agar" parent="Heroes/Container" unique_id=1292481597 node_paths=PackedStringArray("DebugComp", "BeatManagerComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+BeatManagerComp = NodePath("../../../BeatManagerComponent")
+
+[node name="Stantis" parent="Heroes/Container" unique_id=749393621 node_paths=PackedStringArray("DebugComp", "BeatManagerComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+BeatManagerComp = NodePath("../../../BeatManagerComponent")
+
+[node name="Enemies" type="CenterContainer" parent="." unique_id=643959184]
+offset_left = 1456.0
+offset_right = 1867.0
+offset_bottom = 993.0
+script = ExtResource("2_a814b")
+
+[node name="Container" type="VBoxContainer" parent="Enemies" unique_id=1306437133]
+layout_mode = 2
+
+[node name="Entity" parent="Enemies/Container" unique_id=1571754271 node_paths=PackedStringArray("DebugComp", "BeatManagerComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+freeform = true
+DebugComp = NodePath("../../../DebugComponent")
+BeatManagerComp = NodePath("../../../BeatManagerComponent")
+DefaultOrientation = -1
+SpriteFlip = true
+
+[node name="Freeform" type="Node2D" parent="Enemies" unique_id=1115737235]
+
+[node name="DebugComponent" type="Control" parent="." unique_id=1312665495 node_paths=PackedStringArray("BeatManagerComp", "DebugGUI")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_epypp")
+EntityRowScene = ExtResource("3_uxrcv")
+BeatCompRowScene = ExtResource("4_rf2cd")
+BeatManagerComp = NodePath("../BeatManagerComponent")
+DebugGUI = NodePath("Debug Container")
+metadata/_edit_use_anchors_ = true
+
+[node name="Debug Container" type="VBoxContainer" parent="DebugComponent" unique_id=1223134790]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BeatManagerComponent" type="Node" parent="." unique_id=445651845]
+script = ExtResource("3_rpqi1")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0sq8xi0ycfpk"
+path="res://.godot/imported/scarecrow cast.mp3-0b978ee86dd27a793c289bf6dc47db20.mp3str"
+
+[deps]
+
+source_file="res://Assets/scarecrow cast.mp3"
+dest_files=["res://.godot/imported/scarecrow cast.mp3-0b978ee86dd27a793c289bf6dc47db20.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dmxympqvwrf84"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_vo1i8"]
+[ext_resource type="SpriteFrames" uid="uid://tidmwp4ci0aa" path="res://Assets/Backgrounds/Deltarune Background/lucille sprite frames.tres" id="2_n566m"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_ulo5x"]
+[ext_resource type="Script" uid="uid://h4vpcq246o2x" path="res://Components/ComponentScripts/BeatComponent.gd" id="4_xvndf"]
+[ext_resource type="Script" uid="uid://cdhnhjtt2ebm1" path="res://Components/ComponentScripts/GUIComponent.gd" id="5_rj0c6"]
+[ext_resource type="Script" uid="uid://dn7uxp6pb4w3t" path="res://Components/ComponentScripts/DebugComponentScripts/DebugComponent.gd" id="6_ed581"]
+
+[node name="Entity" type="Node2D" unique_id=173630332 node_paths=PackedStringArray("SpriteComp", "BeatComp", "GUIComp", "DebugComp")]
+position = Vector2(1.365, 0)
+script = ExtResource("1_vo1i8")
+SpriteComp = NodePath("SpriteComponent")
+BeatComp = NodePath("BeatComponent")
+GUIComp = NodePath("GUIComponent")
+DebugComp = NodePath("DebugComponent")
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=658315980]
+position = Vector2(-1, 2)
+sprite_frames = ExtResource("2_n566m")
+animation = &"Cast"
+autoplay = "Idle"
+offset = Vector2(0, -200)
+script = ExtResource("3_ulo5x")
+
+[node name="BeatComponent" type="Node" parent="." unique_id=205053175]
+script = ExtResource("4_xvndf")
+
+[node name="GUIComponent" type="Node" parent="." unique_id=1597065599 node_paths=PackedStringArray("BeatComp")]
+script = ExtResource("5_rj0c6")
+BeatComp = NodePath("../BeatComponent")
+
+[node name="Beat" type="Label" parent="GUIComponent" unique_id=2016984260]
+offset_left = 176.0
+offset_top = 84.0
+offset_right = 247.0
+offset_bottom = 125.0
+text = "beat"
+metadata/_edit_use_anchors_ = true
+
+[node name="Drag" type="Label" parent="GUIComponent" unique_id=419120586]
+offset_left = 177.0
+offset_top = 112.0
+offset_right = 248.0
+offset_bottom = 153.0
+text = "drag"
+metadata/_edit_use_anchors_ = true
+
+[node name="Speed" type="Label" parent="GUIComponent" unique_id=1744439081]
+offset_left = 177.0
+offset_top = 140.0
+offset_right = 248.0
+offset_bottom = 181.0
+text = "speed"
+metadata/_edit_use_anchors_ = true
+
+[node name="DebugComponent" type="Control" parent="." unique_id=696424464]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_ed581")
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button" type="Button" parent="DebugComponent" unique_id=1101416443]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 42.0
+offset_right = 260.0
+offset_bottom = 73.0
+text = "ADD BEAT"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="DebugComponent" unique_id=1968021276]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 41.0
+offset_right = 356.0
+offset_bottom = 72.0
+text = "aqasdasd"
+
+[connection signal="pressed" from="DebugComponent/Test Button" to="DebugComponent" method="_on_test_button_pressed"]
+[connection signal="pressed" from="DebugComponent/Button" to="DebugComponent" method="_on_test_button2_pressed"]

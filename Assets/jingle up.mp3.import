@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://deis0p58jc713"
+path="res://.godot/imported/jingle up.mp3-d03dd87f79cc012a140f4b3b65efb50e.mp3str"
+
+[deps]
+
+source_file="res://Assets/jingle up.mp3"
+dest_files=["res://.godot/imported/jingle up.mp3-d03dd87f79cc012a140f4b3b65efb50e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

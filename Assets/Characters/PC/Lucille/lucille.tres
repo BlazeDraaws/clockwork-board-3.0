@@ -1,0 +1,212 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ceehykv3snnk1"]
+
+[ext_resource type="Texture2D" uid="uid://ceknrwg151ilk" path="res://Assets/Characters/PC/Lucille/Cast/Cast039.png" id="1_pdm16"]
+[ext_resource type="Texture2D" uid="uid://cc5756flwlwi" path="res://Assets/Characters/PC/Lucille/Cast/Cast040.png" id="2_prk7w"]
+[ext_resource type="Texture2D" uid="uid://dseuqqesl3jea" path="res://Assets/Characters/PC/Lucille/Cast/Cast041.png" id="3_m6bbg"]
+[ext_resource type="Texture2D" uid="uid://b4wcaeuynm25m" path="res://Assets/Characters/PC/Lucille/Cast/Cast042.png" id="4_ovx5u"]
+[ext_resource type="Texture2D" uid="uid://bkeol2cmts2ao" path="res://Assets/Characters/PC/Lucille/Cast/Cast043.png" id="5_jv55t"]
+[ext_resource type="Texture2D" uid="uid://dnimamt24d10e" path="res://Assets/Characters/PC/Lucille/Cast/Cast044.png" id="6_wya62"]
+[ext_resource type="Texture2D" uid="uid://cukcpevvbhwqi" path="res://Assets/Characters/PC/Lucille/Cast/Cast045.png" id="7_qmtkv"]
+[ext_resource type="Texture2D" uid="uid://bpr3ppfwg7neh" path="res://Assets/Characters/PC/Lucille/Cast/Cast046.png" id="8_h3obe"]
+[ext_resource type="Texture2D" uid="uid://5r3muvn4nrtw" path="res://Assets/Characters/PC/Lucille/Cast/Cast047.png" id="9_rd2ym"]
+[ext_resource type="Texture2D" uid="uid://drppa2fwcm5rm" path="res://Assets/Characters/PC/Lucille/Cast/Cast048.png" id="10_t42pv"]
+[ext_resource type="Texture2D" uid="uid://dimbjadusgibj" path="res://Assets/Characters/PC/Lucille/Cast/Cast049.png" id="11_1cttd"]
+[ext_resource type="Texture2D" uid="uid://ckivcap36e8fp" path="res://Assets/Characters/PC/Lucille/Cast/Cast050.png" id="12_pbwwr"]
+[ext_resource type="Texture2D" uid="uid://csg8qfua1f6su" path="res://Assets/Characters/PC/Lucille/Cast/Cast051.png" id="13_0ak88"]
+[ext_resource type="Texture2D" uid="uid://cvlp1vgaueusp" path="res://Assets/Characters/PC/Lucille/Cast/Cast052.png" id="14_vsmyj"]
+[ext_resource type="Texture2D" uid="uid://1lbm16ham1bn" path="res://Assets/Characters/PC/Lucille/Cast/Cast053.png" id="15_q6d1c"]
+[ext_resource type="Texture2D" uid="uid://bel8jchn7jybk" path="res://Assets/Characters/PC/Lucille/Cast/Cast054.png" id="16_56fyq"]
+[ext_resource type="Texture2D" uid="uid://dacu3bfeocusi" path="res://Assets/Characters/PC/Lucille/Cast/Cast055.png" id="17_n7o62"]
+[ext_resource type="Texture2D" uid="uid://ds8enx4yb5lde" path="res://Assets/Characters/PC/Lucille/Cast/Cast056.png" id="18_tawep"]
+[ext_resource type="Texture2D" uid="uid://drifqyfjj0781" path="res://Assets/Characters/PC/Lucille/Cast/Cast057.png" id="19_00vjl"]
+[ext_resource type="Texture2D" uid="uid://581ts162pnxs" path="res://Assets/Characters/PC/Lucille/Cast/Cast058.png" id="20_ftawp"]
+[ext_resource type="Texture2D" uid="uid://dw82to8cr68pj" path="res://Assets/Characters/PC/Lucille/Cast/Cast059.png" id="21_1e1fl"]
+[ext_resource type="Texture2D" uid="uid://cxh75cmlybaoe" path="res://Assets/Characters/PC/Lucille/Cast/Cast060.png" id="22_54oam"]
+[ext_resource type="Texture2D" uid="uid://bwxat2s3jkvsp" path="res://Assets/Characters/PC/Lucille/Downed/DownPlaceholder.png" id="23_a3qv6"]
+[ext_resource type="Texture2D" uid="uid://u35rthx3iudr" path="res://Assets/Characters/PC/Lucille/Idle/IdlePlaceholder.png" id="24_6a04n"]
+[ext_resource type="Texture2D" uid="uid://ch08fdlvpbvdk" path="res://Assets/Characters/PC/Lucille/Ready/Ready018.png" id="25_fx61h"]
+[ext_resource type="Texture2D" uid="uid://btfhsr01dqk1a" path="res://Assets/Characters/PC/Lucille/Ready/Ready019.png" id="26_gp37y"]
+[ext_resource type="Texture2D" uid="uid://j2h1nxat1u7s" path="res://Assets/Characters/PC/Lucille/Ready/Ready020.png" id="27_hvega"]
+[ext_resource type="Texture2D" uid="uid://csssedw8nwpj5" path="res://Assets/Characters/PC/Lucille/Ready/Ready021.png" id="28_wrckt"]
+[ext_resource type="Texture2D" uid="uid://cu1sujeaqcysi" path="res://Assets/Characters/PC/Lucille/Ready/Ready022.png" id="29_62i8b"]
+[ext_resource type="Texture2D" uid="uid://bn8uooqrsfys3" path="res://Assets/Characters/PC/Lucille/Ready/Ready023.png" id="30_gdsl2"]
+[ext_resource type="Texture2D" uid="uid://b7l62qgw64lje" path="res://Assets/Characters/PC/Lucille/Ready/Ready024.png" id="31_8nnjs"]
+[ext_resource type="Texture2D" uid="uid://blt3qvesc4rni" path="res://Assets/Characters/PC/Lucille/Ready/Ready025.png" id="32_dh8s8"]
+[ext_resource type="Texture2D" uid="uid://kkdw4rf8jkkm" path="res://Assets/Characters/PC/Lucille/Ready/Ready026.png" id="33_1sccs"]
+[ext_resource type="Texture2D" uid="uid://clfhsgwteoq1u" path="res://Assets/Characters/PC/Lucille/Ready/Ready027.png" id="34_kt20x"]
+[ext_resource type="Texture2D" uid="uid://c06q1atamwjue" path="res://Assets/Characters/PC/Lucille/Ready/Ready028.png" id="35_wxec2"]
+[ext_resource type="Texture2D" uid="uid://28lku8oefb41" path="res://Assets/Characters/PC/Lucille/Ready/Ready029.png" id="36_86sn7"]
+[ext_resource type="Texture2D" uid="uid://b48ivj0rihbo6" path="res://Assets/Characters/PC/Lucille/Ready/Ready030.png" id="37_kbhi1"]
+[ext_resource type="Texture2D" uid="uid://dypw81mtbwfrw" path="res://Assets/Characters/PC/Lucille/Ready/Ready031.png" id="38_t7nvm"]
+[ext_resource type="Texture2D" uid="uid://duj1odsak8ysh" path="res://Assets/Characters/PC/Lucille/Ready/Ready032.png" id="39_tkytw"]
+[ext_resource type="Texture2D" uid="uid://cb1axiqxmsq7h" path="res://Assets/Characters/PC/Lucille/Ready/Ready033.png" id="40_c08ib"]
+[ext_resource type="Texture2D" uid="uid://bo4wuyhm3s1lv" path="res://Assets/Characters/PC/Lucille/Ready/Ready034.png" id="41_jkn6f"]
+[ext_resource type="Texture2D" uid="uid://cjuf0lg705yiy" path="res://Assets/Characters/PC/Lucille/Ready/Ready035.png" id="42_up3he"]
+[ext_resource type="Texture2D" uid="uid://c6bjw1205skju" path="res://Assets/Characters/PC/Lucille/Ready/Ready036.png" id="43_gah30"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pdm16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_prk7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m6bbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ovx5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jv55t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wya62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qmtkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h3obe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rd2ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_t42pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1cttd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pbwwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0ak88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vsmyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q6d1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_56fyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_n7o62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tawep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_00vjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ftawp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1e1fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_54oam")
+}],
+"loop": false,
+"name": &"Cast",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_a3qv6")
+}],
+"loop": true,
+"name": &"Downed",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_6a04n")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Intro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_fx61h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gp37y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hvega")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_wrckt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_62i8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gdsl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8nnjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dh8s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_1sccs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_kt20x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_wxec2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_86sn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kbhi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_t7nvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_tkytw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_c08ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_jkn6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_up3he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gah30")
+}],
+"loop": false,
+"name": &"Ready",
+"speed": 12.0
+}]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bgagdnadtqcq0"]
+
+[ext_resource type="Script" uid="uid://be7oe602ugnm3" path="res://Components/DebugEntityRow.gd" id="1_3wamk"]
+[ext_resource type="PackedScene" uid="uid://mciaosaynkbm" path="res://Components/DebugBeatCompRow.tscn" id="2_3wamk"]
+
+[node name="Entity Row" type="VBoxContainer" unique_id=1260041327]
+offset_right = 257.0
+offset_bottom = 40.0
+script = ExtResource("1_3wamk")
+
+[node name="Label" type="Label" parent="." unique_id=525159266]
+layout_mode = 2
+text = "Placeholder:"
+
+[node name="BeatComp Row" parent="." unique_id=1587716512 instance=ExtResource("2_3wamk")]
+layout_mode = 2

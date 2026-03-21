@@ -1,0 +1,154 @@
+[gd_resource type="SpriteFrames" load_steps=37 format=3 uid="uid://bftlatfsrwycw"]
+
+[ext_resource type="Texture2D" uid="uid://ovmotu1i57x0" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water001.png" id="1_4ff74"]
+[ext_resource type="Texture2D" uid="uid://cj85ux64yyuy3" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water002.png" id="2_oi8yq"]
+[ext_resource type="Texture2D" uid="uid://b6c2pqcr5y47j" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water003.png" id="3_sv8bx"]
+[ext_resource type="Texture2D" uid="uid://bkyj7rg4ix12u" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water004.png" id="4_pjb8y"]
+[ext_resource type="Texture2D" uid="uid://c40sbni33461w" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water005.png" id="5_15tsy"]
+[ext_resource type="Texture2D" uid="uid://bspcvoi77svm4" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water006.png" id="6_hn8dc"]
+[ext_resource type="Texture2D" uid="uid://bue66xpkag8ik" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water007.png" id="7_2t410"]
+[ext_resource type="Texture2D" uid="uid://bmk7nc8ii4121" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water008.png" id="8_c05hc"]
+[ext_resource type="Texture2D" uid="uid://d22kddn5oxm6d" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water009.png" id="9_hykig"]
+[ext_resource type="Texture2D" uid="uid://d3dwp3245vcbv" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water010.png" id="10_4ee3u"]
+[ext_resource type="Texture2D" uid="uid://bn6yppxqkfmvk" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water011.png" id="11_4x5ba"]
+[ext_resource type="Texture2D" uid="uid://bl1fh1xcpn2je" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water012.png" id="12_pqlhl"]
+[ext_resource type="Texture2D" uid="uid://cy0pruvmne632" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water013.png" id="13_ba0a8"]
+[ext_resource type="Texture2D" uid="uid://ba2k654jfiucx" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water014.png" id="14_2u1o6"]
+[ext_resource type="Texture2D" uid="uid://cdkfl4kj0tfir" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water015.png" id="15_jk483"]
+[ext_resource type="Texture2D" uid="uid://llli0fyu2jrc" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water016.png" id="16_w60tb"]
+[ext_resource type="Texture2D" uid="uid://csxax3skr14lq" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water017.png" id="17_6y12o"]
+[ext_resource type="Texture2D" uid="uid://40twixjwxlcm" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water018.png" id="18_5ltu5"]
+[ext_resource type="Texture2D" uid="uid://dykbaylh3ixwp" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water019.png" id="19_3qm83"]
+[ext_resource type="Texture2D" uid="uid://vd6kj6xftixl" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water020.png" id="20_6qw1k"]
+[ext_resource type="Texture2D" uid="uid://mprt8dh2magb" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water021.png" id="21_i4uwe"]
+[ext_resource type="Texture2D" uid="uid://cj5a1hrck6ofb" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water022.png" id="22_0mjnl"]
+[ext_resource type="Texture2D" uid="uid://dcqr1q1rro6hk" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water023.png" id="23_5q8wv"]
+[ext_resource type="Texture2D" uid="uid://dte770baekove" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water024.png" id="24_gwl3w"]
+[ext_resource type="Texture2D" uid="uid://divwuv27ktw6c" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water025.png" id="25_6ld4f"]
+[ext_resource type="Texture2D" uid="uid://4v3drcd5xuhn" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water026.png" id="26_l4c8m"]
+[ext_resource type="Texture2D" uid="uid://bcbgdq01on8l1" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water027.png" id="27_vqik1"]
+[ext_resource type="Texture2D" uid="uid://bne7j3cpejh6q" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water028.png" id="28_sme30"]
+[ext_resource type="Texture2D" uid="uid://bdutabg0y60sy" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water029.png" id="29_qvhqw"]
+[ext_resource type="Texture2D" uid="uid://dpr3rcmy4v8dm" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water030.png" id="30_v4ygn"]
+[ext_resource type="Texture2D" uid="uid://glvtleqq7y1i" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water031.png" id="31_eor8m"]
+[ext_resource type="Texture2D" uid="uid://db2x64j5giewf" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water032.png" id="32_4jsp8"]
+[ext_resource type="Texture2D" uid="uid://7h6qy4ib3m4u" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water033.png" id="33_uqfxo"]
+[ext_resource type="Texture2D" uid="uid://b5wgjxrhppwcl" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water034.png" id="34_n73s5"]
+[ext_resource type="Texture2D" uid="uid://cw6f5ovnok66r" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water035.png" id="35_fk700"]
+[ext_resource type="Texture2D" uid="uid://cdq101kvm6wj8" path="res://Assets/Characters/NPC/OlmMother/frames/leviathan_water036.png" id="36_eraqi"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4ff74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oi8yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sv8bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pjb8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_15tsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hn8dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2t410")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c05hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hykig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4ee3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4x5ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pqlhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ba0a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2u1o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jk483")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_w60tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6y12o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5ltu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3qm83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_6qw1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_i4uwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0mjnl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5q8wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_gwl3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_6ld4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_l4c8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vqik1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_sme30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qvhqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_v4ygn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_eor8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4jsp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_uqfxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_n73s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_fk700")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_eraqi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]

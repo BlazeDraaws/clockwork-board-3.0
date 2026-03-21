@@ -1,0 +1,634 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://7kww8d2buo3w"]
+
+[ext_resource type="Texture2D" uid="uid://ckrcnspw2eho0" path="res://Assets/Characters/NPC/RotFish/anim/fish001.png" id="1_ylafp"]
+[ext_resource type="Texture2D" uid="uid://b2var4uqlyl1x" path="res://Assets/Characters/NPC/RotFish/anim/fish002.png" id="2_oiitg"]
+[ext_resource type="Texture2D" uid="uid://bwep3q2bx0tot" path="res://Assets/Characters/NPC/RotFish/anim/fish003.png" id="3_sa2mw"]
+[ext_resource type="Texture2D" uid="uid://cu10xgc6mqtiv" path="res://Assets/Characters/NPC/RotFish/anim/fish004.png" id="4_noka1"]
+[ext_resource type="Texture2D" uid="uid://bu2syrj5ris7h" path="res://Assets/Characters/NPC/RotFish/anim/fish005.png" id="5_j8wkm"]
+[ext_resource type="Texture2D" uid="uid://bsi1lv477da1v" path="res://Assets/Characters/NPC/RotFish/anim/fish006.png" id="6_u3nnc"]
+[ext_resource type="Texture2D" uid="uid://0hs2brqso0ab" path="res://Assets/Characters/NPC/RotFish/anim/fish007.png" id="7_ap5jj"]
+[ext_resource type="Texture2D" uid="uid://c8y2140kspkko" path="res://Assets/Characters/NPC/RotFish/anim/fish008.png" id="8_4qy8s"]
+[ext_resource type="Texture2D" uid="uid://do7kjut050lib" path="res://Assets/Characters/NPC/RotFish/anim/fish009.png" id="9_cblwg"]
+[ext_resource type="Texture2D" uid="uid://vm2q01qjd38j" path="res://Assets/Characters/NPC/RotFish/anim/fish010.png" id="10_hspj1"]
+[ext_resource type="Texture2D" uid="uid://b6quse4vbylla" path="res://Assets/Characters/NPC/RotFish/anim/fish011.png" id="11_c4qf7"]
+[ext_resource type="Texture2D" uid="uid://b5qdf4oapy04q" path="res://Assets/Characters/NPC/RotFish/anim/fish012.png" id="12_433m2"]
+[ext_resource type="Texture2D" uid="uid://ocnc68r4e3i8" path="res://Assets/Characters/NPC/RotFish/anim/fish013.png" id="13_ospqn"]
+[ext_resource type="Texture2D" uid="uid://1825nohjowxk" path="res://Assets/Characters/NPC/RotFish/anim/fish014.png" id="14_ihptf"]
+[ext_resource type="Texture2D" uid="uid://du13evitbrm4y" path="res://Assets/Characters/NPC/RotFish/anim/fish015.png" id="15_wswaj"]
+[ext_resource type="Texture2D" uid="uid://duhdn3nt14kd" path="res://Assets/Characters/NPC/RotFish/anim/fish016.png" id="16_u8fyw"]
+[ext_resource type="Texture2D" uid="uid://ddf732utkjhgb" path="res://Assets/Characters/NPC/RotFish/anim/fish017.png" id="17_nuxc4"]
+[ext_resource type="Texture2D" uid="uid://cpjp1npyt3xnr" path="res://Assets/Characters/NPC/RotFish/anim/fish018.png" id="18_euaoe"]
+[ext_resource type="Texture2D" uid="uid://c7mrrvgccav5g" path="res://Assets/Characters/NPC/RotFish/anim/fish019.png" id="19_vo0ut"]
+[ext_resource type="Texture2D" uid="uid://cjud2hi507xqj" path="res://Assets/Characters/NPC/RotFish/anim/fish020.png" id="20_mrvm6"]
+[ext_resource type="Texture2D" uid="uid://kmxrvoyqkgou" path="res://Assets/Characters/NPC/RotFish/anim/fish021.png" id="21_88ec2"]
+[ext_resource type="Texture2D" uid="uid://36r4cmv0qopj" path="res://Assets/Characters/NPC/RotFish/anim/fish022.png" id="22_84jv4"]
+[ext_resource type="Texture2D" uid="uid://cqvk6xky5dbs5" path="res://Assets/Characters/NPC/RotFish/anim/fish023.png" id="23_im645"]
+[ext_resource type="Texture2D" uid="uid://qu3h3w55ldhd" path="res://Assets/Characters/NPC/RotFish/anim/fish024.png" id="24_a5yed"]
+[ext_resource type="Texture2D" uid="uid://blnycwc8lbjd7" path="res://Assets/Characters/NPC/RotFish/anim/fish025.png" id="25_5nmlp"]
+[ext_resource type="Texture2D" uid="uid://botm5ejxgqt6i" path="res://Assets/Characters/NPC/RotFish/anim/fish026.png" id="26_mcq1d"]
+[ext_resource type="Texture2D" uid="uid://0dduu82hf86m" path="res://Assets/Characters/NPC/RotFish/anim/fish027.png" id="27_xi4pe"]
+[ext_resource type="Texture2D" uid="uid://cwd02gwnlp0e" path="res://Assets/Characters/NPC/RotFish/anim/fish028.png" id="28_63n3p"]
+[ext_resource type="Texture2D" uid="uid://1jbasihwdu1u" path="res://Assets/Characters/NPC/RotFish/anim/fish029.png" id="29_py6ff"]
+[ext_resource type="Texture2D" uid="uid://coxuyu4hxpnha" path="res://Assets/Characters/NPC/RotFish/anim/fish030.png" id="30_gw8f3"]
+[ext_resource type="Texture2D" uid="uid://dcg5whwx2v4hn" path="res://Assets/Characters/NPC/RotFish/anim/fish031.png" id="31_uym8h"]
+[ext_resource type="Texture2D" uid="uid://cx26ptt4xe1uo" path="res://Assets/Characters/NPC/RotFish/anim/fish032.png" id="32_krp6i"]
+[ext_resource type="Texture2D" uid="uid://cygp458pvcycv" path="res://Assets/Characters/NPC/RotFish/anim/fish033.png" id="33_di3j3"]
+[ext_resource type="Texture2D" uid="uid://b6p535esgbigf" path="res://Assets/Characters/NPC/RotFish/anim/fish034.png" id="34_tsu3f"]
+[ext_resource type="Texture2D" uid="uid://dsn35svdwacmt" path="res://Assets/Characters/NPC/RotFish/anim/fish035.png" id="35_orp84"]
+[ext_resource type="Texture2D" uid="uid://cwicnaxibqqtp" path="res://Assets/Characters/NPC/RotFish/anim/fish036.png" id="36_i4foo"]
+[ext_resource type="Texture2D" uid="uid://530n42mdnltr" path="res://Assets/Characters/NPC/RotFish/anim/fish037.png" id="37_e6bvq"]
+[ext_resource type="Texture2D" uid="uid://ci58n3iq4myf4" path="res://Assets/Characters/NPC/RotFish/anim/fish038.png" id="38_i7ybs"]
+[ext_resource type="Texture2D" uid="uid://cv7tklu0uw3g7" path="res://Assets/Characters/NPC/RotFish/anim/fish039.png" id="39_ijpi4"]
+[ext_resource type="Texture2D" uid="uid://cprqf0u5rqd3p" path="res://Assets/Characters/NPC/RotFish/anim/fish040.png" id="40_wtent"]
+[ext_resource type="Texture2D" uid="uid://b1wh5tsraj3a1" path="res://Assets/Characters/NPC/RotFish/anim/fish041.png" id="41_48vhd"]
+[ext_resource type="Texture2D" uid="uid://dxpa6fm4nwgor" path="res://Assets/Characters/NPC/RotFish/anim/fish042.png" id="42_eyumt"]
+[ext_resource type="Texture2D" uid="uid://dp7uosk41v6ff" path="res://Assets/Characters/NPC/RotFish/anim/fish043.png" id="43_dea5d"]
+[ext_resource type="Texture2D" uid="uid://dt00osk1v2dho" path="res://Assets/Characters/NPC/RotFish/anim/fish044.png" id="44_c670u"]
+[ext_resource type="Texture2D" uid="uid://b3bg4yaj52x4i" path="res://Assets/Characters/NPC/RotFish/anim/fish045.png" id="45_nj3u0"]
+[ext_resource type="Texture2D" uid="uid://bc8yfpsesgxah" path="res://Assets/Characters/NPC/RotFish/anim/fish046.png" id="46_djnjy"]
+[ext_resource type="Texture2D" uid="uid://b8luvr74l1qsh" path="res://Assets/Characters/NPC/RotFish/anim/fish047.png" id="47_8gqfj"]
+[ext_resource type="Texture2D" uid="uid://dx6di6axyxe0o" path="res://Assets/Characters/NPC/RotFish/anim/fish048.png" id="48_ny2mn"]
+[ext_resource type="Texture2D" uid="uid://bvnxgt7kojy6h" path="res://Assets/Characters/NPC/RotFish/anim/fish049.png" id="49_4a3uq"]
+[ext_resource type="Texture2D" uid="uid://couiwgnsfstr" path="res://Assets/Characters/NPC/RotFish/anim/fish050.png" id="50_m2nkk"]
+[ext_resource type="Texture2D" uid="uid://wcgvxb82d5wc" path="res://Assets/Characters/NPC/RotFish/anim/fish051.png" id="51_gga4r"]
+[ext_resource type="Texture2D" uid="uid://bic26kn5h3mei" path="res://Assets/Characters/NPC/RotFish/anim/fish052.png" id="52_fpwe3"]
+[ext_resource type="Texture2D" uid="uid://b86af58uv2xth" path="res://Assets/Characters/NPC/RotFish/anim/fish053.png" id="53_tlfmj"]
+[ext_resource type="Texture2D" uid="uid://dun3frsy13nn7" path="res://Assets/Characters/NPC/RotFish/anim/fish054.png" id="54_dnfdp"]
+[ext_resource type="Texture2D" uid="uid://m82hl1481uv4" path="res://Assets/Characters/NPC/RotFish/anim/fish055.png" id="55_fv5a0"]
+[ext_resource type="Texture2D" uid="uid://b7awyox61l0gy" path="res://Assets/Characters/NPC/RotFish/anim/fish056.png" id="56_o8sj5"]
+[ext_resource type="Texture2D" uid="uid://dcna3rxknyir" path="res://Assets/Characters/NPC/RotFish/anim/fish057.png" id="57_kviq6"]
+[ext_resource type="Texture2D" uid="uid://cycsq3g7xpctd" path="res://Assets/Characters/NPC/RotFish/anim/fish058.png" id="58_biy4b"]
+[ext_resource type="Texture2D" uid="uid://cpo1bjmhjbqvm" path="res://Assets/Characters/NPC/RotFish/anim/fish059.png" id="59_t5q8b"]
+[ext_resource type="Texture2D" uid="uid://diovupe4km2w6" path="res://Assets/Characters/NPC/RotFish/anim/fish060.png" id="60_fua0u"]
+[ext_resource type="Texture2D" uid="uid://bppqd0085go43" path="res://Assets/Characters/NPC/RotFish/anim/fish061.png" id="61_6bec1"]
+[ext_resource type="Texture2D" uid="uid://bvmj0pfbdukav" path="res://Assets/Characters/NPC/RotFish/anim/fish062.png" id="62_xja8b"]
+[ext_resource type="Texture2D" uid="uid://bamajfnlr6byt" path="res://Assets/Characters/NPC/RotFish/anim/fish063.png" id="63_cflkl"]
+[ext_resource type="Texture2D" uid="uid://3ol4ieqqdfrw" path="res://Assets/Characters/NPC/RotFish/anim/fish064.png" id="64_gekga"]
+[ext_resource type="Texture2D" uid="uid://co8itou07fqp1" path="res://Assets/Characters/NPC/RotFish/anim/fish065.png" id="65_bfte4"]
+[ext_resource type="Texture2D" uid="uid://c4l2ecbx5q8h4" path="res://Assets/Characters/NPC/RotFish/anim/fish066.png" id="66_i1n8y"]
+[ext_resource type="Texture2D" uid="uid://ooeln7l4mgen" path="res://Assets/Characters/NPC/RotFish/anim/fish067.png" id="67_g28ur"]
+[ext_resource type="Texture2D" uid="uid://c4o2bpdoxe5i7" path="res://Assets/Characters/NPC/RotFish/anim/fish068.png" id="68_viwtl"]
+[ext_resource type="Texture2D" uid="uid://dbmospi2pilw4" path="res://Assets/Characters/NPC/RotFish/anim/fish069.png" id="69_ri0om"]
+[ext_resource type="Texture2D" uid="uid://dlhp3rn5ujreg" path="res://Assets/Characters/NPC/RotFish/anim/fish070.png" id="70_bkxxv"]
+[ext_resource type="Texture2D" uid="uid://clssspl0gqptb" path="res://Assets/Characters/NPC/RotFish/anim/fish071.png" id="71_s4o4n"]
+[ext_resource type="Texture2D" uid="uid://cj0t3erao5ohl" path="res://Assets/Characters/NPC/RotFish/anim/fish072.png" id="72_tjmoe"]
+[ext_resource type="Texture2D" uid="uid://e4onr2mdwe8k" path="res://Assets/Characters/NPC/RotFish/anim/fish073.png" id="73_0fvni"]
+[ext_resource type="Texture2D" uid="uid://b05d7st63twqs" path="res://Assets/Characters/NPC/RotFish/anim/fish074.png" id="74_gowo7"]
+[ext_resource type="Texture2D" uid="uid://dnbx37kbuksv8" path="res://Assets/Characters/NPC/RotFish/anim/fish075.png" id="75_7l044"]
+[ext_resource type="Texture2D" uid="uid://b281whu2w4nuo" path="res://Assets/Characters/NPC/RotFish/anim/fish076.png" id="76_u2mgr"]
+[ext_resource type="Texture2D" uid="uid://bww4j5pimrwkn" path="res://Assets/Characters/NPC/RotFish/anim/fish077.png" id="77_safeh"]
+[ext_resource type="Texture2D" uid="uid://bnbhd28cjviuq" path="res://Assets/Characters/NPC/RotFish/anim/fish078.png" id="78_s0qg5"]
+[ext_resource type="Texture2D" uid="uid://w0ajqb30klcu" path="res://Assets/Characters/NPC/RotFish/anim/fish079.png" id="79_fanfu"]
+[ext_resource type="Texture2D" uid="uid://cx2oge7c4ypgv" path="res://Assets/Characters/NPC/RotFish/anim/fish080.png" id="80_4b4rg"]
+[ext_resource type="Texture2D" uid="uid://dund7o5uy2d4j" path="res://Assets/Characters/NPC/RotFish/anim/fish081.png" id="81_0iwww"]
+[ext_resource type="Texture2D" uid="uid://qrumyr3q10d0" path="res://Assets/Characters/NPC/RotFish/anim/fish082.png" id="82_5wamc"]
+[ext_resource type="Texture2D" uid="uid://c42kswg4l68yk" path="res://Assets/Characters/NPC/RotFish/anim/fish083.png" id="83_1q0n1"]
+[ext_resource type="Texture2D" uid="uid://kixp2qgu57dc" path="res://Assets/Characters/NPC/RotFish/anim/fish084.png" id="84_ftmy4"]
+[ext_resource type="Texture2D" uid="uid://caje4d4v6jgqd" path="res://Assets/Characters/NPC/RotFish/anim/fish085.png" id="85_jp2k0"]
+[ext_resource type="Texture2D" uid="uid://cvwen24pkbqq" path="res://Assets/Characters/NPC/RotFish/anim/fish086.png" id="86_q5eey"]
+[ext_resource type="Texture2D" uid="uid://cjri4y6dr3fn6" path="res://Assets/Characters/NPC/RotFish/anim/fish087.png" id="87_pnogg"]
+[ext_resource type="Texture2D" uid="uid://clquns86mg6ct" path="res://Assets/Characters/NPC/RotFish/anim/fish088.png" id="88_snupw"]
+[ext_resource type="Texture2D" uid="uid://b24o4cc71lnbu" path="res://Assets/Characters/NPC/RotFish/anim/fish089.png" id="89_br6ai"]
+[ext_resource type="Texture2D" uid="uid://cus6h3rcvq0ko" path="res://Assets/Characters/NPC/RotFish/anim/fish090.png" id="90_o4td8"]
+[ext_resource type="Texture2D" uid="uid://cw2xrlib2em1s" path="res://Assets/Characters/NPC/RotFish/anim/fish091.png" id="91_5gdd3"]
+[ext_resource type="Texture2D" uid="uid://xppsd2a83o1c" path="res://Assets/Characters/NPC/RotFish/anim/fish092.png" id="92_ku84j"]
+[ext_resource type="Texture2D" uid="uid://dvrdi0xsmt6ka" path="res://Assets/Characters/NPC/RotFish/anim/fish093.png" id="93_ub87e"]
+[ext_resource type="Texture2D" uid="uid://cdfasrikgrtp1" path="res://Assets/Characters/NPC/RotFish/anim/fish094.png" id="94_imymh"]
+[ext_resource type="Texture2D" uid="uid://dkdtnmqpq0k70" path="res://Assets/Characters/NPC/RotFish/anim/fish095.png" id="95_ukpoh"]
+[ext_resource type="Texture2D" uid="uid://lutqfdi28r1l" path="res://Assets/Characters/NPC/RotFish/anim/fish096.png" id="96_68ld7"]
+[ext_resource type="Texture2D" uid="uid://c8isanjj76gj7" path="res://Assets/Characters/NPC/RotFish/anim/fish097.png" id="97_al0ah"]
+[ext_resource type="Texture2D" uid="uid://du6t8upg8uguf" path="res://Assets/Characters/NPC/RotFish/anim/fish098.png" id="98_dse0n"]
+[ext_resource type="Texture2D" uid="uid://cw2dfjen70ekq" path="res://Assets/Characters/NPC/RotFish/anim/fish099.png" id="99_d2sak"]
+[ext_resource type="Texture2D" uid="uid://b1384d68rqyke" path="res://Assets/Characters/NPC/RotFish/anim/fish100.png" id="100_vgmpo"]
+[ext_resource type="Texture2D" uid="uid://3igi5y5tbf26" path="res://Assets/Characters/NPC/RotFish/anim/fish101.png" id="101_cstse"]
+[ext_resource type="Texture2D" uid="uid://bufhxnrl0nv3" path="res://Assets/Characters/NPC/RotFish/anim/fish102.png" id="102_us5mw"]
+[ext_resource type="Texture2D" uid="uid://dgw32ma4mpkpv" path="res://Assets/Characters/NPC/RotFish/anim/fish103.png" id="103_0xryv"]
+[ext_resource type="Texture2D" uid="uid://brgtydp74nwi5" path="res://Assets/Characters/NPC/RotFish/anim/fish104.png" id="104_wvseu"]
+[ext_resource type="Texture2D" uid="uid://ddkebisrlje71" path="res://Assets/Characters/NPC/RotFish/anim/fish105.png" id="105_jho5p"]
+[ext_resource type="Texture2D" uid="uid://cmu0vs1frholv" path="res://Assets/Characters/NPC/RotFish/anim/fish106.png" id="106_aw72f"]
+[ext_resource type="Texture2D" uid="uid://by8p05lmeuhj6" path="res://Assets/Characters/NPC/RotFish/anim/fish107.png" id="107_stbmd"]
+[ext_resource type="Texture2D" uid="uid://oaj84dd3xxtg" path="res://Assets/Characters/NPC/RotFish/anim/fish108.png" id="108_44efx"]
+[ext_resource type="Texture2D" uid="uid://b2dnd3nnfb4ar" path="res://Assets/Characters/NPC/RotFish/anim/fish109.png" id="109_xj1yg"]
+[ext_resource type="Texture2D" uid="uid://d3o5b15b66y3k" path="res://Assets/Characters/NPC/RotFish/anim/fish110.png" id="110_lihlm"]
+[ext_resource type="Texture2D" uid="uid://d38t8vsiniq1n" path="res://Assets/Characters/NPC/RotFish/anim/fish111.png" id="111_oww8n"]
+[ext_resource type="Texture2D" uid="uid://4d0qam8btxsb" path="res://Assets/Characters/NPC/RotFish/anim/fish112.png" id="112_tj7ao"]
+[ext_resource type="Texture2D" uid="uid://byy1hfm1gdwah" path="res://Assets/Characters/NPC/RotFish/anim/fish113.png" id="113_qp17p"]
+[ext_resource type="Texture2D" uid="uid://dpybex8ei6jyk" path="res://Assets/Characters/NPC/RotFish/anim/fish114.png" id="114_jqi78"]
+[ext_resource type="Texture2D" uid="uid://d02xdiebapk8p" path="res://Assets/Characters/NPC/RotFish/anim/fish115.png" id="115_npt2q"]
+[ext_resource type="Texture2D" uid="uid://bn7u8ja4snsp0" path="res://Assets/Characters/NPC/RotFish/anim/fish116.png" id="116_g6fae"]
+[ext_resource type="Texture2D" uid="uid://cxood4437q77f" path="res://Assets/Characters/NPC/RotFish/anim/fish117.png" id="117_yrq62"]
+[ext_resource type="Texture2D" uid="uid://j3venkdhc432" path="res://Assets/Characters/NPC/RotFish/anim/fish118.png" id="118_lj7n6"]
+[ext_resource type="Texture2D" uid="uid://deii551h1qc5i" path="res://Assets/Characters/NPC/RotFish/anim/fish119.png" id="119_sanfm"]
+[ext_resource type="Texture2D" uid="uid://ca2nbmw811pg" path="res://Assets/Characters/NPC/RotFish/anim/fish120.png" id="120_mx2q3"]
+[ext_resource type="Texture2D" uid="uid://df4gr3gfecxly" path="res://Assets/Characters/NPC/RotFish/anim/fish121.png" id="121_eynkf"]
+[ext_resource type="Texture2D" uid="uid://boald5fsooybu" path="res://Assets/Characters/NPC/RotFish/anim/fish122.png" id="122_beiyo"]
+[ext_resource type="Texture2D" uid="uid://b57bxb2scc1fv" path="res://Assets/Characters/NPC/RotFish/anim/fish123.png" id="123_og3qs"]
+[ext_resource type="Texture2D" uid="uid://btu0ux86es8j7" path="res://Assets/Characters/NPC/RotFish/anim/fish124.png" id="124_b7e3k"]
+[ext_resource type="Texture2D" uid="uid://btqpc4bisief7" path="res://Assets/Characters/NPC/RotFish/anim/fish125.png" id="125_h5mp7"]
+[ext_resource type="Texture2D" uid="uid://ccvfis6g2d0ug" path="res://Assets/Characters/NPC/RotFish/anim/fish126.png" id="126_odtcr"]
+[ext_resource type="Texture2D" uid="uid://dnpy453wsdon2" path="res://Assets/Characters/NPC/RotFish/anim/fish127.png" id="127_ny025"]
+[ext_resource type="Texture2D" uid="uid://barjqp1a2qt5h" path="res://Assets/Characters/NPC/RotFish/anim/fish128.png" id="128_6y5yr"]
+[ext_resource type="Texture2D" uid="uid://bn6aypqr3a8hx" path="res://Assets/Characters/NPC/RotFish/anim/fish129.png" id="129_edn7m"]
+[ext_resource type="Texture2D" uid="uid://ynnccs8jqimy" path="res://Assets/Characters/NPC/RotFish/anim/fish130.png" id="130_lxjnk"]
+[ext_resource type="Texture2D" uid="uid://cub8uecfd18r1" path="res://Assets/Characters/NPC/RotFish/anim/fish131.png" id="131_dqnvo"]
+[ext_resource type="Texture2D" uid="uid://bmjg8b36dh8b6" path="res://Assets/Characters/NPC/RotFish/anim/fish132.png" id="132_04l4y"]
+[ext_resource type="Texture2D" uid="uid://o28a6wg328od" path="res://Assets/Characters/NPC/RotFish/anim/fish133.png" id="133_72f8t"]
+[ext_resource type="Texture2D" uid="uid://pkuvgbu3e2iu" path="res://Assets/Characters/NPC/RotFish/anim/fish134.png" id="134_wsd11"]
+[ext_resource type="Texture2D" uid="uid://cejhs2mcbi1ho" path="res://Assets/Characters/NPC/RotFish/anim/fish135.png" id="135_318yr"]
+[ext_resource type="Texture2D" uid="uid://7m163lpvvdjc" path="res://Assets/Characters/NPC/RotFish/anim/fish136.png" id="136_unvg0"]
+[ext_resource type="Texture2D" uid="uid://bwk310dw5w1w1" path="res://Assets/Characters/NPC/RotFish/anim/fish137.png" id="137_yij8u"]
+[ext_resource type="Texture2D" uid="uid://bw7a6jfuqheyt" path="res://Assets/Characters/NPC/RotFish/anim/fish138.png" id="138_wv1cg"]
+[ext_resource type="Texture2D" uid="uid://3h2tig1xd06e" path="res://Assets/Characters/NPC/RotFish/anim/fish139.png" id="139_fcgdt"]
+[ext_resource type="Texture2D" uid="uid://bj5cpu7p4hl8o" path="res://Assets/Characters/NPC/RotFish/anim/fish140.png" id="140_2ns0u"]
+[ext_resource type="Texture2D" uid="uid://bf8su14e3subb" path="res://Assets/Characters/NPC/RotFish/anim/fish141.png" id="141_ibc3w"]
+[ext_resource type="Texture2D" uid="uid://rnfw1t6qmd1x" path="res://Assets/Characters/NPC/RotFish/anim/fish142.png" id="142_yslr6"]
+[ext_resource type="Texture2D" uid="uid://lumr1esifl2l" path="res://Assets/Characters/NPC/RotFish/anim/fish143.png" id="143_su35s"]
+[ext_resource type="Texture2D" uid="uid://byanml4oex4ab" path="res://Assets/Characters/NPC/RotFish/anim/fish144.png" id="144_cqsgk"]
+[ext_resource type="Texture2D" uid="uid://b7tja2iqknehh" path="res://Assets/Characters/NPC/RotFish/anim/fish145.png" id="145_o8lqy"]
+[ext_resource type="Texture2D" uid="uid://b0fcqlyh22u2d" path="res://Assets/Characters/NPC/RotFish/anim/fish146.png" id="146_1r33x"]
+[ext_resource type="Texture2D" uid="uid://cj5e8hbn0o6br" path="res://Assets/Characters/NPC/RotFish/anim/fish147.png" id="147_l1wgg"]
+[ext_resource type="Texture2D" uid="uid://cxfcugyjece5s" path="res://Assets/Characters/NPC/RotFish/anim/fish148.png" id="148_28ot2"]
+[ext_resource type="Texture2D" uid="uid://bejui3x1125tn" path="res://Assets/Characters/NPC/RotFish/anim/fish149.png" id="149_lxfvb"]
+[ext_resource type="Texture2D" uid="uid://bdn5a0im2h0ak" path="res://Assets/Characters/NPC/RotFish/anim/fish150.png" id="150_yd4we"]
+[ext_resource type="Texture2D" uid="uid://cojhbc1hpxx5d" path="res://Assets/Characters/NPC/RotFish/anim/fish151.png" id="151_6fu17"]
+[ext_resource type="Texture2D" uid="uid://dg12iiu2rpe8p" path="res://Assets/Characters/NPC/RotFish/anim/fish152.png" id="152_x6qh1"]
+[ext_resource type="Texture2D" uid="uid://bge1hgkkx8q3m" path="res://Assets/Characters/NPC/RotFish/anim/fish153.png" id="153_lojk1"]
+[ext_resource type="Texture2D" uid="uid://0n6jeddifbq6" path="res://Assets/Characters/NPC/RotFish/anim/fish154.png" id="154_p70hc"]
+[ext_resource type="Texture2D" uid="uid://10cix701eo2c" path="res://Assets/Characters/NPC/RotFish/anim/fish155.png" id="155_ev0td"]
+[ext_resource type="Texture2D" uid="uid://crw4mk7dpekws" path="res://Assets/Characters/NPC/RotFish/anim/fish156.png" id="156_yll1x"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ylafp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oiitg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sa2mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_noka1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j8wkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u3nnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ap5jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4qy8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cblwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hspj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c4qf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_433m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ospqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ihptf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wswaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_u8fyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nuxc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_euaoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vo0ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mrvm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_88ec2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_84jv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_im645")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_a5yed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_5nmlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mcq1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xi4pe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_63n3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_py6ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_gw8f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_uym8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_krp6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_di3j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tsu3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_orp84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_i4foo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_e6bvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_i7ybs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ijpi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wtent")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_48vhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_eyumt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dea5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_c670u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_nj3u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_djnjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_8gqfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ny2mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4a3uq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_m2nkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_gga4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_fpwe3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tlfmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_dnfdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_fv5a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_o8sj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_kviq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_biy4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_t5q8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_fua0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_6bec1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_xja8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_cflkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_gekga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_bfte4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_i1n8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_g28ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_viwtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_ri0om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_bkxxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_s4o4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_tjmoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_0fvni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_gowo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7l044")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_u2mgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_safeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_s0qg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_fanfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_4b4rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_0iwww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_5wamc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_1q0n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_ftmy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_jp2k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_q5eey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_pnogg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_snupw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_br6ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_o4td8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_5gdd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_ku84j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_ub87e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_imymh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_ukpoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_68ld7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_al0ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_dse0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_d2sak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_vgmpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_cstse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_us5mw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_0xryv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_wvseu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_jho5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_aw72f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_stbmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_44efx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_xj1yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_lihlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_oww8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_tj7ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_qp17p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_jqi78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_npt2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_g6fae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_yrq62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_lj7n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_sanfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_mx2q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_eynkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_beiyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_og3qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_b7e3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_h5mp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_odtcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_ny025")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_6y5yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_edn7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_lxjnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_dqnvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_04l4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_72f8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_wsd11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_318yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_unvg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_yij8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_wv1cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_fcgdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_2ns0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_ibc3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_yslr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_su35s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_cqsgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_o8lqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_1r33x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_l1wgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_28ot2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_lxfvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_yd4we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_6fu17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_x6qh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_lojk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_p70hc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_ev0td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_yll1x")
+}],
+"loop": false,
+"name": &"default",
+"speed": 25.0
+}]

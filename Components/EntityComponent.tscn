@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://low3dqwtnpsn"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_3yayr"]
+[ext_resource type="SpriteFrames" uid="uid://ceehykv3snnk1" path="res://Assets/Characters/PC/Lucille/lucille.tres" id="2_g4ahu"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_nldd8"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="4_dkd51"]
+[ext_resource type="AnimationLibrary" uid="uid://decbb7ljxq7u2" path="res://Assets/Characters/PC/AnimationPlayerTweens.res" id="4_g4ahu"]
+
+[node name="Entity" type="Control" unique_id=1715538023 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_3yayr")
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("BeatComponent")
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
+z_index = 1
+position = Vector2(137, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("2_g4ahu")
+animation = &"Cast"
+autoplay = "Idle"
+offset = Vector2(5, -200)
+script = ExtResource("3_nldd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent" unique_id=474523637]
+libraries/AnimationPlayerTweens = ExtResource("4_g4ahu")
+
+[node name="BeatComponent" parent="." unique_id=1557651122 instance=ExtResource("4_dkd51")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0

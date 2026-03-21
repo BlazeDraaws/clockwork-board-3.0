@@ -1,0 +1,2334 @@
+[gd_scene load_steps=23 format=3 uid="uid://o5wdqplrlvo0"]
+
+[ext_resource type="AudioStream" uid="uid://dwrvq3m4k7kmp" path="res://Assets/hero_dream_nail_short_charge.wav" id="4_5b1gx"]
+[ext_resource type="AudioStream" uid="uid://dwrscbd128j6f" path="res://Assets/bench_rest.wav" id="4_82tof"]
+[ext_resource type="AudioStream" uid="uid://dlqaflt8kewta" path="res://Assets/hero_wings.wav" id="6_f3hgd"]
+[ext_resource type="AudioStream" uid="uid://pnd4xg6pjiyp" path="res://Assets/bat cast.mp3" id="10_ghmkn"]
+[ext_resource type="AudioStream" uid="uid://d0sq8xi0ycfpk" path="res://Assets/scarecrow cast.mp3" id="11_2u20v"]
+[ext_resource type="AudioStream" uid="uid://dk0jk1ihi3fyp" path="res://Assets/hero_nail_art_great_slash.wav" id="11_as5kh"]
+[ext_resource type="AudioStream" uid="uid://gsao87ydap3k" path="res://Assets/woosh reversed.mp3" id="11_fw5jl"]
+[ext_resource type="AudioStream" uid="uid://ct745v2yi31hg" path="res://Assets/spider cast.mp3" id="12_4exya"]
+[ext_resource type="AudioStream" uid="uid://0gonukextou1" path="res://Assets/gorilla cast.mp3" id="13_ifqbg"]
+[ext_resource type="AudioStream" uid="uid://dwkux08d1fimq" path="res://Assets/double time.wav" id="120_bcjpx"]
+[ext_resource type="AudioStream" uid="uid://cdy0i8ru4yg7c" path="res://Assets/half_time.wav" id="120_qq3bu"]
+[ext_resource type="AudioStream" uid="uid://cs1e3nl8mm21c" path="res://Assets/swing.mp3" id="122_swa0l"]
+[ext_resource type="AudioStream" uid="uid://ce8b1hscta3xj" path="res://Assets/wind-up4-106353.mp3" id="293_5wfws"]
+[ext_resource type="AudioStream" uid="uid://bhyf6l66tpxfl" path="res://Assets/carefree_melody_metallic.wav" id="327_quhqa"]
+
+[sub_resource type="GDScript" id="GDScript_1mfxj"]
+script/source = "extends Window
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	visible = true
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
+
+[sub_resource type="InputEventKey" id="InputEventKey_eokxt"]
+device = -1
+ctrl_pressed = true
+keycode = 87
+unicode = 119
+
+[sub_resource type="Shortcut" id="Shortcut_6bn48"]
+events = [SubResource("InputEventKey_eokxt")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_2oiuq"]
+device = -1
+shift_pressed = true
+ctrl_pressed = true
+keycode = 87
+unicode = 119
+
+[sub_resource type="Shortcut" id="Shortcut_nixiq"]
+events = [SubResource("InputEventKey_2oiuq")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_br3pa"]
+line_spacing = -8.96
+font_size = 25
+
+[sub_resource type="Theme" id="Theme_1omuu"]
+Button/font_sizes/font_size = 16
+Label/font_sizes/font_size = 21
+
+[sub_resource type="Environment" id="Environment_dpobh"]
+background_mode = 3
+background_color = Color(0.886054, 0.67722, 0.95409, 1)
+ambient_light_color = Color(0.758192, 0.758192, 0.758192, 1)
+ambient_light_energy = 2.52
+glow_enabled = true
+glow_intensity = 1.17
+glow_strength = 0.28
+glow_bloom = 0.13
+glow_hdr_threshold = 2.4
+glow_hdr_scale = 2.18
+glow_hdr_luminance_cap = 3.14
+glow_map_strength = 0.42
+adjustment_enabled = true
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [256.0, 248.0, 449.0, 456.0, 649.0, 656.0, 851.0, 858.0]
+
+[node name="Preview Window" type="Window" parent="."]
+auto_translate_mode = 1
+transparent_bg = true
+mode = 1
+title = "The Board"
+initial_position = 3
+size = Vector2i(1920, 1080)
+current_screen = 1
+wrap_controls = true
+transparent = true
+content_scale_size = Vector2i(2990, 1630)
+content_scale_mode = 1
+script = SubResource("GDScript_1mfxj")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+offset_left = 23.22
+offset_top = 21.33
+offset_right = 1313.22
+offset_bottom = 877.33
+size_flags_horizontal = 4
+size_flags_vertical = 4
+split_offset = 1055
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer"]
+layout_mode = 2
+
+[node name="Controls" type="HBoxContainer" parent="VSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 58.855)
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Better Beat Button" type="Button" parent="VSplitContainer/VBoxContainer/Controls" groups=["Next Beat Button", "global_recieve"]]
+custom_minimum_size = Vector2(154.045, 51.515)
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+shortcut = SubResource("Shortcut_6bn48")
+text = "NEXT FREE BEAT
+"
+
+[node name="jinge up 2" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/Better Beat Button"]
+stream = ExtResource("4_82tof")
+volume_db = 2.0
+
+[node name="jingle up" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/Better Beat Button"]
+stream = ExtResource("4_5b1gx")
+volume_db = -2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/Better Beat Button"]
+stream = ExtResource("6_f3hgd")
+volume_db = -17.51
+pitch_scale = 1.32
+
+[node name="1 Beat Button" type="Button" parent="VSplitContainer/VBoxContainer/Controls" groups=["Next Beat Button"]]
+custom_minimum_size = Vector2(154.045, 51.515)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+shortcut = SubResource("Shortcut_nixiq")
+text = "NEXT BEAT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/1 Beat Button"]
+stream = ExtResource("6_f3hgd")
+volume_db = -17.51
+pitch_scale = 1.32
+
+[node name="Prev Beat" type="Button" parent="VSplitContainer/VBoxContainer/Controls" groups=["Next Beat Button"]]
+custom_minimum_size = Vector2(154.045, 51.515)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+shortcut = SubResource("Shortcut_nixiq")
+text = "ADD 1 BEAT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/Prev Beat"]
+stream = ExtResource("11_fw5jl")
+volume_db = -15.712
+
+[node name="Swing Button5" type="Button" parent="VSplitContainer/VBoxContainer/Controls" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(154.045, 51.515)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Swing Time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/Swing Button5"]
+stream = ExtResource("122_swa0l")
+volume_db = 7.54
+pitch_scale = 1.69
+
+[node name="Double time" type="Button" parent="VSplitContainer/VBoxContainer/Controls" groups=["Beat Progress Bar", "Player Speed Buttons"]]
+custom_minimum_size = Vector2(154.045, 51.515)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Double time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/Double time"]
+stream = ExtResource("120_bcjpx")
+volume_db = -2.187
+pitch_scale = 1.69
+
+[node name="Half time" type="Button" parent="VSplitContainer/VBoxContainer/Controls" groups=["Beat Progress Bar", "Player Speed Buttons"]]
+custom_minimum_size = Vector2(154.045, 51.515)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Half time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Controls/Half time"]
+stream = ExtResource("120_qq3bu")
+volume_db = -2.187
+pitch_scale = 1.69
+attenuation = 2.92817
+
+[node name="main lines" type="GridContainer" parent="VSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="castULT" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines"]
+position = Vector2(-186, -35)
+stream = ExtResource("11_as5kh")
+volume_db = 5.245
+pitch_scale = 0.75
+
+[node name="Caoihme" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines"]
+custom_minimum_size = Vector2(0, 88.46)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/VBoxContainer/main lines/Caoihme"]
+custom_minimum_size = Vector2(235.955, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label 1" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/MarginContainer"]
+custom_minimum_size = Vector2(224.095, 19.465)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "1: Lucille
+(Caoimhe)
+"
+label_settings = SubResource("LabelSettings_br3pa")
+horizontal_alignment = 3
+vertical_alignment = 3
+justification_flags = 162
+
+[node name="Caoihme" type="VBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Caoihme"]
+custom_minimum_size = Vector2(992.65, 0)
+layout_mode = 2
+size_flags_horizontal = 9
+size_flags_vertical = 9
+
+[node name="Player 1" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme" groups=["Bar 1"]]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/LineEdit"]
+position = Vector2(-186, -35)
+stream = ExtResource("10_ghmkn")
+volume_db = -4.245
+
+[node name="Light" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1"]]
+layout_mode = 2
+text = "LIGHT"
+
+[node name="Standard" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1"]]
+layout_mode = 2
+text = "STANDARD"
+
+[node name="Heavy" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1"]]
+layout_mode = 2
+text = "HEAVY"
+
+[node name="Finale" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "FINALE"
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Swing Button" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1", "Player Swing Buttons", "Sub Bar 1"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+shortcut = SubResource("Shortcut_nixiq")
+text = "Swing Time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Swing Button"]
+stream = ExtResource("122_swa0l")
+volume_db = 7.54
+pitch_scale = 1.69
+
+[node name="Double time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1", "Player Speed Buttons", "Sub Bar 1"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Double time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Double time"]
+stream = ExtResource("120_bcjpx")
+volume_db = -2.187
+pitch_scale = 1.69
+
+[node name="Half time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1", "Player Speed Buttons", "Sub Bar 1"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Half time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Half time"]
+stream = ExtResource("120_qq3bu")
+volume_db = -2.187
+pitch_scale = 1.69
+attenuation = 2.92817
+
+[node name="Drag lABEL" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1"]
+layout_mode = 2
+text = "Drag: "
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="Drag" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1", "drag buttons"]]
+layout_mode = 2
+button_mask = 3
+text = "🠜 # 🠞"
+
+[node name="Downed" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1" groups=["Bar 1"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+toggle_mode = true
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Alive"
+
+[node name="Sub Player 1" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme"]
+layout_mode = 2
+
+[node name="SUB BEAT" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1"]
+custom_minimum_size = Vector2(0, 3.605)
+layout_mode = 2
+text = "SECONDARY:  "
+
+[node name="sub LineEdit" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1" groups=["Sub Bar 1"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1/sub LineEdit"]
+position = Vector2(-186, -35)
+stream = ExtResource("293_5wfws")
+volume_db = -4.245
+
+[node name="Button" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1" groups=["Sub Bar 1"]]
+layout_mode = 2
+text = " ✓ "
+
+[node name="ButtonULT" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1" groups=["Sub Bar 1"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = " ULT "
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1" groups=["Sub Bar 1"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Zoey" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines"]
+custom_minimum_size = Vector2(0, 88.46)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/VBoxContainer/main lines/Zoey"]
+custom_minimum_size = Vector2(235.955, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label 2" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Zoey/MarginContainer"]
+custom_minimum_size = Vector2(224.095, 19.465)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "2: Bree
+(Zoey)"
+label_settings = SubResource("LabelSettings_br3pa")
+horizontal_alignment = 3
+vertical_alignment = 3
+justification_flags = 162
+
+[node name="Zoey2" type="VBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Zoey"]
+custom_minimum_size = Vector2(992.65, 0)
+layout_mode = 2
+size_flags_horizontal = 9
+size_flags_vertical = 9
+
+[node name="Player 2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2"]
+layout_mode = 2
+
+[node name="LineEdit2" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/LineEdit2"]
+position = Vector2(-186, -35)
+stream = ExtResource("11_2u20v")
+volume_db = -4.245
+
+[node name="Light" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2"]]
+layout_mode = 2
+text = "LIGHT"
+
+[node name="Standard" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2"]]
+layout_mode = 2
+text = "STANDARD"
+
+[node name="Heavy" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2"]]
+layout_mode = 2
+text = "HEAVY"
+
+[node name="Finale" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "FINALE"
+
+[node name="Clear Value2" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Swing Button2" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2", "Player Swing Buttons", "Sub Bar 2"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+shortcut = SubResource("Shortcut_nixiq")
+text = "Swing Time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Swing Button2"]
+stream = ExtResource("122_swa0l")
+volume_db = 7.54
+pitch_scale = 1.69
+
+[node name="Double time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2", "Player Speed Buttons", "Sub Bar 2"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Double time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Double time"]
+stream = ExtResource("120_bcjpx")
+volume_db = -2.187
+pitch_scale = 1.69
+
+[node name="Half time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2", "Player Speed Buttons", "Sub Bar 2"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Half time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Half time"]
+stream = ExtResource("120_qq3bu")
+volume_db = -2.187
+pitch_scale = 1.69
+attenuation = 2.92817
+
+[node name="Drag lABEL" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2"]
+layout_mode = 2
+text = "Drag: "
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="Drag" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2", "drag buttons"]]
+layout_mode = 2
+button_mask = 3
+text = "🠜 # 🠞"
+
+[node name="Downed" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2" groups=["Bar 2"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+toggle_mode = true
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Alive"
+
+[node name="Sub Player 2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2"]
+layout_mode = 2
+
+[node name="SUB BEAT" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2"]
+custom_minimum_size = Vector2(0, 3.605)
+layout_mode = 2
+text = "SECONDARY:  "
+
+[node name="sub LineEdit2" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2" groups=["Sub Bar 2"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2/sub LineEdit2"]
+position = Vector2(-186, -35)
+stream = ExtResource("293_5wfws")
+volume_db = -4.245
+
+[node name="Button2" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2" groups=["Sub Bar 2"]]
+layout_mode = 2
+text = " ✓ "
+
+[node name="Button2ULT" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2" groups=["Sub Bar 2"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "ULT"
+
+[node name="Clear Value2" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2" groups=["Sub Bar 2"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Indigo" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines"]
+custom_minimum_size = Vector2(0, 88.46)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/VBoxContainer/main lines/Indigo"]
+custom_minimum_size = Vector2(235.955, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label 3" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Indigo/MarginContainer"]
+custom_minimum_size = Vector2(224.095, 19.465)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "3: Frog
+(Indigo)"
+label_settings = SubResource("LabelSettings_br3pa")
+horizontal_alignment = 3
+vertical_alignment = 3
+justification_flags = 162
+
+[node name="Indigo" type="VBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Indigo"]
+custom_minimum_size = Vector2(992.65, 0)
+layout_mode = 2
+size_flags_horizontal = 9
+size_flags_vertical = 9
+
+[node name="Player 3" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo"]
+layout_mode = 2
+
+[node name="LineEdit3" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/LineEdit3"]
+position = Vector2(-186, -35)
+stream = ExtResource("12_4exya")
+volume_db = -4.245
+
+[node name="Light" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3"]]
+layout_mode = 2
+text = "LIGHT"
+
+[node name="Standard" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3"]]
+layout_mode = 2
+text = "STANDARD"
+
+[node name="Heavy" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3"]]
+layout_mode = 2
+text = "HEAVY"
+
+[node name="Finale" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "FINALE"
+
+[node name="Clear Value3" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Swing Button3" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3", "Player Swing Buttons", "Sub Bar 3"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+shortcut = SubResource("Shortcut_nixiq")
+text = "Swing Time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Swing Button3"]
+stream = ExtResource("122_swa0l")
+volume_db = 7.54
+pitch_scale = 1.69
+
+[node name="Double time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3", "Player Speed Buttons", "Sub Bar 3"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Double time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Double time"]
+stream = ExtResource("120_bcjpx")
+volume_db = -2.187
+pitch_scale = 1.69
+
+[node name="Half time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3", "Player Speed Buttons", "Sub Bar 3"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Half time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Half time"]
+stream = ExtResource("120_qq3bu")
+volume_db = -2.187
+pitch_scale = 1.69
+attenuation = 2.92817
+
+[node name="Drag lABEL" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3"]
+layout_mode = 2
+text = "Drag: "
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="Drag" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3", "drag buttons"]]
+layout_mode = 2
+button_mask = 3
+text = "🠜 # 🠞"
+
+[node name="Downed" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3" groups=["Bar 3"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+toggle_mode = true
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Alive"
+
+[node name="Sub Player 3" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo"]
+layout_mode = 2
+
+[node name="SUB BEAT" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3"]
+custom_minimum_size = Vector2(0, 3.605)
+layout_mode = 2
+text = "SECONDARY:  "
+
+[node name="sub LineEdit3" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3" groups=["Sub Bar 3"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3/sub LineEdit3"]
+position = Vector2(-186, -35)
+stream = ExtResource("293_5wfws")
+volume_db = -4.245
+
+[node name="Button3" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3" groups=["Sub Bar 3"]]
+layout_mode = 2
+text = " ✓ "
+
+[node name="Button3ULT" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3" groups=["Sub Bar 3"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "ULT"
+
+[node name="Clear Value3" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3" groups=["Sub Bar 3"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Tom" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines"]
+custom_minimum_size = Vector2(0, 88.46)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/VBoxContainer/main lines/Tom"]
+custom_minimum_size = Vector2(235.955, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label 4" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Tom/MarginContainer"]
+custom_minimum_size = Vector2(224.095, 19.465)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "4:  Mantis
+(Tom)"
+label_settings = SubResource("LabelSettings_br3pa")
+horizontal_alignment = 3
+vertical_alignment = 3
+justification_flags = 162
+
+[node name="Tom" type="VBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Tom"]
+custom_minimum_size = Vector2(992.65, 0)
+layout_mode = 2
+size_flags_horizontal = 9
+size_flags_vertical = 9
+
+[node name="Player 4" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom"]
+layout_mode = 2
+
+[node name="LineEdit4" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/LineEdit4"]
+position = Vector2(-186, -35)
+stream = ExtResource("13_ifqbg")
+volume_db = -4.245
+
+[node name="Light" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4"]]
+layout_mode = 2
+text = "LIGHT"
+
+[node name="Standard" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4"]]
+layout_mode = 2
+text = "STANDARD"
+
+[node name="Heavy" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4"]]
+layout_mode = 2
+text = "HEAVY"
+
+[node name="Finale" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "FINALE"
+
+[node name="Clear Value4" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Swing Button4" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4", "Player Swing Buttons", "Sub Bar 4"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+shortcut = SubResource("Shortcut_nixiq")
+text = "Swing Time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Swing Button4"]
+stream = ExtResource("122_swa0l")
+volume_db = 7.54
+pitch_scale = 1.69
+
+[node name="Double time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4", "Player Speed Buttons", "Sub Bar 4"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Double time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Double time"]
+stream = ExtResource("120_bcjpx")
+volume_db = -2.187
+pitch_scale = 1.69
+
+[node name="Half time" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4", "Player Speed Buttons", "Sub Bar 4"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Half time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Half time"]
+stream = ExtResource("120_qq3bu")
+volume_db = -2.187
+pitch_scale = 1.69
+attenuation = 2.92817
+
+[node name="Drag lABEL" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4"]
+layout_mode = 2
+text = "Drag: "
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="Drag" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4", "drag buttons"]]
+layout_mode = 2
+button_mask = 3
+text = "🠜 # 🠞"
+
+[node name="Downed" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4" groups=["Bar 4"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+toggle_mode = true
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Alive"
+
+[node name="Sub player4" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom" groups=["Sub Bar 4"]]
+layout_mode = 2
+
+[node name="SUB BEAT" type="Label" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4" groups=["Sub Bar 4"]]
+custom_minimum_size = Vector2(0, 3.605)
+layout_mode = 2
+text = "SECONDARY:  "
+
+[node name="sub LineEdit4" type="LineEdit" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4" groups=["Sub Bar 4"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4/sub LineEdit4"]
+position = Vector2(-186, -35)
+stream = ExtResource("293_5wfws")
+volume_db = -4.245
+
+[node name="Button4" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4" groups=["Sub Bar 4"]]
+layout_mode = 2
+text = " ✓ "
+
+[node name="Button4ULT" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4" groups=["Sub Bar 4"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "ULT"
+
+[node name="Clear Value4" type="Button" parent="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4" groups=["Sub Bar 4"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Enemies" type="VBoxContainer" parent="VSplitContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="castULT" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Enemies"]
+position = Vector2(-186, -35)
+stream = ExtResource("11_as5kh")
+volume_db = 3.531
+pitch_scale = 0.75
+
+[node name="Enemies" type="Label" parent="VSplitContainer/VBoxContainer/Enemies"]
+custom_minimum_size = Vector2(0, 37.735)
+layout_mode = 2
+text = "----------------------------------------------------------------------------------------------------------------------------------------------------------------"
+label_settings = SubResource("LabelSettings_br3pa")
+vertical_alignment = 2
+
+[node name="Enemy" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/Enemies"]
+custom_minimum_size = Vector2(224.095, 19.465)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/VBoxContainer/Enemies/Enemy"]
+custom_minimum_size = Vector2(235.955, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label 6" type="Label" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/MarginContainer"]
+custom_minimum_size = Vector2(162.785, 63.62)
+layout_mode = 2
+text = "Boss Bar:
+"
+label_settings = SubResource("LabelSettings_br3pa")
+
+[node name="BOSS" type="VBoxContainer" parent="VSplitContainer/VBoxContainer/Enemies/Enemy"]
+layout_mode = 2
+
+[node name="enemy" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS"]
+layout_mode = 2
+
+[node name="LineEdit4" type="LineEdit" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/LineEdit4"]
+position = Vector2(-186, -35)
+stream = ExtResource("327_quhqa")
+volume_db = -4.245
+pitch_scale = 0.78
+
+[node name="Light" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+layout_mode = 2
+text = "LIGHT"
+
+[node name="Standard" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+layout_mode = 2
+text = "STANDARD"
+
+[node name="Heavy" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+layout_mode = 2
+text = "HEAVY"
+
+[node name="Finale" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "FINALE"
+
+[node name="Clear Value4" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Swing Button4" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+shortcut = SubResource("Shortcut_nixiq")
+text = "Swing Time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Swing Button4"]
+stream = ExtResource("122_swa0l")
+volume_db = 7.54
+pitch_scale = 1.69
+
+[node name="Double time" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Double time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Double time"]
+stream = ExtResource("120_bcjpx")
+volume_db = -2.187
+pitch_scale = 1.69
+
+[node name="Half time" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5"]]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_nixiq")
+text = "Half time"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Half time"]
+stream = ExtResource("120_qq3bu")
+volume_db = -2.187
+pitch_scale = 1.69
+attenuation = 2.92817
+
+[node name="Drag lABEL" type="Label" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy"]
+layout_mode = 2
+text = "Drag: "
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="Drag" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy" groups=["Bar 5", "drag buttons"]]
+layout_mode = 2
+button_mask = 3
+text = "🠜 # 🠞"
+
+[node name="Sub BOSS" type="HBoxContainer" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS" groups=["Sub Bar 5"]]
+layout_mode = 2
+
+[node name="SUB BEAT" type="Label" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS"]
+custom_minimum_size = Vector2(0, 3.605)
+layout_mode = 2
+text = "SECONDARY:  "
+
+[node name="sub LineEdit4" type="LineEdit" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Sub Bar 5"]]
+custom_minimum_size = Vector2(68.125, 0)
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+select_all_on_focus = true
+
+[node name="cast" type="AudioStreamPlayer2D" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/sub LineEdit4"]
+position = Vector2(-186, -35)
+stream = ExtResource("293_5wfws")
+volume_db = -4.245
+pitch_scale = 0.54
+
+[node name="Button4" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Sub Bar 5"]]
+layout_mode = 2
+text = " ✓ "
+
+[node name="Button4ULT" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Sub Bar 5"]]
+custom_minimum_size = Vector2(51.79, 0)
+layout_mode = 2
+text = "ULT"
+
+[node name="Clear Value4" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Sub Bar 5"]]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="NEXT PHASE" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Bar 5"]]
+layout_mode = 2
+text = "PHASE 1"
+
+[node name="NEXT PHASE2" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Bar 5"]]
+layout_mode = 2
+text = "PHASE 2"
+
+[node name="NEXT PHASE3" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Bar 5"]]
+layout_mode = 2
+text = "PHASE 3"
+
+[node name="NEXT PHASE4" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Bar 5"]]
+layout_mode = 2
+text = "PHASE 4"
+
+[node name="NEXT PHASE5" type="Button" parent="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS" groups=["Bar 5"]]
+layout_mode = 2
+text = "RED"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VSplitContainer"]
+layout_mode = 2
+
+[node name="Counters" type="Label" parent="VSplitContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 3.605)
+layout_mode = 2
+text = "COUNTERS:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VSplitContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(1294.53, 234.905)
+layout_mode = 2
+
+[node name="Counters" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer"]
+custom_minimum_size = Vector2(1290.14, 0)
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+columns = 2
+
+[node name="Counter1" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter2" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter3" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter4" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter5" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter6" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter7" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter8" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter9" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter10" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter11" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter12" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter13" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="Counter14" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters"]
+custom_minimum_size = Vector2(603.75, 0)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+columns = 3
+
+[node name="TextEdit" type="TextEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14"]
+custom_minimum_size = Vector2(186.68, -0.205)
+layout_mode = 2
+size_flags_stretch_ratio = 4.04
+placeholder_text = "Description"
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="Arrow" type="Label" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14"]
+custom_minimum_size = Vector2(0, 3.35)
+layout_mode = 2
+text = "→"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14"]
+custom_minimum_size = Vector2(0, 2.275)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.01
+theme = SubResource("Theme_1omuu")
+
+[node name="Counter" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter" groups=["Beat Progress Bar", "counter"]]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+expand_to_text_length = true
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="GridContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+columns = 3
+
+[node name="Dice" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D4"
+
+[node name="Dice2" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D6"
+
+[node name="Dice3" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D8"
+
+[node name="Dice4" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D10"
+
+[node name="Dice5" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D12"
+
+[node name="Dice6" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer"]
+layout_mode = 2
+text = "+D20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter"]
+layout_mode = 2
+
+[node name="Add Modifier" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Bonus" type="LineEdit" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer2" groups=["Beat Progress Bar"]]
+custom_minimum_size = Vector2(71.68, 0)
+layout_mode = 2
+placeholder_text = "Base #"
+alignment = 1
+expand_to_text_length = true
+
+[node name="Clear Value" type="Button" parent="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer2"]
+layout_mode = 2
+text = "CLEAR"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=["worldfilter"]]
+environment = SubResource("Environment_dpobh")
+
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Better Beat Button" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Better Beat Button" to="VSplitContainer/VBoxContainer/Controls/Better Beat Button" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/1 Beat Button" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/1 Beat Button" to="VSplitContainer/VBoxContainer/Controls/1 Beat Button" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Prev Beat" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Prev Beat" to="VSplitContainer/VBoxContainer/Controls/Prev Beat" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Swing Button5" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Swing Button5" to="VSplitContainer/VBoxContainer/Controls/Swing Button5" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Double time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Double time" to="VSplitContainer/VBoxContainer/Controls/Double time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Half time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Controls/Half time" to="VSplitContainer/VBoxContainer/Controls/Half time" method="_on_pressed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/LineEdit" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/LineEdit" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/LineEdit" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/LineEdit" method="_on_text_submitted"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Clear Value" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Clear Value" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Swing Button" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Swing Button" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Swing Button" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Double time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Double time" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Double time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Half time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Half time" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Half time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Drag" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Drag" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Downed" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Downed" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Player 1/Downed" method="_on_pressed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1/sub LineEdit" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1/sub LineEdit" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1/sub LineEdit" to="VSplitContainer/VBoxContainer/main lines/Caoihme/Caoihme/Sub Player 1/sub LineEdit" method="_on_text_submitted"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/LineEdit2" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/LineEdit2" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/LineEdit2" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/LineEdit2" method="_on_text_submitted"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Swing Button2" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Swing Button2" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Swing Button2" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Double time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Double time" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Double time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Half time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Half time" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Half time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Drag" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Drag" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Downed" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Downed" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Player 2/Downed" method="_on_pressed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2/sub LineEdit2" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2/sub LineEdit2" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2/sub LineEdit2" to="VSplitContainer/VBoxContainer/main lines/Zoey/Zoey2/Sub Player 2/sub LineEdit2" method="_on_text_submitted"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/LineEdit3" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/LineEdit3" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/LineEdit3" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/LineEdit3" method="_on_text_submitted"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Swing Button3" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Swing Button3" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Swing Button3" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Double time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Double time" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Double time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Half time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Half time" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Half time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Drag" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Drag" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Downed" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Downed" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Player 3/Downed" method="_on_pressed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3/sub LineEdit3" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3/sub LineEdit3" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3/sub LineEdit3" to="VSplitContainer/VBoxContainer/main lines/Indigo/Indigo/Sub Player 3/sub LineEdit3" method="_on_text_submitted"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/LineEdit4" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/LineEdit4" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/LineEdit4" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/LineEdit4" method="_on_text_submitted"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Swing Button4" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Swing Button4" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Swing Button4" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Double time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Double time" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Double time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Half time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Half time" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Half time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Drag" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Drag" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Downed" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Downed" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Player 4/Downed" method="_on_pressed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4/sub LineEdit4" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4/sub LineEdit4" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4/sub LineEdit4" to="VSplitContainer/VBoxContainer/main lines/Tom/Tom/Sub player4/sub LineEdit4" method="_on_text_submitted"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/LineEdit4" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/LineEdit4" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/LineEdit4" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/LineEdit4" method="_on_text_submitted"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Swing Button4" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Swing Button4" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Swing Button4" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Double time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Double time" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Double time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Half time" to="." method="_on_beat_button_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Half time" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Half time" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Drag" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/enemy/Drag" method="_on_pressed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/sub LineEdit4" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/sub LineEdit4" method="_on_text_changed"]
+[connection signal="text_submitted" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/sub LineEdit4" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/sub LineEdit4" method="_on_text_submitted"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE2" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE2" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE3" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE3" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE4" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE4" method="_on_pressed"]
+[connection signal="pressed" from="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE5" to="VSplitContainer/VBoxContainer/Enemies/Enemy/BOSS/Sub BOSS/NEXT PHASE5" method="_on_pressed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter1/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter2/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter3/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter4/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter5/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter6/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter7/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter8/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter9/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter10/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter11/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter12/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter13/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/Counter" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/Counter" method="_on_text_changed"]
+[connection signal="text_changed" from="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer2/Bonus" to="VSplitContainer/VBoxContainer2/ScrollContainer/Counters/Counter14/Counter/HBoxContainer2/Bonus" method="_on_text_changed"]

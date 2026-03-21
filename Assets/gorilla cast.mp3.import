@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0gonukextou1"
+path="res://.godot/imported/gorilla cast.mp3-d5bb22e84bb448b13e7f35788516f7da.mp3str"
+
+[deps]
+
+source_file="res://Assets/gorilla cast.mp3"
+dest_files=["res://.godot/imported/gorilla cast.mp3-d5bb22e84bb448b13e7f35788516f7da.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

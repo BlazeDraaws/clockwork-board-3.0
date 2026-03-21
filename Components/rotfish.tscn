@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bancyvpk77p1b"]
+
+[ext_resource type="Script" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_ddydv"]
+[ext_resource type="SpriteFrames" uid="uid://7kww8d2buo3w" path="res://Assets/Characters/NPC/RotFish/new_sprite_frames.tres" id="2_ddydv"]
+[ext_resource type="Script" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_34q8t"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_0l3hf"]
+
+[node name="Entity" type="Control" node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ddydv")
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("BeatComponent")
+DefaultOrientation = -1
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(137, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("2_ddydv")
+autoplay = "default"
+offset = Vector2(5, -200)
+script = ExtResource("3_34q8t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent"]
+
+[node name="BeatComponent" parent="." instance=ExtResource("5_0l3hf")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+
+[node name="GUIComponent" parent="BeatComponent" index="0"]
+layout_direction = 0
+
+[node name="LineComponent" parent="BeatComponent/GUIComponent" index="0"]
+visible = false
+
+[node name="DebugStatsComponent" parent="BeatComponent/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="BeatComponent/GUIComponent" index="3"]
+visible = false
+
+[editable path="BeatComponent"]

@@ -1,0 +1,197 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://tidmwp4ci0aa"]
+
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0039.png" id="1_33jb0"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0040.png" id="2_mwjp8"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0041.png" id="3_sraw4"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0042.png" id="4_sb664"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0043.png" id="5_kbc73"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0044.png" id="6_ocf2p"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0045.png" id="7_slmbg"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0046.png" id="8_02u4e"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0047.png" id="9_2m784"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0048.png" id="10_b4cjf"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0049.png" id="11_ihaeq"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0050.png" id="12_j5lgv"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0051.png" id="13_u7awf"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0052.png" id="14_alvul"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0053.png" id="15_cd5am"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0054.png" id="16_qyduo"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0055.png" id="17_1nykg"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0056.png" id="18_2o1fy"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0057.png" id="19_yex66"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0058.png" id="20_y0l8x"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0059.png" id="21_wbnaa"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Cast/Lucille0060.png" id="22_gpcaw"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Downed/lucille.png" id="23_tbao6"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Idle/Lucille0060.png" id="24_kann7"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0018.png" id="25_jc50r"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0019.png" id="26_m702q"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0020.png" id="27_wok0t"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0021.png" id="28_wthuu"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0022.png" id="29_hfnj5"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0023.png" id="30_bttme"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0024.png" id="31_1c7fr"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0025.png" id="32_rmxbc"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0026.png" id="33_sj6w0"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0027.png" id="34_x2y6o"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0028.png" id="35_jf6dm"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0029.png" id="36_8105a"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0030.png" id="37_3gmki"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0031.png" id="38_h3cac"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0032.png" id="39_vrhff"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0033.png" id="40_733kc"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0034.png" id="41_ig3hn"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0035.png" id="42_fuaox"]
+[ext_resource type="Texture2D" path="res://Assets/Lucille/Ready/Lucille0036.png" id="43_dwtmn"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_33jb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mwjp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sraw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sb664")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kbc73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ocf2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_slmbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_02u4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2m784")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b4cjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ihaeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_j5lgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u7awf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_alvul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cd5am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qyduo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1nykg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2o1fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_yex66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_y0l8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wbnaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_gpcaw")
+}],
+"loop": false,
+"name": &"Cast",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_tbao6")
+}],
+"loop": true,
+"name": &"Downed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_kann7")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_jc50r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_m702q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_wok0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_wthuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hfnj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bttme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1c7fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rmxbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_sj6w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x2y6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jf6dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8105a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_3gmki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_h3cac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_vrhff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_733kc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ig3hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_fuaox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dwtmn")
+}],
+"loop": false,
+"name": &"Ready",
+"speed": 12.0
+}]

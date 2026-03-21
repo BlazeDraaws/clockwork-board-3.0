@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://mciaosaynkbm"]
+
+[ext_resource type="Script" uid="uid://cn23k1o7r185d" path="res://Components/ComponentScripts/DebugButtonComponent.gd" id="1_e5g7k"]
+
+[sub_resource type="GDScript" id="GDScript_e5g7k"]
+script/source = "extends Label
+
+@onready var EntityRow : EntityComponent = $\"../..\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$Label.text = EntityRow.Entity.compBeatComp.name
+"
+
+[node name="BeatComp Row" type="HBoxContainer" unique_id=1587716512]
+
+[node name="Label" type="Label" parent="." unique_id=1659773016]
+layout_mode = 2
+text = "Placeholder:"
+script = SubResource("GDScript_e5g7k")
+
+[node name="Test Button" type="Button" parent="." unique_id=986105392]
+layout_mode = 2
+text = "_modifybeat + 1"
+script = ExtResource("1_e5g7k")
+function = "_modifybeat"
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button6" type="Button" parent="." unique_id=1521391419]
+layout_mode = 2
+text = "_modifybeat - 1"
+script = ExtResource("1_e5g7k")
+function = "_modifybeat"
+value = -1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button2" type="Button" parent="." unique_id=415552499]
+layout_mode = 2
+text = "_setbeat to 5"
+script = ExtResource("1_e5g7k")
+function = "_setbeat"
+value = 5.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button3" type="Button" parent="." unique_id=1502776101]
+layout_mode = 2
+text = "_speed"
+script = ExtResource("1_e5g7k")
+function = "_speed"
+value = 2.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button8" type="Button" parent="." unique_id=724796254]
+layout_mode = 2
+text = "_speed"
+script = ExtResource("1_e5g7k")
+function = "_speed"
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button7" type="Button" parent="." unique_id=1469285777]
+layout_mode = 2
+text = "_speed"
+script = ExtResource("1_e5g7k")
+function = "_speed"
+value = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button4" type="Button" parent="." unique_id=246582199]
+layout_mode = 2
+text = "_drag + 1"
+script = ExtResource("1_e5g7k")
+function = "_drag"
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button9" type="Button" parent="." unique_id=1344307857]
+layout_mode = 2
+text = "_drag - 1"
+script = ExtResource("1_e5g7k")
+function = "_drag"
+value = -1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button5" type="Button" parent="." unique_id=639826512]
+layout_mode = 2
+text = "update"
+script = ExtResource("1_e5g7k")
+function = "update"
+metadata/_edit_use_anchors_ = true

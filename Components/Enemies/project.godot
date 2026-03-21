@@ -1,0 +1,83 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Session 2"
+run/main_scene="res://Everything.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0.14, 0.14, 0.14, 0)
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Global.gd"
+
+[display]
+
+window/size/viewport_width=1340
+window/size/viewport_height=900
+window/size/initial_position_type=0
+window/subwindows/embed_subwindows=false
+window/per_pixel_transparency/allowed=true
+
+[global_group]
+
+"Beat Progress Bar"=""
+"Next Beat Button"=""
+"Bar 1"=""
+"Bar 2"=""
+"Bar 3"=""
+"Bar 4"=""
+worldfilter=""
+"Sub Bar 1"=""
+"Sub Bar 2"=""
+"Sub Bar 4"=""
+"Sub Bar 3"=""
+counter=""
+"Player Speed Buttons"=""
+"Player Swing Buttons"=""
+"Bar 5"=""
+"Sub Bar 5"=""
+bg=""
+"drag buttons"=""
+global_recieve=""
+
+[input]
+
+"Random Beat"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"command_or_control_autoremap":true,"alt_pressed":false,"shift_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+"Random Sub Beat"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"command_or_control_autoremap":true,"alt_pressed":false,"shift_pressed":true,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+BUTTON_LEFT={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+BUTTON_RIGHT={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+
+[rendering]
+
+viewport/hdr_2d=true
+2d/size/viewport_height=1080
+2d/size/viewport_width=1920
+2d/size/borderless=true
+2d/canvas_textures/default_texture_filter=0

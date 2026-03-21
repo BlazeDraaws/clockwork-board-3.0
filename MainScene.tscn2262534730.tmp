@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://gkstp76pgkyu"]
+
+[ext_resource type="PackedScene" uid="uid://low3dqwtnpsn" path="res://Components/EntityComponent.tscn" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://dn7uxp6pb4w3t" path="res://Components/ComponentScripts/DebugComponent.gd" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=1750619247]
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=595195274]
+offset_left = 58.0
+offset_right = 469.0
+offset_bottom = 993.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1473160692]
+layout_mode = 2
+
+[node name="Entity" parent="CenterContainer/VBoxContainer" unique_id=1715538023 node_paths=PackedStringArray("DebugComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+SpriteFlip = false
+
+[node name="BeatComponent" parent="CenterContainer/VBoxContainer/Entity" index="1" unique_id=1557651122]
+drag = 10
+speedvalue = 2.0
+
+[node name="Entity2" parent="CenterContainer/VBoxContainer" unique_id=1404781572 node_paths=PackedStringArray("DebugComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+SpriteFlip = false
+
+[node name="Entity3" parent="CenterContainer/VBoxContainer" unique_id=589991240 node_paths=PackedStringArray("DebugComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+SpriteFlip = false
+
+[node name="Entity4" parent="CenterContainer/VBoxContainer" unique_id=686983981 node_paths=PackedStringArray("DebugComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+SpriteFlip = false
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=643959184]
+offset_left = 1456.0
+offset_right = 1867.0
+offset_bottom = 993.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer2" unique_id=1306437133]
+layout_mode = 2
+
+[node name="Entity" parent="CenterContainer2/VBoxContainer" unique_id=1526292775 node_paths=PackedStringArray("DebugComp") instance=ExtResource("2_0hol4")]
+layout_mode = 2
+DebugComp = NodePath("../../../DebugComponent")
+DefaultOrientation = -1
+
+[node name="DebugComponent" type="Control" parent="." unique_id=1312665495]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_epypp")
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button" type="Button" parent="DebugComponent" unique_id=1288067350]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 42.0
+offset_right = 260.0
+offset_bottom = 73.0
+text = "ADD BEAT"
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button2" type="Button" parent="DebugComponent" unique_id=1656348142]
+layout_mode = 0
+offset_left = 267.72
+offset_top = 42.0
+offset_right = 353.72006
+offset_bottom = 73.0
+text = "NEXT BEAT"
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button3" type="Button" parent="DebugComponent" unique_id=1492621849]
+layout_mode = 0
+offset_left = 363.15
+offset_top = 42.0
+offset_right = 449.15005
+offset_bottom = 73.0
+text = "UPDATE"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="DebugComponent/Test Button" to="DebugComponent" method="_on_test_button_pressed"]
+[connection signal="pressed" from="DebugComponent/Test Button2" to="DebugComponent" method="_on_test_button_2_pressed"]
+[connection signal="pressed" from="DebugComponent/Test Button3" to="DebugComponent" method="_on_test_button_3_pressed"]
+
+[editable path="CenterContainer/VBoxContainer/Entity"]

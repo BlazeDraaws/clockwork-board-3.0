@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://mciaosaynkbm"]
+
+[ext_resource type="Script" path="res://Components/ComponentScripts/DebugComponentScripts/DebugBeatCompRow.gd" id="1_ur18o"]
+[ext_resource type="Script" path="res://Components/ComponentScripts/DebugComponentScripts/DebugButtonBeat.gd" id="2_kho5f"]
+
+[node name="BeatComp Row" type="HBoxContainer"]
+script = ExtResource("1_ur18o")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Placeholder:"
+
+[node name="Beat_Button_1" type="Button" parent="."]
+layout_mode = 2
+text = "_modifybeat + 1"
+script = ExtResource("2_kho5f")
+function = "_modifybeat"
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_2" type="Button" parent="."]
+layout_mode = 2
+text = "_modifybeat - 1"
+script = ExtResource("2_kho5f")
+function = "_modifybeat"
+value = -1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_3" type="Button" parent="."]
+layout_mode = 2
+text = "_setbeat to 5"
+script = ExtResource("2_kho5f")
+function = "_setbeat"
+value = 5.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_4" type="Button" parent="."]
+layout_mode = 2
+text = "_setbeat to 2"
+script = ExtResource("2_kho5f")
+function = "_setbeat"
+value = 2.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_5" type="Button" parent="."]
+layout_mode = 2
+text = "_setbeat to 8"
+script = ExtResource("2_kho5f")
+function = "_setbeat"
+value = 8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_6" type="Button" parent="."]
+layout_mode = 2
+text = "half time"
+script = ExtResource("2_kho5f")
+function = "_speed"
+value = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_7" type="Button" parent="."]
+layout_mode = 2
+text = "normal time"
+script = ExtResource("2_kho5f")
+function = "_speed"
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_8" type="Button" parent="."]
+layout_mode = 2
+text = "double time"
+script = ExtResource("2_kho5f")
+function = "_speed"
+value = 2.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_9" type="Button" parent="."]
+layout_mode = 2
+text = "_drag + 1"
+script = ExtResource("2_kho5f")
+function = "_drag"
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_10" type="Button" parent="."]
+layout_mode = 2
+text = "_drag - 1"
+script = ExtResource("2_kho5f")
+function = "_drag"
+value = -1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_11" type="Button" parent="."]
+layout_mode = 2
+text = "update"
+script = ExtResource("2_kho5f")
+function = "update"
+UseValue = false
+value = 0.0
+metadata/_edit_use_anchors_ = true

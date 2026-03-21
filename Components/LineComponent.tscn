@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://41gfk3tasqsy"]
+
+[ext_resource type="Texture2D" uid="uid://cnfvmkq1cxfxf" path="res://Assets/GUI/Bars/empty line.png" id="1_uis3n"]
+[ext_resource type="Texture2D" uid="uid://bu53035prpofr" path="res://Assets/GUI/Bars/full line.png" id="2_a63ld"]
+[ext_resource type="Script" path="res://Components/ComponentScripts/LineComponent.gd" id="3_gjjbd"]
+[ext_resource type="Texture2D" uid="uid://b5lxg43fg5et1" path="res://Assets/GUI/Bars/semi line.png" id="4_7ac2o"]
+[ext_resource type="SpriteFrames" uid="uid://cuojb25llbtii" path="res://Assets/GUI/Notes/notes.tres" id="4_kjrq2"]
+[ext_resource type="Script" path="res://Components/ComponentScripts/NoteComponent.gd" id="5_gs46j"]
+[ext_resource type="Script" path="res://Components/ComponentScripts/DragComponent.gd" id="6_ln3ma"]
+[ext_resource type="SpriteFrames" uid="uid://5oe430fieehs" path="res://Assets/GUI/DragLine/DragTop.tres" id="7_6b54y"]
+[ext_resource type="SpriteFrames" uid="uid://bhrcasymye5g4" path="res://Assets/GUI/DragLine/DragBottom.tres" id="8_bahos"]
+
+[node name="LineComponent" type="TextureProgressBar" node_paths=PackedStringArray("DragComp", "note")]
+z_index = -1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_right = 2872.0
+offset_bottom = 7.0
+grow_vertical = 2
+max_value = 400.0
+step = 0.01
+allow_greater = true
+texture_under = ExtResource("1_uis3n")
+texture_progress = ExtResource("2_a63ld")
+script = ExtResource("3_gjjbd")
+texture_secondary = ExtResource("4_7ac2o")
+DragComp = NodePath("DragComponent")
+note = NodePath("NoteComponent")
+metadata/_edit_use_anchors_ = true
+
+[node name="NoteComponent" type="AnimatedSprite2D" parent="."]
+z_index = 2
+position = Vector2(0, 4)
+sprite_frames = ExtResource("4_kjrq2")
+animation = &"Secondary"
+script = ExtResource("5_gs46j")
+
+[node name="DragComponent" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+pivot_offset = Vector2(-20, 0)
+script = ExtResource("6_ln3ma")
+
+[node name="DragTop" type="AnimatedSprite2D" parent="DragComponent"]
+z_index = 1
+position = Vector2(-198.871, 0)
+sprite_frames = ExtResource("7_6b54y")
+animation = &"Default"
+autoplay = "Default"
+offset = Vector2(244, 5.41379)
+
+[node name="DragBottom" type="AnimatedSprite2D" parent="DragComponent"]
+z_index = -1
+position = Vector2(-308.871, 338)
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("8_bahos")
+animation = &"Stage 2"
+autoplay = "Stage 2"
+frame_progress = 0.518373
+offset = Vector2(415.589, -442)
+
+[node name="DragPlayer" type="AnimationPlayer" parent="DragComponent"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bgjfatmk16mx0"]
+
+[ext_resource type="Script" uid="uid://h4vpcq246o2x" path="res://Components/ComponentScripts/BeatComponent.gd" id="1_r4xlc"]
+[ext_resource type="Script" uid="uid://cdhnhjtt2ebm1" path="res://Components/ComponentScripts/GUIComponent.gd" id="2_g5jsh"]
+[ext_resource type="PackedScene" uid="uid://41gfk3tasqsy" path="res://Components/LineComponent.tscn" id="3_vf0kr"]
+[ext_resource type="PackedScene" uid="uid://5tvmldk0wneg" path="res://Components/RingComponent.tscn" id="4_w71yb"]
+[ext_resource type="Script" uid="uid://njdulxomjea5" path="res://Components/ComponentScripts/DebugStatsComponent.gd" id="5_dgd74"]
+[ext_resource type="SpriteFrames" uid="uid://bboqhyxmwgwui" path="res://Assets/GUI/Clefs/Clefs.tres" id="6_g5jsh"]
+
+[node name="BeatComponent" type="Control" unique_id=1557651122 node_paths=PackedStringArray("GUIComp")]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r4xlc")
+GUIComp = NodePath("GUIComponent")
+
+[node name="GUIComponent" type="Control" parent="." unique_id=1189417836 node_paths=PackedStringArray("BeatComp")]
+layout_direction = 4
+anchors_preset = 0
+script = ExtResource("2_g5jsh")
+BeatComp = NodePath("..")
+
+[node name="LineComponent" parent="GUIComponent" unique_id=1049307612 instance=ExtResource("3_vf0kr")]
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_right = 2722.0
+grow_vertical = 1
+
+[node name="RingComponent" parent="GUIComponent" unique_id=1303705421 instance=ExtResource("4_w71yb")]
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 128.00018
+offset_bottom = 128.0
+grow_vertical = 1
+
+[node name="DebugStatsComponent" type="Control" parent="GUIComponent" unique_id=952363024]
+anchors_preset = 0
+offset_left = -301.0
+offset_top = -248.0
+offset_right = -261.0
+offset_bottom = -208.0
+script = ExtResource("5_dgd74")
+
+[node name="Beat" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=1892490856]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 235.0
+offset_bottom = 123.0
+text = "beat"
+metadata/_edit_use_anchors_ = true
+
+[node name="Drag" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=313086553]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 125.0
+offset_right = 236.0
+offset_bottom = 148.0
+text = "drag"
+metadata/_edit_use_anchors_ = true
+
+[node name="Speed" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=1956227233]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 150.0
+offset_right = 247.0
+offset_bottom = 173.0
+text = "speed"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GUIComponent" unique_id=589501898]
+position = Vector2(-303, -76)
+sprite_frames = ExtResource("6_g5jsh")
+animation = &"1"

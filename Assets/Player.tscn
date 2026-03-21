@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkqsr30lsdsw7"]
+
+[ext_resource type="Script" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_6vidr"]
+[ext_resource type="SpriteFrames" uid="uid://ceehykv3snnk1" path="res://Assets/Characters/PC/Lucille/lucille.tres" id="2_wmw2k"]
+[ext_resource type="Script" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_j0vyv"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_jqnu1"]
+
+[node name="Entity" type="Control" node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_6vidr")
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("BeatComponent")
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="."]
+z_index = 4
+position = Vector2(137, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("2_wmw2k")
+animation = &"Cast"
+autoplay = "Idle"
+offset = Vector2(5, -200)
+script = ExtResource("3_j0vyv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent"]
+
+[node name="BeatComponent" parent="." instance=ExtResource("5_jqnu1")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+
+[node name="GUIComponent" parent="BeatComponent" index="0"]
+layout_direction = 0
+
+[node name="DebugStatsComponent" parent="BeatComponent/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="BeatComponent/GUIComponent" index="3"]
+z_index = 2
+
+[editable path="BeatComponent"]

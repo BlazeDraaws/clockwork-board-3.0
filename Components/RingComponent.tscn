@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://5tvmldk0wneg"]
+
+[ext_resource type="Texture2D" uid="uid://dp8wbh0liikyw" path="res://Assets/GUI/Bars/RingEmpty.png" id="1_8s145"]
+[ext_resource type="Texture2D" uid="uid://uyfghmcp4uir" path="res://Assets/GUI/Bars/RingFull.png" id="2_ldewx"]
+[ext_resource type="Script" path="res://Components/ComponentScripts/RingComponent.gd" id="3_eb80d"]
+[ext_resource type="Texture2D" uid="uid://byvie8y8lgo1x" path="res://Assets/GUI/Bars/RingSub.png" id="4_ocjje"]
+
+[node name="RingComponent" type="TextureProgressBar" node_paths=PackedStringArray("AnimComp")]
+z_index = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 137.0
+offset_top = 200.0
+offset_right = 265.0
+offset_bottom = 328.0
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(-350, -550)
+max_value = 160.0
+step = 0.01
+value = 36.89
+allow_greater = true
+fill_mode = 4
+texture_under = ExtResource("1_8s145")
+texture_progress = ExtResource("2_ldewx")
+script = ExtResource("3_eb80d")
+texture_secondary = ExtResource("4_ocjje")
+AnimComp = NodePath("AnimationPlayer")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

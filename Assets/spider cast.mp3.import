@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ct745v2yi31hg"
+path="res://.godot/imported/spider cast.mp3-0acce02263b664cd3e2aad7128c1c42f.mp3str"
+
+[deps]
+
+source_file="res://Assets/spider cast.mp3"
+dest_files=["res://.godot/imported/spider cast.mp3-0acce02263b664cd3e2aad7128c1c42f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

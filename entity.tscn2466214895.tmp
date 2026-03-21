@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://2ppbdibf8ty8"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://ComponentScripts/EntityCompenent.gd" id="1_6tppj"]
+[ext_resource type="SpriteFrames" uid="uid://tidmwp4ci0aa" path="res://Frames/lucille sprite frames.tres" id="2_pb85n"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://ComponentScripts/SpriteComponent.gd" id="3_vk4km"]
+[ext_resource type="Script" uid="uid://h4vpcq246o2x" path="res://ComponentScripts/BeatComponent.gd" id="4_2fq0f"]
+[ext_resource type="Script" uid="uid://cdhnhjtt2ebm1" path="res://ComponentScripts/GUIComponent.gd" id="5_5878s"]
+[ext_resource type="Texture2D" uid="uid://dyt1t13xbh188" path="res://Assets/empty line.png" id="6_2fq0f"]
+[ext_resource type="Script" uid="uid://dn7uxp6pb4w3t" path="res://ComponentScripts/DebugComponent.gd" id="6_2455w"]
+[ext_resource type="Texture2D" uid="uid://d1h2kvybd5dqv" path="res://Assets/full line.png" id="7_5878s"]
+[ext_resource type="Script" uid="uid://clj5pthohgcg8" path="res://ComponentScripts/BarComponent.gd" id="8_2455w"]
+
+[node name="Node2D" type="Node2D" unique_id=1614903076 node_paths=PackedStringArray("SpriteComp", "BeatComp", "GUIComp", "DebugComp")]
+script = ExtResource("1_6tppj")
+SpriteComp = NodePath("SpriteComponent")
+BeatComp = NodePath("BeatComponent")
+GUIComp = NodePath("")
+DebugComp = NodePath("DebugComponent")
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
+sprite_frames = ExtResource("2_pb85n")
+animation = &"Cast"
+autoplay = "Idle"
+frame = 21
+frame_progress = 1.0
+offset = Vector2(5, -200)
+script = ExtResource("3_vk4km")
+
+[node name="BeatComponent" type="Node" parent="." unique_id=1260598672]
+script = ExtResource("4_2fq0f")
+
+[node name="GUIComponent" type="Control" parent="." unique_id=1594779319 node_paths=PackedStringArray("BeatComp")]
+layout_direction = 4
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("5_5878s")
+BeatComp = NodePath("../BeatComponent")
+
+[node name="Beat" type="Label" parent="GUIComponent" unique_id=45265504]
+layout_mode = 0
+offset_left = -467.0
+offset_top = -446.0
+offset_right = -396.0
+offset_bottom = -405.0
+text = "beat"
+metadata/_edit_use_anchors_ = true
+
+[node name="Drag" type="Label" parent="GUIComponent" unique_id=668898023]
+layout_mode = 0
+offset_left = -466.0
+offset_top = -418.0
+offset_right = -395.0
+offset_bottom = -377.0
+text = "drag"
+metadata/_edit_use_anchors_ = true
+
+[node name="Speed" type="Label" parent="GUIComponent" unique_id=1943859672]
+layout_mode = 0
+offset_left = -466.0
+offset_top = -390.0
+offset_right = -395.0
+offset_bottom = -349.0
+text = "speed"
+metadata/_edit_use_anchors_ = true
+
+[node name="BarComponent" type="TextureProgressBar" parent="GUIComponent" unique_id=22105649]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 175.0
+offset_right = 2897.0
+offset_bottom = 7.0
+grow_vertical = 2
+max_value = 150.0
+step = 0.01
+allow_greater = true
+allow_lesser = true
+texture_under = ExtResource("6_2fq0f")
+texture_progress = ExtResource("7_5878s")
+script = ExtResource("8_2455w")
+metadata/_edit_use_anchors_ = true
+
+[node name="DebugComponent" type="Control" parent="." unique_id=1464735179]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -643.0
+offset_top = -530.0
+offset_right = -603.0
+offset_bottom = -490.0
+script = ExtResource("6_2455w")
+metadata/_edit_use_anchors_ = true
+
+[node name="Test Button" type="Button" parent="DebugComponent" unique_id=882929831]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 42.0
+offset_right = 260.0
+offset_bottom = 73.0
+text = "ADD BEAT"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="DebugComponent/Test Button" to="DebugComponent" method="_on_test_button_pressed"]
