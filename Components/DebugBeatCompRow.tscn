@@ -1,16 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://mciaosaynkbm"]
+[gd_scene format=3 uid="uid://mciaosaynkbm"]
 
-[ext_resource type="Script" path="res://Components/ComponentScripts/DebugComponentScripts/DebugBeatCompRow.gd" id="1_ur18o"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/DebugComponentScripts/DebugButtonBeat.gd" id="2_kho5f"]
+[ext_resource type="Script" uid="uid://bnwrlto3m5s78" path="res://Components/ComponentScripts/DebugComponentScripts/DebugBeatCompRow.gd" id="1_ur18o"]
+[ext_resource type="Script" uid="uid://bkewn3rqf0it" path="res://Components/ComponentScripts/DebugComponentScripts/DebugButtonBeat.gd" id="2_kho5f"]
+[ext_resource type="Script" uid="uid://bvsuscx8tr7se" path="res://Components/data_button.gd" id="3_dbdfh"]
 
-[node name="BeatComp Row" type="HBoxContainer"]
+[node name="BeatComp Row" type="HBoxContainer" unique_id=1031429323]
 script = ExtResource("1_ur18o")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=484078566]
 layout_mode = 2
 text = "Placeholder:"
 
-[node name="Beat_Button_1" type="Button" parent="."]
+[node name="Set Beat Input" type="LineEdit" parent="." unique_id=190681802]
+layout_mode = 2
+placeholder_text = "#"
+alignment = 1
+
+[node name="Set Beat Button" type="Button" parent="." unique_id=2011348064 node_paths=PackedStringArray("input")]
+layout_mode = 2
+text = "Set Beat"
+script = ExtResource("3_dbdfh")
+input = NodePath("../Set Beat Input")
+function = "_setbeat"
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_1" type="Button" parent="." unique_id=266834435]
 layout_mode = 2
 text = "_modifybeat + 1"
 script = ExtResource("2_kho5f")
@@ -18,7 +32,7 @@ function = "_modifybeat"
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_2" type="Button" parent="."]
+[node name="Beat_Button_2" type="Button" parent="." unique_id=1400467264]
 layout_mode = 2
 text = "_modifybeat - 1"
 script = ExtResource("2_kho5f")
@@ -26,7 +40,7 @@ function = "_modifybeat"
 value = -1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_3" type="Button" parent="."]
+[node name="Beat_Button_3" type="Button" parent="." unique_id=819531081]
 layout_mode = 2
 text = "_setbeat to 5"
 script = ExtResource("2_kho5f")
@@ -34,7 +48,7 @@ function = "_setbeat"
 value = 5.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_4" type="Button" parent="."]
+[node name="Beat_Button_4" type="Button" parent="." unique_id=1431976117]
 layout_mode = 2
 text = "_setbeat to 2"
 script = ExtResource("2_kho5f")
@@ -42,7 +56,7 @@ function = "_setbeat"
 value = 2.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_5" type="Button" parent="."]
+[node name="Beat_Button_5" type="Button" parent="." unique_id=1500828088]
 layout_mode = 2
 text = "_setbeat to 8"
 script = ExtResource("2_kho5f")
@@ -50,7 +64,7 @@ function = "_setbeat"
 value = 8.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_6" type="Button" parent="."]
+[node name="Beat_Button_6" type="Button" parent="." unique_id=1108124633]
 layout_mode = 2
 text = "half time"
 script = ExtResource("2_kho5f")
@@ -58,7 +72,7 @@ function = "_speed"
 value = 0.5
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_7" type="Button" parent="."]
+[node name="Beat_Button_7" type="Button" parent="." unique_id=390489701]
 layout_mode = 2
 text = "normal time"
 script = ExtResource("2_kho5f")
@@ -66,7 +80,7 @@ function = "_speed"
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_8" type="Button" parent="."]
+[node name="Beat_Button_8" type="Button" parent="." unique_id=1906262611]
 layout_mode = 2
 text = "double time"
 script = ExtResource("2_kho5f")
@@ -74,7 +88,7 @@ function = "_speed"
 value = 2.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_9" type="Button" parent="."]
+[node name="Beat_Button_9" type="Button" parent="." unique_id=813330372]
 layout_mode = 2
 text = "_drag + 1"
 script = ExtResource("2_kho5f")
@@ -82,7 +96,7 @@ function = "_drag"
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_10" type="Button" parent="."]
+[node name="Beat_Button_10" type="Button" parent="." unique_id=247017558]
 layout_mode = 2
 text = "_drag - 1"
 script = ExtResource("2_kho5f")
@@ -90,7 +104,7 @@ function = "_drag"
 value = -1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_11" type="Button" parent="."]
+[node name="Beat_Button_11" type="Button" parent="." unique_id=1295078663]
 layout_mode = 2
 text = "update"
 script = ExtResource("2_kho5f")

@@ -1,394 +1,47 @@
-[gd_scene load_steps=41 format=3 uid="uid://gkstp76pgkyu"]
+[gd_scene format=3 uid="uid://gkstp76pgkyu"]
 
-[ext_resource type="PackedScene" uid="uid://dkqsr30lsdsw7" path="res://Assets/Player.tscn" id="1_a814b"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/DebugComponentScripts/DebugComponent.gd" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://bvfo5cssheq4t" path="res://Assets/Characters/PC/Bree/Lucille0040.png" id="2_nlw8m"]
-[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="2_r1x6n"]
+[ext_resource type="PackedScene" uid="uid://dkqsr30lsdsw7" path="res://Components/Player.tscn" id="1_5crlr"]
+[ext_resource type="Script" uid="uid://dn7uxp6pb4w3t" path="res://Components/ComponentScripts/DebugComponentScripts/DebugComponent.gd" id="2_epypp"]
 [ext_resource type="PackedScene" uid="uid://ct5rlkm3g0h8h" path="res://Components/Enemies/BlackOlm.tscn" id="3_5crlr"]
-[ext_resource type="PackedScene" uid="uid://bancyvpk77p1b" path="res://Components/rotfish.tscn" id="3_hbc2u"]
-[ext_resource type="Texture2D" uid="uid://cfpjcuakcw7va" path="res://Assets/Characters/PC/Bree/Lucille0042.png" id="3_r1x6n"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/BeatManagerComponent.gd" id="3_rpqi1"]
+[ext_resource type="Script" uid="uid://c4s4lboe8cwp6" path="res://Components/ComponentScripts/BeatManagerComponent.gd" id="3_rpqi1"]
 [ext_resource type="PackedScene" uid="uid://bgagdnadtqcq0" path="res://Components/DebugEntityRow.tscn" id="3_uxrcv"]
-[ext_resource type="Texture2D" uid="uid://dj50ffbp53o5m" path="res://Assets/Characters/PC/Bree/Lucille0044.png" id="4_kvyqs"]
+[ext_resource type="Script" uid="uid://c36gaj3j7jpk0" path="res://Components/ComponentScripts/ControlerComponent.gd" id="4_hbc2u"]
 [ext_resource type="PackedScene" uid="uid://mciaosaynkbm" path="res://Components/DebugBeatCompRow.tscn" id="4_rf2cd"]
-[ext_resource type="Texture2D" uid="uid://5q547i67btqr" path="res://Assets/Characters/PC/Bree/Lucille0046.png" id="5_i1thg"]
-[ext_resource type="Texture2D" uid="uid://fjw76s3wkwgq" path="res://Assets/Characters/PC/Bree/Lucille0048.png" id="6_a28bb"]
-[ext_resource type="Texture2D" uid="uid://dssal610843qp" path="res://Assets/Characters/PC/Bree/Lucille0050.png" id="7_506kc"]
-[ext_resource type="Texture2D" uid="uid://d20wnwydb0oc4" path="res://Assets/Characters/PC/Bree/Lucille0051.png" id="8_igrck"]
-[ext_resource type="Texture2D" uid="uid://c1y6cntnuohfc" path="res://Assets/Characters/PC/Bree/Lucille0052.png" id="9_pj2c0"]
-[ext_resource type="Texture2D" uid="uid://bkto6g284w5kw" path="res://Assets/Characters/PC/Bree/Lucille0054.png" id="10_g1j4k"]
-[ext_resource type="Texture2D" uid="uid://477sv4fqj26m" path="res://Assets/Characters/PC/Bree/Lucille0056.png" id="11_4f1ln"]
-[ext_resource type="Texture2D" uid="uid://bmr2sj6kbbe8j" path="res://Assets/Characters/PC/Bree/Lucille0058.png" id="12_hku0m"]
-[ext_resource type="Texture2D" uid="uid://boikid3cc38vo" path="res://Assets/Characters/PC/Bree/Lucille0060.png" id="13_k2m8n"]
-[ext_resource type="Texture2D" uid="uid://cknjku0qy44ri" path="res://Assets/Characters/PC/Bree/Lucille0062.png" id="14_viv21"]
-[ext_resource type="Texture2D" uid="uid://dttwbyu5oc3dy" path="res://Assets/Characters/PC/Bree/Lucille0064.png" id="15_gdhla"]
-[ext_resource type="Texture2D" uid="uid://bv2a652oh0uvl" path="res://Assets/playerzoey.png" id="16_h8rcm"]
-[ext_resource type="Texture2D" uid="uid://dlysijm8cwaa" path="res://Assets/Characters/PC/Bree/Lucille0018.png" id="17_8y33c"]
-[ext_resource type="Texture2D" uid="uid://c2bb4txrlkuhy" path="res://Assets/Characters/PC/Bree/Lucille0020.png" id="18_slrkm"]
-[ext_resource type="Texture2D" uid="uid://b8nemddskr12q" path="res://Assets/Characters/PC/Bree/Lucille0022.png" id="19_0ww21"]
-[ext_resource type="Texture2D" uid="uid://2lphpjvpk0al" path="res://Assets/Characters/PC/Bree/Lucille0024.png" id="20_j6s8t"]
-[ext_resource type="Texture2D" uid="uid://184etbtgrnr0" path="res://Assets/Characters/PC/Bree/Lucille0026.png" id="21_faklv"]
-[ext_resource type="Texture2D" uid="uid://dsmapyunibk7a" path="res://Assets/Characters/PC/Bree/Lucille0028.png" id="22_3yk8d"]
-[ext_resource type="Texture2D" uid="uid://cpcpedmhri81a" path="res://Assets/Characters/PC/Bree/Lucille0030.png" id="23_uvpfp"]
-[ext_resource type="Texture2D" uid="uid://5exgjb27aaus" path="res://Assets/Characters/PC/Bree/Lucille0032.png" id="24_0ikq1"]
-[ext_resource type="Texture2D" uid="uid://bdwltfqhen7wb" path="res://Assets/Characters/PC/Bree/Lucille0034.png" id="25_nno2f"]
-[ext_resource type="Texture2D" uid="uid://btqh6e4wcpbpj" path="res://Assets/Characters/PC/Bree/Lucille0036.png" id="26_gukr6"]
-[ext_resource type="Texture2D" uid="uid://ct6erm3x0wk65" path="res://Assets/Characters/PC/Bree/Lucille0038.png" id="27_3cu87"]
-[ext_resource type="Texture2D" uid="uid://yn8tkia81w84" path="res://Assets/playerIndigo.png" id="28_hfyop"]
-[ext_resource type="Texture2D" uid="uid://dgckwjtclr7r8" path="res://Assets/playerTom.png" id="29_0p4dw"]
 [ext_resource type="Texture2D" uid="uid://dhhkk30nx43vf" path="res://Assets/retrere.png" id="36_78ikg"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_nlxy1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_nlw8m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_r1x6n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_kvyqs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_i1thg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_a28bb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_506kc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_igrck")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_pj2c0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_g1j4k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_4f1ln")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_hku0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_k2m8n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_viv21")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_gdhla")
-}],
-"loop": false,
-"name": &"Cast",
-"speed": 12.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"Defeat",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("16_h8rcm")
-}],
-"loop": true,
-"name": &"Downed",
-"speed": 12.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"Hurt",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_8y33c")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 12.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"Intro",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_8y33c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_slrkm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_0ww21")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_j6s8t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_faklv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_3yk8d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_uvpfp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_0ikq1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_nno2f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_gukr6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_3cu87")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_nlw8m")
-}],
-"loop": false,
-"name": &"Ready",
-"speed": 12.0
-}]
+[node name="Node2D" type="Node2D" unique_id=1660286881]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_r53wc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("28_hfyop")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pebpy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("29_0p4dw")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="Heroes" type="CenterContainer" parent="."]
+[node name="Heroes" type="CenterContainer" parent="." unique_id=1449699815]
 offset_left = 21.0
 offset_right = 432.0
 offset_bottom = 993.0
 
-[node name="Container" type="VBoxContainer" parent="Heroes"]
+[node name="Container" type="VBoxContainer" parent="Heroes" unique_id=237926573]
 layout_mode = 2
 
-[node name="Player" parent="Heroes/Container" instance=ExtResource("1_a814b")]
+[node name="Player" parent="Heroes/Container" unique_id=1928447707 instance=ExtResource("1_5crlr")]
 layout_mode = 2
 
-[node name="SpriteComponent" parent="Heroes/Container/Player" index="0"]
-self_modulate = Color(1, 0.277344, 0.277344, 1)
-animation = &"Idle"
-
-[node name="GUIComponent" parent="Heroes/Container/Player/BeatComponent" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player/BeatComponent/GUIComponent" index="1"]
-visible = false
-
-[node name="BeatComponent2" parent="Heroes/Container/Player" instance=ExtResource("2_r1x6n")]
-z_index = 0
-layout_mode = 0
-offset_left = 100.0
-offset_top = 200.0
-offset_right = 100.0
-offset_bottom = 200.0
-Secondary = true
-
-[node name="GUIComponent" parent="Heroes/Container/Player/BeatComponent2" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player/BeatComponent2/GUIComponent" index="1"]
-visible = false
-
-[node name="DebugStatsComponent" parent="Heroes/Container/Player/BeatComponent2/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="Heroes/Container/Player/BeatComponent2/GUIComponent" index="3"]
-z_index = 2
-
-[node name="Player2" parent="Heroes/Container" instance=ExtResource("1_a814b")]
+[node name="Player2" parent="Heroes/Container" unique_id=1610485282 instance=ExtResource("1_5crlr")]
 layout_mode = 2
 
-[node name="SpriteComponent" parent="Heroes/Container/Player2" index="0"]
-sprite_frames = SubResource("SpriteFrames_nlxy1")
-frame = 13
-frame_progress = 1.0
-
-[node name="GUIComponent" parent="Heroes/Container/Player2/BeatComponent" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player2/BeatComponent/GUIComponent" index="1"]
-visible = false
-
-[node name="BeatComponent2" parent="Heroes/Container/Player2" instance=ExtResource("2_r1x6n")]
-z_index = 0
-layout_mode = 0
-offset_left = 100.0
-offset_top = 200.0
-offset_right = 100.0
-offset_bottom = 200.0
-Secondary = true
-
-[node name="GUIComponent" parent="Heroes/Container/Player2/BeatComponent2" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player2/BeatComponent2/GUIComponent" index="1"]
-visible = false
-
-[node name="DebugStatsComponent" parent="Heroes/Container/Player2/BeatComponent2/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="Heroes/Container/Player2/BeatComponent2/GUIComponent" index="3"]
-z_index = 2
-
-[node name="Player3" parent="Heroes/Container" instance=ExtResource("1_a814b")]
+[node name="Player3" parent="Heroes/Container" unique_id=1140908215 instance=ExtResource("1_5crlr")]
 layout_mode = 2
 
-[node name="SpriteComponent" parent="Heroes/Container/Player3" index="0"]
-scale = Vector2(0.885, 0.885)
-sprite_frames = SubResource("SpriteFrames_r53wc")
-animation = &"default"
-autoplay = ""
-offset = Vector2(5, -73.9)
-
-[node name="GUIComponent" parent="Heroes/Container/Player3/BeatComponent" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player3/BeatComponent/GUIComponent" index="1"]
-visible = false
-
-[node name="BeatComponent2" parent="Heroes/Container/Player3" instance=ExtResource("2_r1x6n")]
-z_index = 0
-layout_mode = 0
-offset_left = 100.0
-offset_top = 200.0
-offset_right = 100.0
-offset_bottom = 200.0
-Secondary = true
-
-[node name="GUIComponent" parent="Heroes/Container/Player3/BeatComponent2" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player3/BeatComponent2/GUIComponent" index="1"]
-visible = false
-
-[node name="DebugStatsComponent" parent="Heroes/Container/Player3/BeatComponent2/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="Heroes/Container/Player3/BeatComponent2/GUIComponent" index="3"]
-z_index = 2
-
-[node name="Player4" parent="Heroes/Container" instance=ExtResource("1_a814b")]
+[node name="Player4" parent="Heroes/Container" unique_id=572696900 instance=ExtResource("1_5crlr")]
 layout_mode = 2
 
-[node name="SpriteComponent" parent="Heroes/Container/Player4" index="0"]
-position = Vector2(175.11, 202)
-scale = Vector2(1.185, 1.218)
-sprite_frames = SubResource("SpriteFrames_pebpy")
-animation = &"default"
-autoplay = ""
-offset = Vector2(-59.565, -75.96)
-
-[node name="GUIComponent" parent="Heroes/Container/Player4/BeatComponent" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player4/BeatComponent/GUIComponent" index="1"]
-visible = false
-
-[node name="BeatComponent2" parent="Heroes/Container/Player4" instance=ExtResource("2_r1x6n")]
-z_index = 0
-layout_mode = 0
-offset_left = 100.0
-offset_top = 200.0
-offset_right = 100.0
-offset_bottom = 200.0
-Secondary = true
-
-[node name="GUIComponent" parent="Heroes/Container/Player4/BeatComponent2" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player4/BeatComponent2/GUIComponent" index="1"]
-visible = false
-
-[node name="DebugStatsComponent" parent="Heroes/Container/Player4/BeatComponent2/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="Heroes/Container/Player4/BeatComponent2/GUIComponent" index="3"]
-z_index = 2
-
-[node name="Player5" parent="Heroes/Container" instance=ExtResource("1_a814b")]
-layout_mode = 2
-
-[node name="SpriteComponent" parent="Heroes/Container/Player5" index="0"]
-visible = false
-position = Vector2(175.11, 202)
-scale = Vector2(1.185, 1.218)
-sprite_frames = SubResource("SpriteFrames_pebpy")
-animation = &"default"
-autoplay = ""
-offset = Vector2(-59.565, -75.96)
-
-[node name="GUIComponent" parent="Heroes/Container/Player5/BeatComponent" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player5/BeatComponent/GUIComponent" index="1"]
-visible = false
-
-[node name="ClefComponent" parent="Heroes/Container/Player5/BeatComponent/GUIComponent" index="3"]
-visible = false
-
-[node name="BeatComponent2" parent="Heroes/Container/Player5" instance=ExtResource("2_r1x6n")]
-z_index = 0
-layout_mode = 0
-offset_left = 100.0
-offset_top = 200.0
-offset_right = 100.0
-offset_bottom = 200.0
-Secondary = true
-
-[node name="GUIComponent" parent="Heroes/Container/Player5/BeatComponent2" index="0"]
-layout_direction = 0
-
-[node name="RingComponent" parent="Heroes/Container/Player5/BeatComponent2/GUIComponent" index="1"]
-visible = false
-
-[node name="DebugStatsComponent" parent="Heroes/Container/Player5/BeatComponent2/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="Heroes/Container/Player5/BeatComponent2/GUIComponent" index="3"]
-z_index = 2
-
-[node name="Enemies" type="CenterContainer" parent="."]
+[node name="Enemies" type="CenterContainer" parent="." unique_id=1416409893]
 offset_left = 1487.0
 offset_right = 1898.0
 offset_bottom = 993.0
 
-[node name="Container5" type="VBoxContainer" parent="Enemies"]
+[node name="Container5" type="VBoxContainer" parent="Enemies" unique_id=627352523]
 layout_mode = 2
 
-[node name="Container" type="Node2D" parent="Enemies"]
+[node name="Container" type="Node2D" parent="Enemies" unique_id=1726297892]
 
-[node name="Olm" parent="Enemies/Container" instance=ExtResource("3_5crlr")]
+[node name="Olm" parent="Enemies/Container" unique_id=225552642 instance=ExtResource("3_5crlr")]
 anchors_preset = 9
 anchor_right = 0.0
 offset_left = -730.0
@@ -397,38 +50,20 @@ offset_right = -555.0
 offset_bottom = 595.0
 grow_horizontal = 1
 
-[node name="Entity5" parent="Enemies/Container" instance=ExtResource("3_hbc2u")]
-offset_left = -764.0
-offset_top = 22.0
-offset_right = -589.0
-offset_bottom = 222.0
-
-[node name="Entity6" parent="Enemies/Container" instance=ExtResource("3_hbc2u")]
-offset_left = -919.0
-offset_top = 605.0
-offset_right = -744.0
-offset_bottom = 805.0
-
-[node name="Entity7" parent="Enemies/Container" instance=ExtResource("3_hbc2u")]
-offset_left = -955.0
-offset_top = 361.0
-offset_right = -780.0
-offset_bottom = 561.0
-
-[node name="Entity4" parent="Enemies/Container" instance=ExtResource("3_hbc2u")]
-offset_left = -794.0
-offset_top = 848.0
-offset_right = -619.0
-offset_bottom = 1048.0
-
-[node name="BeatManagerComponent" type="Node" parent="."]
+[node name="BeatManagerComponent" type="Node" parent="." unique_id=614451702]
 script = ExtResource("3_rpqi1")
 
-[node name="Window" type="Window" parent="."]
-position = Vector2i(289, 36)
-size = Vector2i(306, 310)
+[node name="ControllerComponent" type="Node" parent="." unique_id=661772787 node_paths=PackedStringArray("Manager")]
+script = ExtResource("4_hbc2u")
+Manager = NodePath("../BeatManagerComponent")
 
-[node name="DebugComponent" type="ScrollContainer" parent="Window" node_paths=PackedStringArray("BeatManagerComp", "DebugGUI")]
+[node name="Window" type="Window" parent="." unique_id=257251618]
+oversampling_override = 1.0
+position = Vector2i(1697, 36)
+size = Vector2i(289, 310)
+always_on_top = true
+
+[node name="DebugComponent" type="ScrollContainer" parent="Window" unique_id=58410571 node_paths=PackedStringArray("BeatManagerComp", "DebugGUI")]
 anchors_preset = -1
 anchor_right = 2.65097
 anchor_bottom = 1.23482
@@ -444,38 +79,22 @@ BeatManagerComp = NodePath("../../BeatManagerComponent")
 DebugGUI = NodePath("Debug Container")
 metadata/_edit_use_anchors_ = true
 
-[node name="Debug Container" type="VBoxContainer" parent="Window/DebugComponent"]
+[node name="Debug Container" type="VBoxContainer" parent="Window/DebugComponent" unique_id=533790699]
 layout_mode = 2
 
-[node name="BeatManagerButtons" type="HBoxContainer" parent="Window/DebugComponent/Debug Container"]
+[node name="BeatManagerButtons" type="HBoxContainer" parent="Window/DebugComponent/Debug Container" unique_id=1667281116]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Window/DebugComponent/Debug Container/BeatManagerButtons"]
+[node name="Button" type="Button" parent="Window/DebugComponent/Debug Container/BeatManagerButtons" unique_id=773297146]
 layout_mode = 2
 text = "next free beat"
 
-[node name="Button2" type="Button" parent="Window/DebugComponent/Debug Container/BeatManagerButtons"]
+[node name="Button2" type="Button" parent="Window/DebugComponent/Debug Container/BeatManagerButtons" unique_id=255024248]
 layout_mode = 2
 text = "next beat
 "
 
-[node name="Retrere" type="Sprite2D" parent="."]
+[node name="Retrere" type="Sprite2D" parent="." unique_id=1057680770]
 z_index = -15
 position = Vector2(943, 666)
 texture = ExtResource("36_78ikg")
-
-[editable path="Heroes/Container/Player"]
-[editable path="Heroes/Container/Player/BeatComponent"]
-[editable path="Heroes/Container/Player/BeatComponent2"]
-[editable path="Heroes/Container/Player2"]
-[editable path="Heroes/Container/Player2/BeatComponent"]
-[editable path="Heroes/Container/Player2/BeatComponent2"]
-[editable path="Heroes/Container/Player3"]
-[editable path="Heroes/Container/Player3/BeatComponent"]
-[editable path="Heroes/Container/Player3/BeatComponent2"]
-[editable path="Heroes/Container/Player4"]
-[editable path="Heroes/Container/Player4/BeatComponent"]
-[editable path="Heroes/Container/Player4/BeatComponent2"]
-[editable path="Heroes/Container/Player5"]
-[editable path="Heroes/Container/Player5/BeatComponent"]
-[editable path="Heroes/Container/Player5/BeatComponent2"]

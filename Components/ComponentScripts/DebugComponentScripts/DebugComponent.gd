@@ -1,9 +1,5 @@
 class_name DebugComponent extends Control
 
-signal pressed
-signal pressed2
-signal pressed3
-
 @onready var HeroContainer = $"../../Heroes/Container"
 @onready var EnemyContainer = $"../../Enemies/Container"
 @export var EntityRowScene : PackedScene
@@ -28,19 +24,3 @@ func instantiateForEntityComps(EntityComp):
 			var BeatRow = BeatCompRowScene.instantiate()
 			BeatRow.BeatComp = BeatComp
 			EntityRow.add_child(BeatRow)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-func _buttonpressed(function, value, RowBeatComp):
-	print(str(function, value, RowBeatComp))
-
-func _on_test_button_pressed() -> void:
-	pressed.emit(1)
-
-func _on_test_button_2_pressed() -> void:
-	pressed2.emit(1)
-
-func _on_test_button_3_pressed() -> void:
-	pressed3.emit()

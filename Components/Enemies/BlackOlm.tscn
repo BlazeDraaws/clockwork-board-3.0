@@ -45,7 +45,7 @@ offset_bottom = 200.0
 pivot_offset = Vector2(18.535, 18.12)
 pivot_offset_ratio = Vector2(0, 11.655)
 
-[node name="GUIComponent" parent="BeatComponent" index="0" unique_id=1189417836]
+[node name="GUIComponent" parent="BeatComponent" index="0"]
 z_index = 6
 offset_left = 1198.4
 offset_top = 421.11
@@ -54,7 +54,13 @@ offset_bottom = 421.11
 pivot_offset = Vector2(0, 4.27)
 pivot_offset_ratio = Vector2(0, 2.325)
 
-[node name="RingComponent" parent="BeatComponent/GUIComponent" index="1" unique_id=1303705421]
+[node name="RingComponent" parent="BeatComponent/GUIComponent" index="1"]
+visible = false
+
+[node name="DebugStatsComponent" parent="BeatComponent/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="BeatComponent/GUIComponent" index="3"]
 visible = false
 
 [editable path="BeatComponent"]
