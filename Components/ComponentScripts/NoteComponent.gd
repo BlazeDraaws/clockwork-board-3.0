@@ -20,6 +20,8 @@ func _Anim(animID):
 		if animation != animID:
 			play(animID)
 
+
+
 func _update():
 	if BeatComp.Secondary:
 		_Anim("Secondary")

@@ -25,7 +25,11 @@ func _update():
 	
 	if EntityComp.downedstate:
 		_PlayerAnim("Downed")
+		self.self_modulate.a = 0.2
 		return
+	else:
+		self.self_modulate.a = 1
+	
 	
 	if EntityComp.close:
 		_PlayerAnim(Close)

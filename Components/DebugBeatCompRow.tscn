@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnwrlto3m5s78" path="res://Components/ComponentScripts/DebugComponentScripts/DebugBeatCompRow.gd" id="1_ur18o"]
 [ext_resource type="Script" uid="uid://bkewn3rqf0it" path="res://Components/ComponentScripts/DebugComponentScripts/DebugButtonBeat.gd" id="2_kho5f"]
-[ext_resource type="Script" uid="uid://bvsuscx8tr7se" path="res://Components/data_button.gd" id="3_dbdfh"]
+[ext_resource type="Script" uid="uid://bvsuscx8tr7se" path="res://Components/ComponentScripts/DebugComponentScripts/data_button.gd" id="3_dbdfh"]
 
 [node name="BeatComp Row" type="HBoxContainer" unique_id=1031429323]
 script = ExtResource("1_ur18o")
@@ -40,36 +40,21 @@ function = "_modifybeat"
 value = -1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Beat_Button_3" type="Button" parent="." unique_id=819531081]
-layout_mode = 2
-text = "_setbeat to 5"
-script = ExtResource("2_kho5f")
-function = "_setbeat"
-value = 5.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Beat_Button_4" type="Button" parent="." unique_id=1431976117]
-layout_mode = 2
-text = "_setbeat to 2"
-script = ExtResource("2_kho5f")
-function = "_setbeat"
-value = 2.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Beat_Button_5" type="Button" parent="." unique_id=1500828088]
-layout_mode = 2
-text = "_setbeat to 8"
-script = ExtResource("2_kho5f")
-function = "_setbeat"
-value = 8.0
-metadata/_edit_use_anchors_ = true
-
 [node name="Beat_Button_6" type="Button" parent="." unique_id=1108124633]
 layout_mode = 2
 text = "half time"
 script = ExtResource("2_kho5f")
 function = "_speed"
 value = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="Beat_Button_12" type="Button" parent="." unique_id=900065977]
+layout_mode = 2
+text = "locked
+"
+script = ExtResource("2_kho5f")
+function = "_speed"
+value = 0.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Beat_Button_7" type="Button" parent="." unique_id=390489701]

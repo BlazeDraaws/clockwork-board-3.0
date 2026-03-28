@@ -1,6 +1,6 @@
 class_name ClefComponent extends BarAssetComponent
 
-
+@export var ClefID : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +10,8 @@ func _ready() -> void:
 	position.x *= EntityComp.DefaultOrientation
 	if BeatComp.Secondary:
 		visible = false
+	if ClefID:
+		play(str(ClefID))
 
 
 

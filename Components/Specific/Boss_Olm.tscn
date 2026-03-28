@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://cumpipj0aailu"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_hsggs"]
+[ext_resource type="SpriteFrames" uid="uid://bftlatfsrwycw" path="res://Assets/Characters/NPC/OlmMother/animation.tres" id="2_fecda"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_ky503"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="4_f3od3"]
+[ext_resource type="AudioStream" uid="uid://bmiqewgi8dcms" path="res://Assets/Audio/Specific/cast_boss_leviathan.ogg" id="5_fyd7u"]
+[ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="6_fecda"]
+[ext_resource type="Script" uid="uid://dgk2n8fnr54qn" path="res://Components/ComponentScripts/EnemyAIScripts/LeviathanAI.gd" id="7_ky503"]
+
+[node name="The Black Olm" type="Control" unique_id=1715538023 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -23.0
+offset_right = -3.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_hsggs")
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("BeatComponent")
+DefaultOrientation = -1
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
+z_index = 1
+position = Vector2(122.00001, 1165)
+scale = Vector2(1.0057293, 1.0000001)
+sprite_frames = ExtResource("2_fecda")
+autoplay = "default"
+frame_progress = 0.7518507
+offset = Vector2(59.96, -55.395)
+script = ExtResource("3_ky503")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent" unique_id=1319410001]
+
+[node name="BeatComponent" parent="." unique_id=1557651122 instance=ExtResource("4_f3od3")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+pivot_offset = Vector2(18.535, 18.12)
+pivot_offset_ratio = Vector2(0, 11.655)
+
+[node name="GUIComponent" parent="BeatComponent" index="0"]
+z_index = 6
+offset_left = 1198.4
+offset_top = 421.11
+offset_right = 1198.4
+offset_bottom = 421.11
+pivot_offset = Vector2(0, 4.27)
+pivot_offset_ratio = Vector2(0, 2.325)
+
+[node name="LineComponent" parent="BeatComponent/GUIComponent" index="0"]
+modulate = Color(0.70703125, 0.26789856, 0.43679577, 1)
+scale = Vector2(1, 1.665)
+
+[node name="NoteComponent" parent="BeatComponent/GUIComponent/LineComponent" index="0" unique_id=1490336016]
+scale = Vector2(1, 0.615)
+
+[node name="RingComponent" parent="BeatComponent/GUIComponent" index="1"]
+visible = false
+offset_left = -15.545
+offset_right = 112.455
+scale = Vector2(1.035, 1.035)
+pivot_offset = Vector2(8.29, -500)
+pivot_offset_ratio = Vector2(128.735, 85.67)
+
+[node name="DebugStatsComponent" parent="BeatComponent/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="BeatComponent/GUIComponent" index="3"]
+visible = false
+
+[node name="BeatComponent2" parent="." unique_id=1326416496 instance=ExtResource("4_f3od3")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+pivot_offset = Vector2(18.535, 18.12)
+pivot_offset_ratio = Vector2(0, 11.655)
+Secondary = true
+
+[node name="GUIComponent" parent="BeatComponent2" index="0"]
+z_index = 6
+offset_left = 1198.4
+offset_top = 421.11
+offset_right = 1198.4
+offset_bottom = 421.11
+pivot_offset = Vector2(0, 4.27)
+pivot_offset_ratio = Vector2(0, 2.325)
+
+[node name="LineComponent" parent="BeatComponent2/GUIComponent" index="0"]
+modulate = Color(0.70703125, 0.26789856, 0.43679577, 1)
+scale = Vector2(1, 1.665)
+
+[node name="NoteComponent" parent="BeatComponent2/GUIComponent/LineComponent" index="0" unique_id=1490336016]
+scale = Vector2(1, 0.615)
+
+[node name="RingComponent" parent="BeatComponent2/GUIComponent" index="1"]
+visible = false
+offset_left = -15.545
+offset_right = 112.455
+scale = Vector2(1.035, 1.035)
+pivot_offset = Vector2(8.29, -500)
+pivot_offset_ratio = Vector2(128.735, 85.67)
+
+[node name="DebugStatsComponent" parent="BeatComponent2/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="BeatComponent2/GUIComponent" index="3"]
+visible = false
+
+[node name="BeatComponent3" parent="." unique_id=43277880 instance=ExtResource("4_f3od3")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+pivot_offset = Vector2(18.535, 18.12)
+pivot_offset_ratio = Vector2(0, 11.655)
+notetype = 4
+Secondary = true
+
+[node name="GUIComponent" parent="BeatComponent3" index="0"]
+z_index = 6
+offset_left = 1198.4
+offset_top = 421.11
+offset_right = 1198.4
+offset_bottom = 421.11
+pivot_offset = Vector2(0, 4.27)
+pivot_offset_ratio = Vector2(0, 2.325)
+
+[node name="LineComponent" parent="BeatComponent3/GUIComponent" index="0"]
+modulate = Color(0.70703125, 0.26789856, 0.43679577, 1)
+scale = Vector2(1, 1.665)
+
+[node name="NoteComponent" parent="BeatComponent3/GUIComponent/LineComponent" index="0" unique_id=1490336016]
+scale = Vector2(1, 0.615)
+
+[node name="RingComponent" parent="BeatComponent3/GUIComponent" index="1"]
+visible = false
+offset_left = -15.545
+offset_right = 112.455
+scale = Vector2(1.035, 1.035)
+pivot_offset = Vector2(8.29, -500)
+pivot_offset_ratio = Vector2(128.735, 85.67)
+
+[node name="DebugStatsComponent" parent="BeatComponent3/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="BeatComponent3/GUIComponent" index="3"]
+visible = false
+
+[node name="Cast_MUS" type="AudioStreamPlayer" parent="." unique_id=901999996]
+stream = ExtResource("5_fyd7u")
+volume_db = -3.036
+
+[node name="Secondary_SFX" type="AudioStreamPlayer" parent="." unique_id=1791263792]
+stream = ExtResource("6_fecda")
+volume_db = 2.0
+
+[node name="BasicAIComponent" type="Node" parent="." unique_id=1491309975 node_paths=PackedStringArray("EntityComp")]
+script = ExtResource("7_ky503")
+EntityComp = NodePath("..")
+metadata/_custom_type_script = "uid://cjjjf63dev2ro"
+
+[editable path="BeatComponent"]
+[editable path="BeatComponent/GUIComponent/LineComponent"]
+[editable path="BeatComponent2"]
+[editable path="BeatComponent2/GUIComponent/LineComponent"]
+[editable path="BeatComponent3"]
+[editable path="BeatComponent3/GUIComponent/LineComponent"]

@@ -19,10 +19,10 @@ func _ready() -> void:
 func _update():
 	if !Hidden:
 		if BeatComp.drag > 0 and !Entered:
-			AnimPlayer.play("Enter")
+			AnimPlayer.play("DragTween/Enter")
 			Entered = true
 		elif BeatComp.drag <= 0 and Entered:
-			AnimPlayer.play("Exit")
+			AnimPlayer.play("DragTween/Exit")
 			Entered = false
 		if BeatComp.drag >= 5:
 			DragBottom.set_frame(randi_range(1,3)*4 - 4)

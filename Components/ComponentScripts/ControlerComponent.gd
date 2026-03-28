@@ -1,4 +1,4 @@
-extends Node
+class_name ControllerComponent extends Node
 
 @export var Manager: BeatManagerComponent
 # Called when the node enters the scene tree for the first time.

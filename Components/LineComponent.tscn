@@ -1,16 +1,37 @@
-[gd_scene load_steps=10 format=3 uid="uid://41gfk3tasqsy"]
+[gd_scene format=3 uid="uid://41gfk3tasqsy"]
 
 [ext_resource type="Texture2D" uid="uid://cnfvmkq1cxfxf" path="res://Assets/GUI/Bars/empty line.png" id="1_uis3n"]
 [ext_resource type="Texture2D" uid="uid://bu53035prpofr" path="res://Assets/GUI/Bars/full line.png" id="2_a63ld"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/LineComponent.gd" id="3_gjjbd"]
+[ext_resource type="Script" uid="uid://cs1gwuqc6oiki" path="res://Components/ComponentScripts/LineComponent.gd" id="3_gjjbd"]
 [ext_resource type="Texture2D" uid="uid://b5lxg43fg5et1" path="res://Assets/GUI/Bars/semi line.png" id="4_7ac2o"]
 [ext_resource type="SpriteFrames" uid="uid://cuojb25llbtii" path="res://Assets/GUI/Notes/notes.tres" id="4_kjrq2"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/NoteComponent.gd" id="5_gs46j"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/DragComponent.gd" id="6_ln3ma"]
+[ext_resource type="Script" uid="uid://c37wkjsosmoy6" path="res://Components/ComponentScripts/NoteComponent.gd" id="5_gs46j"]
+[ext_resource type="Script" uid="uid://cb7xhl7a31do5" path="res://Components/ComponentScripts/DragComponent.gd" id="6_ln3ma"]
 [ext_resource type="SpriteFrames" uid="uid://5oe430fieehs" path="res://Assets/GUI/DragLine/DragTop.tres" id="7_6b54y"]
 [ext_resource type="SpriteFrames" uid="uid://bhrcasymye5g4" path="res://Assets/GUI/DragLine/DragBottom.tres" id="8_bahos"]
+[ext_resource type="AnimationLibrary" uid="uid://di1w6wo6bwjfy" path="res://Assets/GUI/DragLine/DragTween.res" id="10_80mmf"]
 
-[node name="LineComponent" type="TextureProgressBar" node_paths=PackedStringArray("DragComp", "note")]
+[sub_resource type="Animation" id="Animation_80mmf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dxmvo"]
+_data = {
+&"RESET": SubResource("Animation_80mmf")
+}
+
+[node name="LineComponent" type="TextureProgressBar" unique_id=1005489413 node_paths=PackedStringArray("DragComp", "note")]
 z_index = -1
 anchors_preset = 4
 anchor_top = 0.5
@@ -30,20 +51,19 @@ DragComp = NodePath("DragComponent")
 note = NodePath("NoteComponent")
 metadata/_edit_use_anchors_ = true
 
-[node name="NoteComponent" type="AnimatedSprite2D" parent="."]
+[node name="NoteComponent" type="AnimatedSprite2D" parent="." unique_id=1490336016]
 z_index = 2
 position = Vector2(0, 4)
 sprite_frames = ExtResource("4_kjrq2")
 animation = &"Secondary"
 script = ExtResource("5_gs46j")
 
-[node name="DragComponent" type="Control" parent="."]
-visible = false
+[node name="DragComponent" type="Control" parent="." unique_id=2037342630]
 anchors_preset = 0
-pivot_offset = Vector2(-20, 0)
+pivot_offset = Vector2(600, 0)
 script = ExtResource("6_ln3ma")
 
-[node name="DragTop" type="AnimatedSprite2D" parent="DragComponent"]
+[node name="DragTop" type="AnimatedSprite2D" parent="DragComponent" unique_id=136435391]
 z_index = 1
 position = Vector2(-198.871, 0)
 sprite_frames = ExtResource("7_6b54y")
@@ -51,7 +71,7 @@ animation = &"Default"
 autoplay = "Default"
 offset = Vector2(244, 5.41379)
 
-[node name="DragBottom" type="AnimatedSprite2D" parent="DragComponent"]
+[node name="DragBottom" type="AnimatedSprite2D" parent="DragComponent" unique_id=1343272998]
 z_index = -1
 position = Vector2(-308.871, 338)
 scale = Vector2(0.8, 0.8)
@@ -61,6 +81,8 @@ autoplay = "Stage 2"
 frame_progress = 0.518373
 offset = Vector2(415.589, -442)
 
-[node name="DragPlayer" type="AnimationPlayer" parent="DragComponent"]
+[node name="DragPlayer" type="AnimationPlayer" parent="DragComponent" unique_id=1860516586]
+libraries/ = SubResource("AnimationLibrary_dxmvo")
+libraries/DragTween = ExtResource("10_80mmf")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1387997685]

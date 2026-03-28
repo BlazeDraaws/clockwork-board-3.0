@@ -19,6 +19,7 @@ var history_limit:= 30
 
 signal _update
 
+@onready var secondary_sfx: AudioStreamPlayer = $"../Secondary_SFX"
 @onready var UndoComp : UndoRedo = UndoRedo.new()
 @onready var EntityComp : EntityComponent = $".."
 @export var BackupEntity : EntityComponent
@@ -48,8 +49,27 @@ func _setbeat(setvalue): #set beat value
 	if beat_history.size() > history_limit:
 		beat_history.pop_back()
 	
+	if Secondary and secondary_sfx:
+		secondary_sfx.pitch_scale = randf_range(0.9, 1.1)
+		secondary_sfx.play(0.1)
+	
 	beat = setvalue + drag
 	update()
+
+
+func _setabsolutebeat(setvalue): #set beat value
+	beat_history.push_front(beat)
+	
+	if beat_history.size() > history_limit:
+		beat_history.pop_back()
+	
+	if Secondary and secondary_sfx:
+		secondary_sfx.pitch_scale = randf_range(0.9, 1.1)
+		secondary_sfx.play(0.1)
+	
+	beat = setvalue
+	update()
+
 
 func _speed(setvalue): #set speed value
 	speed_history.push_front(speedvalue)
@@ -67,6 +87,15 @@ func _drag(steps): #change drag value up or down
 		drag_history.pop_back()
 	
 	drag += steps
+	update()
+
+func _setdrag(steps): #change drag value up or down
+	
+	drag_history.push_front(drag)
+	if drag_history.size() > history_limit:
+		drag_history.pop_back()
+	
+	drag = steps
 	update()
 
 func _notetype(noteID):

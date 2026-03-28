@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://gkstp76pgkyu"]
 
-[ext_resource type="PackedScene" uid="uid://dkqsr30lsdsw7" path="res://Components/Player.tscn" id="1_5crlr"]
+[ext_resource type="PackedScene" uid="uid://b6a4nh0ki0qmf" path="res://Components/Specific/Hero_Agar.tscn" id="1_mctxq"]
 [ext_resource type="Script" uid="uid://dn7uxp6pb4w3t" path="res://Components/ComponentScripts/DebugComponentScripts/DebugComponent.gd" id="2_epypp"]
-[ext_resource type="PackedScene" uid="uid://ct5rlkm3g0h8h" path="res://Components/Enemies/BlackOlm.tscn" id="3_5crlr"]
-[ext_resource type="Script" uid="uid://c4s4lboe8cwp6" path="res://Components/ComponentScripts/BeatManagerComponent.gd" id="3_rpqi1"]
+[ext_resource type="PackedScene" uid="uid://dyt3n1i3v064m" path="res://Components/Specific/Hero_Bree.tscn" id="2_nm5af"]
 [ext_resource type="PackedScene" uid="uid://bgagdnadtqcq0" path="res://Components/DebugEntityRow.tscn" id="3_uxrcv"]
+[ext_resource type="PackedScene" uid="uid://c253txf674aob" path="res://Components/Specific/Hero_Lucille.tscn" id="3_x0cd2"]
+[ext_resource type="PackedScene" uid="uid://np3gndi3yjtr" path="res://Components/Specific/Hero_Stantis.tscn" id="4_8s4c3"]
+[ext_resource type="Script" uid="uid://db0m1p4mp8jrv" path="res://AudioManagerComponent.gd" id="4_8xkvn"]
 [ext_resource type="Script" uid="uid://c36gaj3j7jpk0" path="res://Components/ComponentScripts/ControlerComponent.gd" id="4_hbc2u"]
 [ext_resource type="PackedScene" uid="uid://mciaosaynkbm" path="res://Components/DebugBeatCompRow.tscn" id="4_rf2cd"]
+[ext_resource type="PackedScene" uid="uid://d1qlxe35qop72" path="res://Components/Specific/Support_Lottie.tscn" id="5_3slyh"]
+[ext_resource type="PackedScene" uid="uid://cumpipj0aailu" path="res://Components/Specific/Boss_Olm.tscn" id="6_mctxq"]
+[ext_resource type="Script" uid="uid://dg6wbj8nh3cts" path="res://Components/ComponentScripts/BeatManagerComponent2.0.gd" id="8_nm5af"]
+[ext_resource type="AudioStream" uid="uid://bytxb3dob205u" path="res://Assets/Audio/cast_default.ogg" id="9_mctxq"]
+[ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="10_mctxq"]
 [ext_resource type="Texture2D" uid="uid://dhhkk30nx43vf" path="res://Assets/retrere.png" id="36_78ikg"]
 
 [node name="Node2D" type="Node2D" unique_id=1660286881]
@@ -19,39 +26,102 @@ offset_bottom = 993.0
 [node name="Container" type="VBoxContainer" parent="Heroes" unique_id=237926573]
 layout_mode = 2
 
-[node name="Player" parent="Heroes/Container" unique_id=1928447707 instance=ExtResource("1_5crlr")]
+[node name="Lucille" parent="Heroes/Container" unique_id=1928447707 node_paths=PackedStringArray("DebugComp") instance=ExtResource("3_x0cd2")]
+unique_name_in_owner = true
 layout_mode = 2
+freeform = false
+DebugComp = NodePath("../../../Window/DebugComponent")
+DefaultOrientation = 1
+SpriteFlip = false
+CustomCast = false
 
-[node name="Player2" parent="Heroes/Container" unique_id=1610485282 instance=ExtResource("1_5crlr")]
+[node name="Stantis" parent="Heroes/Container" unique_id=1290767530 node_paths=PackedStringArray("DebugComp") instance=ExtResource("4_8s4c3")]
+unique_name_in_owner = true
 layout_mode = 2
+freeform = false
+DebugComp = NodePath("../../../Window/DebugComponent")
+DefaultOrientation = 1
+SpriteFlip = false
+CustomCast = false
 
-[node name="Player3" parent="Heroes/Container" unique_id=1140908215 instance=ExtResource("1_5crlr")]
+[node name="Agar" parent="Heroes/Container" unique_id=1723868600 node_paths=PackedStringArray("DebugComp") instance=ExtResource("1_mctxq")]
+unique_name_in_owner = true
 layout_mode = 2
+DebugComp = NodePath("../../../Window/DebugComponent")
 
-[node name="Player4" parent="Heroes/Container" unique_id=572696900 instance=ExtResource("1_5crlr")]
+[node name="Bree" parent="Heroes/Container" unique_id=899783580 node_paths=PackedStringArray("DebugComp") instance=ExtResource("2_nm5af")]
+unique_name_in_owner = true
 layout_mode = 2
+freeform = false
+DebugComp = NodePath("../../../Window/DebugComponent")
+DefaultOrientation = 1
+SpriteFlip = false
+CustomCast = false
+
+[node name="Lottie" parent="Heroes/Container" unique_id=1159456901 node_paths=PackedStringArray("DebugComp") instance=ExtResource("5_3slyh")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+freeform = false
+DebugComp = NodePath("../../../Window/DebugComponent")
+DefaultOrientation = 1
+SpriteFlip = false
+CustomCast = false
 
 [node name="Enemies" type="CenterContainer" parent="." unique_id=1416409893]
 offset_left = 1487.0
 offset_right = 1898.0
 offset_bottom = 993.0
 
-[node name="Container5" type="VBoxContainer" parent="Enemies" unique_id=627352523]
-layout_mode = 2
+[node name="SpawnSlots" type="Node2D" parent="Enemies" unique_id=1092730898]
+position = Vector2(0, 211)
+
+[node name="Slot1" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=757940708]
+position = Vector2(-745, 161)
+
+[node name="Slot6" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=2062565151]
+position = Vector2(-621, 74)
+
+[node name="Slot2" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1359826570]
+position = Vector2(-824, 350)
+
+[node name="Slot3" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1066607802]
+position = Vector2(-833, 556)
+
+[node name="Slot4" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1212977115]
+position = Vector2(-842, 746)
+
+[node name="Slot5" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1538320237]
+position = Vector2(-773, 1002)
 
 [node name="Container" type="Node2D" parent="Enemies" unique_id=1726297892]
 
-[node name="Olm" parent="Enemies/Container" unique_id=225552642 instance=ExtResource("3_5crlr")]
-anchors_preset = 9
+[node name="The Black Olm" parent="Enemies/Container" unique_id=1715538023 node_paths=PackedStringArray("DebugComp") instance=ExtResource("6_mctxq")]
+anchors_preset = 0
 anchor_right = 0.0
-offset_left = -730.0
-offset_top = 395.0
-offset_right = -555.0
-offset_bottom = 595.0
+anchor_bottom = 0.0
+offset_left = -715.0
+offset_top = -570.0
+offset_right = -514.5
+offset_bottom = -341.0
 grow_horizontal = 1
+grow_vertical = 1
+DebugComp = NodePath("../../../Window/DebugComponent")
 
 [node name="BeatManagerComponent" type="Node" parent="." unique_id=614451702]
-script = ExtResource("3_rpqi1")
+script = ExtResource("8_nm5af")
+
+[node name="AudioManagerComponent" type="Node" parent="." unique_id=1993623002]
+unique_name_in_owner = true
+script = ExtResource("4_8xkvn")
+
+[node name="Cast_SFX" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=800430285]
+stream = ExtResource("9_mctxq")
+volume_db = 2.0
+
+[node name="Ready_SFX" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=1553534736]
+stream = ExtResource("10_mctxq")
+volume_db = -2.0
 
 [node name="ControllerComponent" type="Node" parent="." unique_id=661772787 node_paths=PackedStringArray("Manager")]
 script = ExtResource("4_hbc2u")
@@ -59,7 +129,7 @@ Manager = NodePath("../BeatManagerComponent")
 
 [node name="Window" type="Window" parent="." unique_id=257251618]
 oversampling_override = 1.0
-position = Vector2i(1697, 36)
+position = Vector2i(328, 36)
 size = Vector2i(289, 310)
 always_on_top = true
 
@@ -94,7 +164,7 @@ layout_mode = 2
 text = "next beat
 "
 
-[node name="Retrere" type="Sprite2D" parent="." unique_id=1057680770]
+[node name="Background" type="Sprite2D" parent="." unique_id=1057680770]
 z_index = -15
-position = Vector2(943, 666)
+position = Vector2(943, 668)
 texture = ExtResource("36_78ikg")

@@ -42,6 +42,7 @@ func _update():
 				_tint_node(self, Color(0.59, 0.429, 0.429, 1.0/dragopacity))
 
 func _updateAnim(newanim):
+	if AnimComp and AnimComp.has_animation(newanim):
 		currentanim = newanim
 		AnimComp.play(newanim)
 

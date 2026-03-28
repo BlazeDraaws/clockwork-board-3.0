@@ -4,6 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://bftlatfsrwycw" path="res://Assets/Characters/NPC/OlmMother/animation.tres" id="2_kg7xp"]
 [ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_frmh8"]
 [ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_85yww"]
+[ext_resource type="AudioStream" uid="uid://bmiqewgi8dcms" path="res://Assets/audio/specific/cast_boss_leviathan.ogg" id="5_kg7xp"]
 
 [node name="Entity" type="Control" unique_id=1715538023 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
 custom_minimum_size = Vector2(175, 200)
@@ -27,7 +28,7 @@ DefaultOrientation = -1
 
 [node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
 z_index = 1
-position = Vector2(137, 200)
+position = Vector2(122.00001, 1165)
 scale = Vector2(1.0057293, 1.0000001)
 sprite_frames = ExtResource("2_kg7xp")
 autoplay = "default"
@@ -54,8 +55,20 @@ offset_bottom = 421.11
 pivot_offset = Vector2(0, 4.27)
 pivot_offset_ratio = Vector2(0, 2.325)
 
+[node name="LineComponent" parent="BeatComponent/GUIComponent" index="0"]
+modulate = Color(0.70703125, 0.26789856, 0.43679577, 1)
+scale = Vector2(1, 1.665)
+
+[node name="NoteComponent" parent="BeatComponent/GUIComponent/LineComponent" index="0"]
+scale = Vector2(1, 0.615)
+
 [node name="RingComponent" parent="BeatComponent/GUIComponent" index="1"]
 visible = false
+offset_left = -15.545
+offset_right = 112.455
+scale = Vector2(1.035, 1.035)
+pivot_offset = Vector2(8.29, -500)
+pivot_offset_ratio = Vector2(128.735, 85.67)
 
 [node name="DebugStatsComponent" parent="BeatComponent/GUIComponent" index="2"]
 visible = false
@@ -63,4 +76,9 @@ visible = false
 [node name="ClefComponent" parent="BeatComponent/GUIComponent" index="3"]
 visible = false
 
+[node name="Cast_MUS" type="AudioStreamPlayer" parent="." unique_id=901999996]
+stream = ExtResource("5_kg7xp")
+volume_db = -3.036
+
 [editable path="BeatComponent"]
+[editable path="BeatComponent/GUIComponent/LineComponent"]

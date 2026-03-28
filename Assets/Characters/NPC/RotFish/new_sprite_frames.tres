@@ -219,6 +219,17 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("20_mrvm6")
+}],
+"loop": false,
+"name": &"Stage_1",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_vo0ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mrvm6")
 }, {
 "duration": 1.0,
 "texture": ExtResource("21_88ec2")
@@ -255,7 +266,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("32_krp6i")
+}],
+"loop": true,
+"name": &"Stage_1_loop",
+"speed": 24.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("33_di3j3")
 }, {
@@ -294,7 +310,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("45_nj3u0")
+}],
+"loop": false,
+"name": &"Stage_2",
+"speed": 24.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("46_djnjy")
 }, {
@@ -321,7 +342,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("54_dnfdp")
+}],
+"loop": true,
+"name": &"Stage_2_loop",
+"speed": 24.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("55_fv5a0")
 }, {
@@ -435,7 +461,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("92_ku84j")
+}],
+"loop": false,
+"name": &"Stage_3",
+"speed": 24.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("93_ub87e")
 }, {
@@ -489,7 +520,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("110_lihlm")
+}],
+"loop": true,
+"name": &"Stage_3_loop",
+"speed": 24.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("111_oww8n")
 }, {
@@ -594,7 +630,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("145_o8lqy")
+}],
+"loop": false,
+"name": &"Stage_4",
+"speed": 24.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("146_1r33x")
 }, {
@@ -628,6 +669,11 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("156_yll1x")
 }],
+"loop": true,
+"name": &"Stage_4_loop",
+"speed": 24.0
+}, {
+"frames": [],
 "loop": false,
 "name": &"default",
 "speed": 25.0

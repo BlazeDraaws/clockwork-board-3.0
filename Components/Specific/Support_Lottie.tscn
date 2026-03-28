@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://d1qlxe35qop72"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_0hl08"]
+[ext_resource type="Texture2D" uid="uid://dj5xfw7xe1ppf" path="res://Assets/Characters/SPC/lottie.png" id="2_0hl08"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_1g7ef"]
+[ext_resource type="AnimationLibrary" uid="uid://decbb7ljxq7u2" path="res://Assets/Characters/PC/AnimationPlayerTweens.res" id="4_yf28a"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_0gc2w"]
+[ext_resource type="AudioStream" uid="uid://dcet6sbcmw8tf" path="res://Assets/Audio/cast_zing.ogg" id="6_0hl08"]
+[ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="7_5ao64"]
+[ext_resource type="Texture2D" uid="uid://bw018npmc7y3m" path="res://Assets/GUI/Misc/Selection.png" id="8_1g7ef"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ao64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0hl08")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Lottie" type="Control" unique_id=1928447707 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
+custom_minimum_size = Vector2(175, 150)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 175.0
+offset_bottom = 150.0
+pivot_offset = Vector2(122.565, 54.58)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_0hl08")
+freeform = null
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("Main")
+DefaultOrientation = null
+SpriteFlip = null
+close = false
+CustomCast = null
+player = true
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=183838993]
+z_index = 4
+position = Vector2(119.549545, 155.99997)
+scale = Vector2(0.5400541, 0.54005414)
+sprite_frames = SubResource("SpriteFrames_5ao64")
+offset = Vector2(5, -180.28)
+script = ExtResource("3_1g7ef")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent" unique_id=1096183370]
+libraries/AnimationPlayerTweens = ExtResource("4_yf28a")
+autoplay = &"AnimationPlayerTweens/_Far"
+
+[node name="Main" parent="." unique_id=762886910 instance=ExtResource("5_0gc2w")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
+
+[node name="RingComponent" parent="Main/GUIComponent" index="1"]
+visible = false
+
+[node name="DebugStatsComponent" parent="Main/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="Main/GUIComponent" index="3"]
+visible = false
+z_index = 2
+
+[node name="Duration" parent="." unique_id=1327926551 instance=ExtResource("5_0gc2w")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
+Secondary = true
+
+[node name="RingComponent" parent="Duration/GUIComponent" index="1"]
+visible = false
+
+[node name="DebugStatsComponent" parent="Duration/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="Duration/GUIComponent" index="3"]
+visible = false
+z_index = 2
+
+[node name="Cast_MUS" type="AudioStreamPlayer" parent="." unique_id=1687460623]
+stream = ExtResource("6_0hl08")
+
+[node name="Secondary_SFX" type="AudioStreamPlayer" parent="." unique_id=998089196]
+stream = ExtResource("7_5ao64")
+volume_db = 2.0
+
+[node name="Selection" type="Sprite2D" parent="." unique_id=321591152]
+visible = false
+position = Vector2(117, 65)
+scale = Vector2(0.5419778, 0.5419779)
+texture = ExtResource("8_1g7ef")
+
+[editable path="Main"]
+[editable path="Duration"]

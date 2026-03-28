@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://dyt3n1i3v064m"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_gy5hu"]
+[ext_resource type="SpriteFrames" uid="uid://cbgegblb810bb" path="res://Assets/Characters/PC/Bree/bree.tres" id="2_gy5hu"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_hptf7"]
+[ext_resource type="AnimationLibrary" uid="uid://decbb7ljxq7u2" path="res://Assets/Characters/PC/AnimationPlayerTweens.res" id="4_us2oy"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_tsud4"]
+[ext_resource type="AudioStream" uid="uid://cb3lxmlj40qng" path="res://Assets/Audio/Specific/cast_hero_bree.ogg" id="6_gy5hu"]
+[ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="7_gv1of"]
+[ext_resource type="Texture2D" uid="uid://bw018npmc7y3m" path="res://Assets/GUI/Misc/Selection.png" id="8_hptf7"]
+
+[sub_resource type="Animation" id="Animation_d5xm3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y7ycg"]
+_data = {
+&"RESET": SubResource("Animation_d5xm3")
+}
+
+[node name="Bree" type="Control" unique_id=1928447707 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_gy5hu")
+freeform = null
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("Main")
+DefaultOrientation = null
+SpriteFlip = null
+close = false
+CustomCast = null
+player = true
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=183838993]
+z_index = 4
+position = Vector2(137, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("2_gy5hu")
+animation = &"Idle"
+autoplay = "Idle"
+offset = Vector2(5, -200)
+script = ExtResource("3_hptf7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent" unique_id=1096183370]
+libraries/ = SubResource("AnimationLibrary_y7ycg")
+libraries/AnimationPlayerTweens = ExtResource("4_us2oy")
+autoplay = &"AnimationPlayerTweens/_Far"
+
+[node name="Main" parent="." unique_id=762886910 instance=ExtResource("5_tsud4")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+
+[node name="RingComponent" parent="Main/GUIComponent" index="1"]
+visible = false
+
+[node name="DebugStatsComponent" parent="Main/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="Main/GUIComponent" index="3"]
+z_index = 2
+animation = &"4"
+autoplay = ""
+ClefID = 4
+
+[node name="Secondary" parent="." unique_id=466648611 instance=ExtResource("5_tsud4")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+Secondary = true
+
+[node name="RingComponent" parent="Secondary/GUIComponent" index="1"]
+visible = false
+
+[node name="DebugStatsComponent" parent="Secondary/GUIComponent" index="2"]
+visible = false
+
+[node name="ClefComponent" parent="Secondary/GUIComponent" index="3"]
+visible = false
+z_index = 2
+autoplay = ""
+ClefID = 2
+
+[node name="Cast_MUS" type="AudioStreamPlayer" parent="." unique_id=1687460623]
+stream = ExtResource("6_gy5hu")
+
+[node name="Secondary_SFX" type="AudioStreamPlayer" parent="." unique_id=817094122]
+stream = ExtResource("7_gv1of")
+volume_db = 2.0
+
+[node name="Selection" type="Sprite2D" parent="." unique_id=370420906]
+visible = false
+position = Vector2(117, 149.99998)
+scale = Vector2(0.5419778, 0.5419779)
+texture = ExtResource("8_hptf7")
+
+[editable path="Main"]
+[editable path="Secondary"]

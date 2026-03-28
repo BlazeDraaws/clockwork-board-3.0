@@ -1,4 +1,4 @@
-class_name BeatManagerComponent extends Node
+class_name BeatManagerComponentObsolete extends Node
 
 
 @onready var UndoComp : UndoRedo = UndoRedo.new()
@@ -67,28 +67,42 @@ func _ready() -> void:
 	
 
 func _collect_info():
+	BeatCompValues.clear()
+
 	for EntityComp in HeroContainer.get_children():
-			for BeatComp in EntityComp.get_children():
-				if BeatComp is BeatComponent:
-					BeatCompValues[BeatComp] = BeatComp.beat / BeatComp.speedvalue
-					if BeatCompValues[BeatComp] <= 0:
-						BeatCompValues.erase(BeatComp)
+		for BeatComp in EntityComp.get_children():
+			if BeatComp is BeatComponent and is_instance_valid(BeatComp):
+				var val = BeatComp.beat / BeatComp.speedvalue
+				if val > 0:
+					BeatCompValues[BeatComp] = val
+
 	for EntityComp in EnemyContainer.get_children():
-			for BeatComp in EntityComp.get_children():
-				if BeatComp is BeatComponent:
-					BeatCompValues[BeatComp] = BeatComp.beat / BeatComp.speedvalue
-					if BeatCompValues[BeatComp] <= 0:
-						BeatCompValues.erase(BeatComp)
-	print(BeatCompValues)
+		for BeatComp in EntityComp.get_children():
+			if BeatComp is BeatComponent and is_instance_valid(BeatComp):
+				var val = BeatComp.beat / BeatComp.speedvalue
+				if val > 0:
+					BeatCompValues[BeatComp] = val
 
 func _FindLowest():
-		_collect_info()
-		if BeatCompValues != {}:
-			LowestBeatCompValue = BeatCompValues.values()[0]
-			for BeatComp in BeatCompValues:
-				if BeatCompValues[BeatComp] < LowestBeatCompValue:
-					LowestBeatCompValue = BeatCompValues[BeatComp]
-			LowestBeatComp = BeatCompValues.find_key(LowestBeatCompValue)
+	_collect_info()
+
+	LowestBeatComp = null
+	LowestBeatCompValue = INF
+
+	for comp in BeatCompValues:
+		if not is_instance_valid(comp):
+			continue
+			
+		var value = BeatCompValues[comp]
+		
+		if value < LowestBeatCompValue:
+			LowestBeatCompValue = value
+			LowestBeatComp = comp
+
+func _clean_invalid():
+	for key in BeatCompValues.keys():
+		if not is_instance_valid(key):
+			BeatCompValues.erase(key)
 
 func _NextFreeBeat():
 	_FindLowest()
