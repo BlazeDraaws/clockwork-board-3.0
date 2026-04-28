@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://toq44lwm2fqu"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_eobyo"]
+[ext_resource type="Texture2D" uid="uid://ct01ocw8s06lj" path="res://Assets/Characters/NPC/catandbeet/beetle.png" id="2_eobyo"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_swe7v"]
+[ext_resource type="AnimationLibrary" uid="uid://decbb7ljxq7u2" path="res://Assets/Characters/PC/AnimationPlayerTweens.res" id="4_040yn"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_rpl45"]
+[ext_resource type="Script" uid="uid://db0m1p4mp8jrv" path="res://Components/ComponentScripts/AudioManagerComponent.gd" id="6_kxind"]
+[ext_resource type="AudioStream" uid="uid://bytxb3dob205u" path="res://Assets/Audio/cast_default.ogg" id="7_mxh1w"]
+[ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_wl41g"]
+[ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_5h7sb"]
+[ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="10_tvw0b"]
+[ext_resource type="Script" uid="uid://cd2ykx7rlrmvg" path="res://Components/ComponentScripts/EnemyAIScripts/BeetleAI.gd" id="11_eobyo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rowj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eobyo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_8kudx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30s24"]
+_data = {
+&"RESET": SubResource("Animation_8kudx")
+}
+
+[node name="Beetle" type="Control" unique_id=1715538023 node_paths=PackedStringArray("SpriteComp", "MainBeatComp", "AI") groups=["Enemies", "Unfriendly"]]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_eobyo")
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("Main")
+DefaultOrientation = -1
+AI = NodePath("BasicAIComponent")
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
+z_index = 1
+position = Vector2(137, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_rowj8")
+offset = Vector2(5, -200)
+script = ExtResource("3_swe7v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent" unique_id=474523637]
+libraries/ = SubResource("AnimationLibrary_30s24")
+libraries/AnimationPlayerTweens = ExtResource("4_040yn")
+
+[node name="Main" parent="." unique_id=1557651122 instance=ExtResource("5_rpl45")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+
+[node name="AudioManagerComponent" type="Node" parent="." unique_id=1277966778]
+script = ExtResource("6_kxind")
+
+[node name="Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=2127358690]
+stream = ExtResource("7_mxh1w")
+volume_db = 2.0
+script = ExtResource("8_wl41g")
+
+[node name="Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=484378064]
+stream = ExtResource("9_5h7sb")
+volume_db = -2.0
+script = ExtResource("8_wl41g")
+
+[node name="Secondary Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=954127966]
+stream = ExtResource("10_tvw0b")
+volume_db = 2.0
+script = ExtResource("8_wl41g")
+
+[node name="Secondary Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=795365553]
+stream = ExtResource("10_tvw0b")
+volume_db = 2.0
+script = ExtResource("8_wl41g")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=325798852]
+stream = ExtResource("10_tvw0b")
+volume_db = 2.0
+script = ExtResource("8_wl41g")
+
+[node name="BasicAIComponent" type="Node" parent="." unique_id=1667565099]
+script = ExtResource("11_eobyo")
+metadata/_custom_type_script = "uid://cjjjf63dev2ro"
+
+[editable path="Main"]

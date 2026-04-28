@@ -5,9 +5,11 @@
 [ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_ee3oc"]
 [ext_resource type="AnimationLibrary" uid="uid://decbb7ljxq7u2" path="res://Assets/Characters/PC/AnimationPlayerTweens.res" id="4_tirv5"]
 [ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_vb4on"]
-[ext_resource type="AudioStream" uid="uid://chu7h6c6ibu8w" path="res://Assets/Audio/Specific/cast_hero_lucille.ogg" id="6_3q4g4"]
+[ext_resource type="Script" uid="uid://db0m1p4mp8jrv" path="res://Components/ComponentScripts/AudioManagerComponent.gd" id="6_u60jd"]
+[ext_resource type="AudioStream" uid="uid://bytxb3dob205u" path="res://Assets/Audio/cast_default.ogg" id="7_8cydv"]
 [ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="7_y7ycg"]
-[ext_resource type="Texture2D" uid="uid://bw018npmc7y3m" path="res://Assets/GUI/Misc/Selection.png" id="8_08v7c"]
+[ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_bm0s6"]
+[ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_olw8j"]
 
 [sub_resource type="Animation" id="Animation_d5xm3"]
 length = 0.001
@@ -41,14 +43,11 @@ pivot_offset = Vector2(150, 200)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_dx7pt")
-freeform = null
 SpriteComp = NodePath("SpriteComponent")
 MainBeatComp = NodePath("Main")
 DefaultOrientation = null
 SpriteFlip = null
 close = false
-CustomCast = null
-player = true
 
 [node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=183838993]
 z_index = 4
@@ -73,13 +72,7 @@ offset_top = 200.0
 offset_right = 100.0
 offset_bottom = 200.0
 
-[node name="RingComponent" parent="Main/GUIComponent" index="1"]
-visible = false
-
-[node name="DebugStatsComponent" parent="Main/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="Main/GUIComponent" index="3"]
+[node name="ClefComponent" parent="Main/GUIComponent" parent_id_path=PackedInt32Array(762886910, 2040536734) index="1" unique_id=194591243]
 z_index = 2
 animation = &"1"
 ClefID = 1
@@ -93,30 +86,38 @@ offset_right = 100.0
 offset_bottom = 200.0
 Secondary = true
 
-[node name="RingComponent" parent="Secondary/GUIComponent" index="1"]
-visible = false
-
-[node name="DebugStatsComponent" parent="Secondary/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="Secondary/GUIComponent" index="3"]
-visible = false
+[node name="ClefComponent" parent="Secondary/GUIComponent" parent_id_path=PackedInt32Array(1647608393, 2040536734) index="1" unique_id=194591243]
 z_index = 2
 autoplay = ""
 ClefID = 2
 
-[node name="Cast_MUS" type="AudioStreamPlayer" parent="." unique_id=1687460623]
-stream = ExtResource("6_3q4g4")
+[node name="AudioManagerComponent" type="Node" parent="." unique_id=1455465148]
+script = ExtResource("6_u60jd")
 
-[node name="Secondary_SFX" type="AudioStreamPlayer" parent="." unique_id=1879031771]
+[node name="Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=1212650781]
+stream = ExtResource("7_8cydv")
+volume_db = 2.0
+script = ExtResource("8_bm0s6")
+
+[node name="Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=1546762596]
+stream = ExtResource("9_olw8j")
+volume_db = -2.0
+script = ExtResource("8_bm0s6")
+
+[node name="Secondary Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=1353362671]
 stream = ExtResource("7_y7ycg")
 volume_db = 2.0
+script = ExtResource("8_bm0s6")
 
-[node name="Selection" type="Sprite2D" parent="." unique_id=2065223896]
-visible = false
-position = Vector2(117, 149.99998)
-scale = Vector2(0.5419778, 0.5419779)
-texture = ExtResource("8_08v7c")
+[node name="Secondary Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=403657792]
+stream = ExtResource("7_y7ycg")
+volume_db = 2.0
+script = ExtResource("8_bm0s6")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=695464899]
+stream = ExtResource("7_y7ycg")
+volume_db = 2.0
+script = ExtResource("8_bm0s6")
 
 [editable path="Main"]
 [editable path="Secondary"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://diw7344kufdd7"
+path="res://.godot/imported/Pilot Music Box Attempts to play.mp3-26f5f85cb7f9303ba28b35643dff90ff.mp3str"
+
+[deps]
+
+source_file="res://Assets/old crap/Pilot Music Box Attempts to play.mp3"
+dest_files=["res://.godot/imported/Pilot Music Box Attempts to play.mp3-26f5f85cb7f9303ba28b35643dff90ff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

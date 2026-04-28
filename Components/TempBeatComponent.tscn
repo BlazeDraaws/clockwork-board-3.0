@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://hhykbcafcuco"]
+
+[ext_resource type="Script" uid="uid://h4vpcq246o2x" path="res://Components/ComponentScripts/BeatComponent.gd" id="1_6qgjy"]
+[ext_resource type="Script" uid="uid://cdhnhjtt2ebm1" path="res://Components/ComponentScripts/GUIComponent.gd" id="2_2fu8v"]
+[ext_resource type="PackedScene" uid="uid://41gfk3tasqsy" path="res://Components/LineComponent.tscn" id="3_2gqdr"]
+[ext_resource type="PackedScene" uid="uid://5tvmldk0wneg" path="res://Components/RingComponent.tscn" id="4_647yl"]
+[ext_resource type="Script" uid="uid://njdulxomjea5" path="res://Components/ComponentScripts/DebugComponentScripts/DebugStatsComponent.gd" id="5_2la5t"]
+[ext_resource type="SpriteFrames" uid="uid://bboqhyxmwgwui" path="res://Assets/GUI/Clefs/Clefs.tres" id="6_bjy6p"]
+[ext_resource type="Script" uid="uid://yawtkyfjl3ic" path="res://Components/ComponentScripts/ClefComponent.gd" id="7_weih4"]
+
+[node name="BeatComponent" type="Control" unique_id=449889702 node_paths=PackedStringArray("GUIComp")]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6qgjy")
+GUIComp = NodePath("GUIComponent")
+
+[node name="GUIComponent" type="Control" parent="." unique_id=505748633 node_paths=PackedStringArray("BeatComp")]
+anchors_preset = 0
+script = ExtResource("2_2fu8v")
+BeatComp = NodePath("..")
+
+[node name="LineComponent" parent="GUIComponent" unique_id=1819369433 instance=ExtResource("3_2gqdr")]
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_right = 2722.0
+grow_vertical = 1
+
+[node name="RingComponent" parent="GUIComponent" unique_id=1829166180 instance=ExtResource("4_647yl")]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+anchors_preset = 0
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_vertical = 1
+pivot_offset = Vector2(70.34, -500)
+
+[node name="DebugStatsComponent" type="Control" parent="GUIComponent" unique_id=550184347]
+z_index = 10
+z_as_relative = false
+anchors_preset = 0
+offset_left = -301.0
+offset_top = -248.0
+offset_right = -261.0
+offset_bottom = -208.0
+script = ExtResource("5_2la5t")
+
+[node name="Beat" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=167926881]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 235.0
+offset_bottom = 123.0
+text = "beat"
+metadata/_edit_use_anchors_ = true
+
+[node name="Drag" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=1153279212]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 125.0
+offset_right = 236.0
+offset_bottom = 148.0
+text = "drag"
+metadata/_edit_use_anchors_ = true
+
+[node name="Speed" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=1378621571]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 150.0
+offset_right = 247.0
+offset_bottom = 173.0
+text = "speed"
+metadata/_edit_use_anchors_ = true
+
+[node name="ClefComponent" type="AnimatedSprite2D" parent="GUIComponent" unique_id=1011825944]
+position = Vector2(-173, -40)
+sprite_frames = ExtResource("6_bjy6p")
+animation = &"2"
+autoplay = "1"
+script = ExtResource("7_weih4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUIComponent/ClefComponent" unique_id=448818223]

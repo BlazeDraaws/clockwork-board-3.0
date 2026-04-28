@@ -1,9 +1,12 @@
 class_name BeatManagerComponent extends Node
 
 # === CORE ===
-var beat_components: Array = [] # managed list (no dict)
 var LowestBeatComp : BeatComponent
 var LowestBeatCompValue : float = INF
+
+
+# === HIGHLIGHTING ===
+var highlighted_entities := []
 
 # === UNDO ===
 @onready var UndoComp : UndoRedo = UndoRedo.new()
@@ -14,6 +17,8 @@ var LowestBeatCompValue : float = INF
 
 # === OPTIONAL UI ===
 @onready var beat_manager_buttons: HBoxContainer = $"../Window/DebugComponent/Debug Container/BeatManagerButtons"
+@onready var debug_component: DebugComponent = $"../Window/DebugComponent"
+
 
 # === SPAWN ZONES ===
 @onready var spawn_slots: Node = $"../Enemies/SpawnSlots"
@@ -21,19 +26,21 @@ var slot_occupants := {} # slot -> entity
 # === REGISTER SYSTEM ===
 # call this from BeatComponent _ready()
 func register_beat(comp: BeatComponent):
-	if comp in beat_components:
+	if comp in Registry.get_all_beats():
 		return
 		
-	beat_components.append(comp)
+	Registry.get_all_beats().append(comp)
 	comp.tree_exited.connect(_on_beat_removed.bind(comp))
+	
 
 func _on_beat_removed(comp):
-	beat_components.erase(comp)
+	Registry.get_all_beats().erase(comp)
 	free_slot(comp.EntityComp)
+	debug_component._on_beat_removed(comp)
 
 # === ENTITY SPAWN ===
 # simple helper for instantiating entity scenes
-func spawn_entity(scene: PackedScene, container: Node):
+func spawn_entity(scene: PackedScene):
 	var entity = scene.instantiate()
 	
 	# SEARCH phase
@@ -42,7 +49,6 @@ func spawn_entity(scene: PackedScene, container: Node):
 			entity.position = slot.position+Vector2(0,-200)
 			slot_occupants[slot] = entity
 			EnemyContainer.add_child(entity)
-			print(slot.global_position)
 			return entity
 	
 	# FALLBACK phase
@@ -70,13 +76,27 @@ func get_random_screen_position() -> Vector2:
 		randf_range(rect.position.y, rect.end.y)
 	)
 
+# === UPDATE ===
+
+func on_update_next():
+	_GetComboGroup()
+	_HighlightNext()
+
 # === FIND LOWEST ===
-func _FindLowest():
+
+func _FindLowest(group = "all"):
 	LowestBeatComp = null
 	LowestBeatCompValue = INF
 	
-	for comp in beat_components:
+	for comp in Registry.get_all_beats():
 		if not is_instance_valid(comp):
+			continue
+		
+		var parent = comp.get_parent()
+		if not is_instance_valid(parent):
+			continue
+		
+		if group != "all" and not parent.is_in_group(group):
 			continue
 		
 		var value = comp.beat / comp.speedvalue
@@ -87,16 +107,24 @@ func _FindLowest():
 
 # === COMBO DETECTION ===
 # returns array of BeatComponents that share the same timing
-func _GetComboGroup():
+func _GetComboGroup(group = "all"):
 	var combo := []
+	_FindLowest(group)
 	
 	if LowestBeatComp == null:
 		return combo
 	
-	for comp in beat_components:
+	for comp in Registry.get_all_beats():
 		if not is_instance_valid(comp):
 			continue
-			
+		
+		var parent = comp.get_parent()
+		if not is_instance_valid(parent):
+			continue
+		
+		if group != "all" and not parent.is_in_group(group):
+			continue
+		
 		var value = comp.beat / comp.speedvalue
 		
 		if is_equal_approx(value, LowestBeatCompValue):
@@ -108,21 +136,47 @@ func _GetComboGroup():
 func _HighlightNext():
 	var combo_group = _GetComboGroup()
 	
+	# build set of entities that SHOULD be highlighted
+	var next_entities := []
+	
 	for comp in combo_group:
-		if comp == null:
+		if not is_instance_valid(comp):
 			continue
 		
-		var entity = comp.get_parent()
+		var entity = comp.EntityComp
 		
-		if entity != null and entity.has_method("highlighted"):
-			entity.highlighted()
+		if entity != null and not entity in next_entities:
+			next_entities.append(entity)
+	
+	# unhighlight anything NOT in next
+	_ClearHighlights(next_entities)
+	
+	# highlight new ones
+	for entity in next_entities:
+		if not entity in highlighted_entities:
+			if entity.has_method("highlighted"):
+				entity.highlighted()
+	
+	highlighted_entities = next_entities
+
+func _ClearHighlights(next_entities: Array):
+	var to_remove := []
+	
+	for entity in highlighted_entities:
+		if not entity in next_entities:
+			if entity != null and entity.has_method("unhighlight"):
+				entity.unhighlight()
+			to_remove.append(entity)
+	
+	for entity in to_remove:
+		highlighted_entities.erase(entity)
 
 # === CORE BATCH SYSTEM ===
 # this fixes undo batching
 func _BatchBeatModify(amount: float):
 	UndoComp.create_action("BatchBeatModify")
 
-	for comp in beat_components:
+	for comp in Registry.get_all_beats():
 		if not is_instance_valid(comp):
 			continue
 		
@@ -136,14 +190,14 @@ func _BatchBeatModify(amount: float):
 
 # === NEXT FREE BEAT ===
 func _NextFreeBeat():
-	_FindLowest()
+	on_update_next()
 	
 	if LowestBeatComp == null:
 		return
 	
 	UndoComp.create_action("NextFreeBeat")
 	
-	for comp in beat_components:
+	for comp in Registry.get_all_beats():
 		if not is_instance_valid(comp):
 			continue
 		
@@ -167,7 +221,7 @@ func _NextBeat():
 func _randomize(shift_pressed):
 	UndoComp.create_action("Randomize")
 	
-	for comp in beat_components:
+	for comp in Registry.get_all_beats():
 		if not is_instance_valid(comp):
 			continue
 		
@@ -193,6 +247,7 @@ func _randomize(shift_pressed):
 		UndoComp.add_undo_method(Callable(comp, "_speed").bind(before_speed))
 		UndoComp.add_undo_method(Callable(comp, "_setdrag").bind(before_drag))
 	UndoComp.commit_action()
+	on_update_next()
 
 # === GENERIC ORDER SYSTEM (kept for compatibility) ===
 func _BeatOrder(function, value, RowBeatComp: BeatComponent, UseValue: bool):
@@ -216,6 +271,7 @@ func _BaseOrder(function, value, SpecifiedComp, UseValue: bool):
 		UndoComp.add_undo_method(Callable(SpecifiedComp, "_undo" + function))
 
 	UndoComp.commit_action()
+	on_update_next()
 
 # === SEND ORDER (kept) ===
 func _SendOrder(function, value, SpecifiedComp, UseValue: bool):
@@ -225,6 +281,7 @@ func _SendOrder(function, value, SpecifiedComp, UseValue: bool):
 		c.call(value)
 	else:
 		c.call()
+	on_update_next()
 
 # === UNDO / REDO ===
 func _UndoRedo(shift):
@@ -236,19 +293,10 @@ func _UndoRedo(shift):
 # === READY ===
 func _ready():
 	# auto-register existing beats (important for compatibility)
-	_auto_register_existing()
+	call_deferred("_HighlightNext")
+	call_deferred("on_update_next")
 	
 	$"../Window/DebugComponent/Debug Container/BeatManagerButtons/Button".pressed.connect(_NextFreeBeat)
 	$"../Window/DebugComponent/Debug Container/BeatManagerButtons/Button2".pressed.connect(_NextBeat)
 
 # === AUTO REGISTER (so you don’t have to rewrite everything) ===
-func _auto_register_existing():
-	for EntityComp in HeroContainer.get_children():
-		for BeatComp in EntityComp.get_children():
-			if BeatComp is BeatComponent:
-				register_beat(BeatComp)
-	
-	for EntityComp in EnemyContainer.get_children():
-		for BeatComp in EntityComp.get_children():
-			if BeatComp is BeatComponent:
-				register_beat(BeatComp)

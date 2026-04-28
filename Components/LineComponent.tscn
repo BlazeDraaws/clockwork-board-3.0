@@ -59,6 +59,7 @@ animation = &"Secondary"
 script = ExtResource("5_gs46j")
 
 [node name="DragComponent" type="Control" parent="." unique_id=2037342630]
+visible = false
 anchors_preset = 0
 pivot_offset = Vector2(600, 0)
 script = ExtResource("6_ln3ma")

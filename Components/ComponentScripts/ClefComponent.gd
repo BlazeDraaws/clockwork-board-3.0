@@ -8,6 +8,8 @@ func _ready() -> void:
 	BeatComp = $"../.."
 	scale.x *= EntityComp.DefaultOrientation
 	position.x *= EntityComp.DefaultOrientation
+	visible = EntityComp.clef
+	
 	if BeatComp.Secondary:
 		visible = false
 	if ClefID:

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4nrg7p21p4y"
+path="res://.godot/imported/abyss_ult.mp3-8780a95adec10eb4bb8b8f0465c9d5c6.mp3str"
+
+[deps]
+
+source_file="res://Assets/old crap/abyss_ult.mp3"
+dest_files=["res://.godot/imported/abyss_ult.mp3-8780a95adec10eb4bb8b8f0465c9d5c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvgs5uk6ftj0q"
+path="res://.godot/imported/cast.mp3-4dcd78fe209b75c0f347f0650a6b0e26.mp3str"
+
+[deps]
+
+source_file="res://Assets/old crap/cast.mp3"
+dest_files=["res://.godot/imported/cast.mp3-4dcd78fe209b75c0f347f0650a6b0e26.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

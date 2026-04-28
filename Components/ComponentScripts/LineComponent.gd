@@ -14,7 +14,8 @@ func _ready() -> void:
 	if BeatComp.Secondary:
 		texture_under = null
 		texture_progress = texture_secondary
-		position.y += 10
+	if BeatComp.temp:
+		texture_under = null
 	if BeatComp == null:
 		BeatComp = BackupBeat
 	if EntityComp == null:

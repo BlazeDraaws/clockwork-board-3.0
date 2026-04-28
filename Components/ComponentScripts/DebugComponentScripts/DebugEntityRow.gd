@@ -2,9 +2,8 @@ extends FoldableContainer
 
 @onready var EntityComp : EntityComponent
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _process(_delta: float) -> void:
 	if EntityComp:
-		self.title = EntityComp.name
+		self.title = str(EntityComp.name, "          || Beat: ", EntityComp.beat, " | Speed: ", EntityComp.speed, " | Drag: ", EntityComp.drag, " | Down: ", EntityComp.downedstate, " | Confuse: ", EntityComp.confused, " ||")
 	else:
 		self.title = "[No EntityComp]"

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlqaflt8kewta"
+path="res://.godot/imported/hero_wings.wav-c4f3382197f9b920189f9f99d001dcdc.sample"
+
+[deps]
+
+source_file="res://Assets/old crap/hero_wings.wav"
+dest_files=["res://.godot/imported/hero_wings.wav-c4f3382197f9b920189f9f99d001dcdc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

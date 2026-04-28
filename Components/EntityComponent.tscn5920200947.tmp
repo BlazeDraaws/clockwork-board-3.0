@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://low3dqwtnpsn"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_3yayr"]
+[ext_resource type="SpriteFrames" uid="uid://ceehykv3snnk1" path="res://Assets/Characters/PC/Lucille/lucille.tres" id="2_g4ahu"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_nldd8"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="4_dkd51"]
+[ext_resource type="AnimationLibrary" uid="uid://decbb7ljxq7u2" path="res://Assets/Characters/PC/AnimationPlayerTweens.res" id="4_g4ahu"]
+[ext_resource type="Script" uid="uid://db0m1p4mp8jrv" path="res://Components/ComponentScripts/AudioManagerComponent.gd" id="6_gsn4m"]
+[ext_resource type="AudioStream" uid="uid://bytxb3dob205u" path="res://Assets/Audio/cast_default.ogg" id="7_64bye"]
+[ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_28ung"]
+[ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_n2uw5"]
+[ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="10_m28oc"]
+
+[node name="Entity" type="Control" unique_id=1715538023 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_3yayr")
+freeform = null
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("BeatComponent")
+DefaultOrientation = null
+SpriteFlip = null
+close = null
+CustomCast = null
+player = null
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
+z_index = 1
+position = Vector2(137, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("2_g4ahu")
+animation = &"Cast"
+autoplay = "Idle"
+offset = Vector2(5, -200)
+script = ExtResource("3_nldd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent" unique_id=474523637]
+libraries/AnimationPlayerTweens = ExtResource("4_g4ahu")
+
+[node name="BeatComponent" parent="." unique_id=1557651122 instance=ExtResource("4_dkd51")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+
+[node name="AudioManagerComponent" type="Node" parent="." unique_id=756826455]
+script = ExtResource("6_gsn4m")
+
+[node name="Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=334764878]
+stream = ExtResource("7_64bye")
+volume_db = 2.0
+script = ExtResource("8_28ung")
+
+[node name="Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=1471645120]
+stream = ExtResource("9_n2uw5")
+volume_db = -2.0
+script = ExtResource("8_28ung")
+
+[node name="Secondary Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=42027277]
+stream = ExtResource("10_m28oc")
+volume_db = 2.0
+script = ExtResource("8_28ung")
+
+[node name="Secondary Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=1490048855]
+stream = ExtResource("10_m28oc")
+volume_db = 2.0
+script = ExtResource("8_28ung")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=1790618127]
+stream = ExtResource("10_m28oc")
+volume_db = 2.0
+script = ExtResource("8_28ung")

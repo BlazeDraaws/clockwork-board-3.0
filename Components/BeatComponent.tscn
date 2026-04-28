@@ -1,48 +1,25 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgjfatmk16mx0"]
+[gd_scene format=3 uid="uid://bgjfatmk16mx0"]
 
-[ext_resource type="Script" path="res://Components/ComponentScripts/BeatComponent.gd" id="1_r4xlc"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/GUIComponent.gd" id="2_g5jsh"]
-[ext_resource type="PackedScene" uid="uid://41gfk3tasqsy" path="res://Components/LineComponent.tscn" id="3_vf0kr"]
-[ext_resource type="PackedScene" uid="uid://5tvmldk0wneg" path="res://Components/RingComponent.tscn" id="4_w71yb"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/DebugComponentScripts/DebugStatsComponent.gd" id="5_dgd74"]
+[ext_resource type="Script" uid="uid://h4vpcq246o2x" path="res://Components/ComponentScripts/BeatComponent.gd" id="1_r4xlc"]
+[ext_resource type="Script" uid="uid://cdhnhjtt2ebm1" path="res://Components/ComponentScripts/GUIComponent.gd" id="2_g5jsh"]
+[ext_resource type="Script" uid="uid://njdulxomjea5" path="res://Components/ComponentScripts/DebugComponentScripts/DebugStatsComponent.gd" id="5_dgd74"]
 [ext_resource type="SpriteFrames" uid="uid://bboqhyxmwgwui" path="res://Assets/GUI/Clefs/Clefs.tres" id="6_g5jsh"]
-[ext_resource type="Script" path="res://Components/ComponentScripts/ClefComponent.gd" id="7_vf0kr"]
+[ext_resource type="Script" uid="uid://yawtkyfjl3ic" path="res://Components/ComponentScripts/ClefComponent.gd" id="7_vf0kr"]
 
-[node name="BeatComponent" type="Control" node_paths=PackedStringArray("GUIComp")]
+[node name="BeatComponent" type="Control" unique_id=256186076 node_paths=PackedStringArray("GUIComp")]
 z_index = -1
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_r4xlc")
 GUIComp = NodePath("GUIComponent")
 
-[node name="GUIComponent" type="Control" parent="." node_paths=PackedStringArray("BeatComp")]
+[node name="GUIComponent" type="Control" parent="." unique_id=2040536734 node_paths=PackedStringArray("BeatComp")]
 anchors_preset = 0
 script = ExtResource("2_g5jsh")
 BeatComp = NodePath("..")
 
-[node name="LineComponent" parent="GUIComponent" instance=ExtResource("3_vf0kr")]
-layout_mode = 0
-anchors_preset = 0
-anchor_top = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_right = 2722.0
-grow_vertical = 1
-
-[node name="RingComponent" parent="GUIComponent" instance=ExtResource("4_w71yb")]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_top = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 128.0
-offset_bottom = 128.0
-grow_vertical = 1
-pivot_offset = Vector2(70.34, -500)
-
-[node name="DebugStatsComponent" type="Control" parent="GUIComponent"]
+[node name="DebugStatsComponent" type="Control" parent="GUIComponent" unique_id=1442950103]
+visible = false
 z_index = 10
 z_as_relative = false
 anchors_preset = 0
@@ -52,7 +29,7 @@ offset_right = -261.0
 offset_bottom = -208.0
 script = ExtResource("5_dgd74")
 
-[node name="Beat" type="Label" parent="GUIComponent/DebugStatsComponent"]
+[node name="Beat" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=1224763296]
 layout_mode = 0
 offset_left = 200.0
 offset_top = 100.0
@@ -61,7 +38,7 @@ offset_bottom = 123.0
 text = "beat"
 metadata/_edit_use_anchors_ = true
 
-[node name="Drag" type="Label" parent="GUIComponent/DebugStatsComponent"]
+[node name="Drag" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=302674191]
 layout_mode = 0
 offset_left = 200.0
 offset_top = 125.0
@@ -70,7 +47,7 @@ offset_bottom = 148.0
 text = "drag"
 metadata/_edit_use_anchors_ = true
 
-[node name="Speed" type="Label" parent="GUIComponent/DebugStatsComponent"]
+[node name="Speed" type="Label" parent="GUIComponent/DebugStatsComponent" unique_id=618616528]
 layout_mode = 0
 offset_left = 200.0
 offset_top = 150.0
@@ -79,11 +56,12 @@ offset_bottom = 173.0
 text = "speed"
 metadata/_edit_use_anchors_ = true
 
-[node name="ClefComponent" type="AnimatedSprite2D" parent="GUIComponent"]
+[node name="ClefComponent" type="AnimatedSprite2D" parent="GUIComponent" unique_id=194591243]
+visible = false
 position = Vector2(-173, -40)
 sprite_frames = ExtResource("6_g5jsh")
 animation = &"2"
 autoplay = "1"
 script = ExtResource("7_vf0kr")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="GUIComponent/ClefComponent"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUIComponent/ClefComponent" unique_id=407806158]

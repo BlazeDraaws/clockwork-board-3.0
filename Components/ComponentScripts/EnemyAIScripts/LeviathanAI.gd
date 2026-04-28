@@ -13,7 +13,7 @@ extends BasicAIComponent
 
 const ENEMY_ROTFISH = preload("uid://bancyvpk77p1b")
 
-func on_ready() -> void:
+func on_ready(_h) -> void:
 	select_target()
 	
 	animation_player.animation_finished.connect(kill)
@@ -42,9 +42,9 @@ func on_update(CurrentBeatComp):
 				action()
 
 			beat_component_2:
-				BeatManagerComp.spawn_entity(ENEMY_ROTFISH, container)
-				BeatManagerComp.spawn_entity(ENEMY_ROTFISH, container)
-				BeatManagerComp.spawn_entity(ENEMY_ROTFISH, container)
+				BeatManagerComp.spawn_entity(ENEMY_ROTFISH)
+				BeatManagerComp.spawn_entity(ENEMY_ROTFISH)
+				BeatManagerComp.spawn_entity(ENEMY_ROTFISH)
 
 func action():
 	match randi_range(1,5):

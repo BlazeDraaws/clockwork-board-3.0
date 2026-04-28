@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4p3c4aqriqsq"
+path="res://.godot/imported/woosh hard.mp3-2bf4072999b199a4a36f8ebce0b3afae.mp3str"
+
+[deps]
+
+source_file="res://Assets/old crap/woosh hard.mp3"
+dest_files=["res://.godot/imported/woosh hard.mp3-2bf4072999b199a4a36f8ebce0b3afae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

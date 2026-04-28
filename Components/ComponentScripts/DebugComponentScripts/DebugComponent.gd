@@ -63,7 +63,6 @@ func register_entity(EntityComp):
 
 # Creates + tracks debug UI for a beat component
 func register_beat(EntityComp, BeatComp):
-
 	# Spawn UI row
 	var BeatRow = BeatCompRowScene.instantiate()
 	BeatRow.BeatComp = BeatComp

@@ -5,9 +5,11 @@ class_name BeatComponent extends Node
 @export var speedvalue : float = 1
 @export var notetype : int = 1
 @export var Secondary : bool = false
+@export var line : bool = true
 @export var specific_orientation : int = 0
 @export var GUIComp : GUIComponent
 
+var temp : bool = false
 var prev_beat : float
 var orientation : int
 var beat_history: Array = []
@@ -18,15 +20,18 @@ var drag_history: Array = []
 var history_limit:= 30
 
 signal _update
+signal _finished
 
-@onready var secondary_sfx: AudioStreamPlayer = $"../Secondary_SFX"
+@onready var BeatManagerComp : BeatManagerComponent = $"../../../../BeatManagerComponent"
 @onready var UndoComp : UndoRedo = UndoRedo.new()
 @onready var EntityComp : EntityComponent = $".."
 @export var BackupEntity : EntityComponent
 @export var BackupSprite : SpriteComponent
 
 func _ready() -> void:
-	
+	if GUIComp:
+		GUIComp._addGUI(line)
+
 	
 	if EntityComp == null:
 		EntityComp = BackupEntity
@@ -35,7 +40,19 @@ func _ready() -> void:
 		orientation = EntityComp.DefaultOrientation
 	else:
 		orientation = specific_orientation
+	
+	Registry.register_beat(self)
+	await get_tree().process_frame
+	Registry.link(get_parent(), self)
+	
+	self._update.connect(EntityComp.sync) #is synced with entity
+	for childcomp in EntityComp.get_children(): #then synced with its siblings
+		if childcomp and childcomp.has_method("_update"): 
+			self._update.connect(childcomp._update)
 
+
+func _exit_tree():
+	Registry.unregister_beat(self)
 
 
 #region Functions
@@ -49,10 +66,6 @@ func _setbeat(setvalue): #set beat value
 	if beat_history.size() > history_limit:
 		beat_history.pop_back()
 	
-	if Secondary and secondary_sfx:
-		secondary_sfx.pitch_scale = randf_range(0.9, 1.1)
-		secondary_sfx.play(0.1)
-	
 	beat = setvalue + drag
 	update()
 
@@ -62,10 +75,6 @@ func _setabsolutebeat(setvalue): #set beat value
 	
 	if beat_history.size() > history_limit:
 		beat_history.pop_back()
-	
-	if Secondary and secondary_sfx:
-		secondary_sfx.pitch_scale = randf_range(0.9, 1.1)
-		secondary_sfx.play(0.1)
 	
 	beat = setvalue
 	update()
@@ -109,9 +118,17 @@ func _notetype(noteID):
 
 
 func update():
+	if beat <= 0:
+		_finished.emit()
+	
 	_update.emit(self) #emit signal to master
 	if GUIComp:
 		GUIComp._update()
+	
+	
+	if temp and beat <= 0:
+		await get_tree().create_timer(0.5).timeout
+		queue_free()
 
 func _randomize(extra : bool):
 	
