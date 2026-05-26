@@ -91,6 +91,7 @@ func _newline(nameplate, beats, secondary = false, carry_over_stats = false):
 	add_sibling(NewBeatComp)
 	debug_component.register_beat(NewBeatComp.EntityComp, NewBeatComp)
 	return NewBeatComp
+	
 func print_game(a, ...args):
 	if a is Color:
 		args.push_front(str("[color=gray][i] Narration: [/i][/color][color=", a.to_html(false), "][b][center]"))

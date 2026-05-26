@@ -35,7 +35,7 @@ _data = {
 
 [sub_resource type="Resource" id="Resource_bm0s6"]
 script = ExtResource("12_bm0s6")
-name = "TestAction 1"
+name = "Punch"
 Beat_Cost = 3
 Tempo_Cost = 1
 Narration = "punches the enemy"
@@ -43,7 +43,7 @@ metadata/_custom_type_script = "uid://2liyffaspg2u"
 
 [sub_resource type="Resource" id="Resource_olw8j"]
 script = ExtResource("12_bm0s6")
-name = "TestAction 2"
+name = "kick"
 Beat_Cost = 1
 Tempo_Cost = 3
 Narration = "kicks the enemy"
@@ -51,11 +51,10 @@ metadata/_custom_type_script = "uid://2liyffaspg2u"
 
 [sub_resource type="Resource" id="Resource_6idqt"]
 script = ExtResource("12_bm0s6")
-name = "TestAction 3"
+name = "heal up someone"
 Beat_Cost = 4
 Tempo_Cost = 3
 Narration = "heals someone"
-main = false
 metadata/_custom_type_script = "uid://2liyffaspg2u"
 
 [node name="Lucille" type="Control" unique_id=1928447707 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
@@ -72,6 +71,8 @@ size_flags_vertical = 4
 script = ExtResource("1_dx7pt")
 SpriteComp = NodePath("SpriteComponent")
 MainBeatComp = NodePath("Main")
+DefaultOrientation = null
+SpriteFlip = null
 close = false
 
 [node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=183838993]
@@ -147,6 +148,12 @@ script = ExtResource("8_bm0s6")
 [node name="ActionSetComponent" type="Node" parent="." unique_id=919069171]
 script = ExtResource("11_8cydv")
 moves = Array[ExtResource("12_bm0s6")]([SubResource("Resource_bm0s6"), SubResource("Resource_olw8j"), SubResource("Resource_6idqt")])
+
+[node name="Button" type="Button" parent="ActionSetComponent" unique_id=1489739969]
+offset_right = 373.0
+offset_bottom = 254.0
+
+[connection signal="pressed" from="ActionSetComponent/Button" to="ActionSetComponent" method="_on_button_pressed"]
 
 [editable path="Main"]
 [editable path="Secondary"]

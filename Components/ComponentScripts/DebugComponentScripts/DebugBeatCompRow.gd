@@ -7,3 +7,4 @@ func _ready() -> void:
 		$Label.text = BeatComp.name
 	else:
 		$Label.text = "[No BeatComp]"
+	

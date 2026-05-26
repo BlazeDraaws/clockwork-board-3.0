@@ -7,6 +7,7 @@ class_name DebugComponent extends Control
 # UI scenes (what gets spawned in debug)
 @export var EntityRowScene : PackedScene      # One row per entity
 @export var BeatCompRowScene : PackedScene    # One row per beat component
+@export var ActionMenuScene : PackedScene    # One row per beat component
 
 # External systems
 @export var BeatManagerComp : BeatManagerComponent
@@ -18,6 +19,7 @@ class_name DebugComponent extends Control
 # Maps for tracking UI <-> real objects
 var entity_map := {} # EntityComp -> EntityRow
 var beat_map := {}   # BeatComp   -> BeatRow
+var action_map := {}   # BeatComp   -> BeatRow
 
 
 # Called when scene loads
@@ -58,8 +60,30 @@ func register_entity(EntityComp):
 	for BeatComp in EntityComp.get_children():
 		if BeatComp is BeatComponent:
 			register_beat(EntityComp, BeatComp)
+	
+	# Register all ActionsComps under this entity
+	for ActionsComp in EntityComp.get_children():
+		if ActionsComp is ActionSetComponent:
+			register_abilities(EntityComp, ActionsComp)
+
+func register_abilities(EntityComp, ActionsComp):
+	# Spawn UI row
+	var ActionRow = ActionMenuScene.instantiate()
+	ActionRow.EntityComp = EntityComp
+	ActionRow.ActionsComp = ActionsComp
+
+	# Find parent entity UI
+	var EntityRow = entity_map[EntityComp]
+
+	# Attach beat row under entity row
+	EntityRow.get_node("VBoxContainer").add_child(ActionRow)
+	EntityRow.get_node("VBoxContainer").move_child(ActionRow, 0)
+	# Store reference
+	action_map[ActionsComp] = ActionRow
 
 
+	# When beat component is deleted → remove its UI
+	ActionsComp.tree_exiting.connect(_on_actions_removed.bind(ActionsComp))
 
 # Creates + tracks debug UI for a beat component
 func register_beat(EntityComp, BeatComp):
@@ -110,3 +134,16 @@ func _on_beat_removed(BeatComp):
 
 		# Remove from map
 		beat_map.erase(BeatComp)
+		
+		
+
+# Cleanup when beat component is removed
+func _on_actions_removed(ActionsComp):
+
+	if beat_map.has(ActionsComp):
+
+		# Delete UI row
+		beat_map[ActionsComp].queue_free()
+
+		# Remove from map
+		beat_map.erase(ActionsComp)

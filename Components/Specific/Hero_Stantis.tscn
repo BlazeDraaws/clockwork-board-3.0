@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="7_kmo77"]
 [ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_ckud4"]
 [ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_ikqhy"]
+[ext_resource type="Script" uid="uid://b2pcr6kiurvrn" path="res://Components/Specific/ActionSetComponent.gd" id="11_ckud4"]
+[ext_resource type="Script" uid="uid://2liyffaspg2u" path="res://Action.gd" id="12_ikqhy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kmo77"]
 animations = [{
@@ -41,6 +43,31 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_d5xm3")
 }
+
+[sub_resource type="Resource" id="Resource_bm0s6"]
+script = ExtResource("12_ikqhy")
+name = "TestAction 1"
+Beat_Cost = 3
+Tempo_Cost = 1
+Narration = "punches the enemy"
+metadata/_custom_type_script = "uid://2liyffaspg2u"
+
+[sub_resource type="Resource" id="Resource_olw8j"]
+script = ExtResource("12_ikqhy")
+name = "TestAction 2"
+Beat_Cost = 1
+Tempo_Cost = 3
+Narration = "kicks the enemy"
+metadata/_custom_type_script = "uid://2liyffaspg2u"
+
+[sub_resource type="Resource" id="Resource_6idqt"]
+script = ExtResource("12_ikqhy")
+name = "TestAction 3"
+Beat_Cost = 4
+Tempo_Cost = 3
+Narration = "heals someone"
+main = false
+metadata/_custom_type_script = "uid://2liyffaspg2u"
 
 [node name="Stantis" type="Control" unique_id=1928447707 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
 custom_minimum_size = Vector2(175, 200)
@@ -128,6 +155,10 @@ script = ExtResource("8_ckud4")
 stream = ExtResource("7_kmo77")
 volume_db = 2.0
 script = ExtResource("8_ckud4")
+
+[node name="ActionSetComponent" type="Node" parent="." unique_id=1490847615]
+script = ExtResource("11_ckud4")
+moves = Array[ExtResource("12_ikqhy")]([SubResource("Resource_bm0s6"), SubResource("Resource_olw8j"), SubResource("Resource_6idqt")])
 
 [editable path="Main"]
 [editable path="Secondary"]

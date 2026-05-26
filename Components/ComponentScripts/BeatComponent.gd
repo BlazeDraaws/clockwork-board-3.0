@@ -10,6 +10,7 @@ class_name BeatComponent extends Node
 @export var GUIComp : GUIComponent
 
 var temp : bool = false
+var free : bool = true
 var prev_beat : float
 var orientation : int
 var beat_history: Array = []
@@ -19,14 +20,19 @@ var extrarand_history: Array = []
 var drag_history: Array = []
 var history_limit:= 30
 
-signal _update
-signal _finished
+signal updated
+signal idle
+signal cast
+signal busy
+signal finished
+signal GUIfinished
 
 @onready var BeatManagerComp : BeatManagerComponent = $"../../../../BeatManagerComponent"
 @onready var UndoComp : UndoRedo = UndoRedo.new()
 @onready var EntityComp : EntityComponent = $".."
 @export var BackupEntity : EntityComponent
 @export var BackupSprite : SpriteComponent
+@export var ActionSetComp : ActionSetComponent
 
 func _ready() -> void:
 	if GUIComp:
@@ -45,10 +51,11 @@ func _ready() -> void:
 	await get_tree().process_frame
 	Registry.link(get_parent(), self)
 	
-	self._update.connect(EntityComp.sync) #is synced with entity
+	self.updated.connect(EntityComp.sync) #is synced with entity
+	
 	for childcomp in EntityComp.get_children(): #then synced with its siblings
 		if childcomp and childcomp.has_method("_update"): 
-			self._update.connect(childcomp._update)
+			self.updated.connect(childcomp._update)
 
 
 func _exit_tree():
@@ -118,17 +125,29 @@ func _notetype(noteID):
 
 
 func update():
-	if beat <= 0:
-		_finished.emit()
-	
-	_update.emit(self) #emit signal to master
+	updated.emit(self) #emit signal to master
 	if GUIComp:
 		GUIComp._update()
 	
+	if beat_history.front() <= 0 and beat > 0: # going from 0 to something
+		free = false
+		cast.emit()
+		return
+	if beat_history.front() > 0 and beat <= 0:# going from something to 0
+		free = true
+		finished.emit()
+		await GUIComp.bar.depleted
+		GUIfinished.emit()
+		if temp:
+			queue_free()
+		return
+	if beat_history.front() <= 0 and beat <= 0: # going from 0 to 0
+		idle.emit()
+		return
+	if beat_history.front() > 0 and beat > 0: # going from something to something
+		busy.emit()
+		return
 	
-	if temp and beat <= 0:
-		await get_tree().create_timer(0.5).timeout
-		queue_free()
 
 func _randomize(extra : bool):
 	
