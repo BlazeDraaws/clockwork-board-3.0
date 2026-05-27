@@ -1,0 +1,300 @@
+[gd_scene format=3 uid="uid://ceeomod8ty343"]
+
+[ext_resource type="Script" uid="uid://2ip338qnwf13" path="res://Components/ComponentScripts/EntityCompenent.gd" id="1_rgx1k"]
+[ext_resource type="Texture2D" uid="uid://cnejmuyqmye5r" path="res://Assets/Characters/NPC/Lucipede/lucibod.png" id="2_pfaov"]
+[ext_resource type="Script" uid="uid://cenyiit3br825" path="res://Components/ComponentScripts/SpriteComponent.gd" id="3_pfaov"]
+[ext_resource type="Texture2D" uid="uid://5pcwf7m6trk2" path="res://Assets/Characters/NPC/Lucipede/lucihead.png" id="3_ye473"]
+[ext_resource type="Texture2D" uid="uid://dpy1bk86rrp4" path="res://Assets/Characters/NPC/Lucipede/lucipede.png" id="4_hn8ds"]
+[ext_resource type="AnimationLibrary" uid="uid://decbb7ljxq7u2" path="res://Assets/Characters/PC/AnimationPlayerTweens.res" id="4_ye473"]
+[ext_resource type="PackedScene" uid="uid://bgjfatmk16mx0" path="res://Components/BeatComponent.tscn" id="5_hn8ds"]
+[ext_resource type="Script" uid="uid://db0m1p4mp8jrv" path="res://Components/ComponentScripts/AudioManagerComponent.gd" id="6_r66ml"]
+[ext_resource type="AudioStream" uid="uid://bytxb3dob205u" path="res://Assets/Audio/cast_default.ogg" id="7_ojgs6"]
+[ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_aupmd"]
+[ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_77dq6"]
+[ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="10_32iqe"]
+[ext_resource type="Script" uid="uid://drjykyh7lo2nh" path="res://Components/ComponentScripts/EnemyAIScripts/LucipedeAI.tscn.gd" id="13_4b8ea"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r66ml"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pfaov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ye473")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hn8ds")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_8kudx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, -200)]
+}
+
+[sub_resource type="Animation" id="Animation_4b8ea"]
+resource_name = "loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.10000001, 0.6333333),
+"transitions": PackedFloat32Array(1.8660648, 0.39229155),
+"update": 0,
+"values": [Vector2(8.02, -200), Vector2(7.28, -195.545)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.017453292519943295]
+}
+
+[sub_resource type="Animation" id="Animation_od0ns"]
+resource_name = "loop_2"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.73333335),
+"transitions": PackedFloat32Array(1.8660648, 0.39229155),
+"update": 0,
+"values": [Vector2(8.02, -200), Vector2(7.28, -195.545)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_30s24"]
+_data = {
+&"RESET": SubResource("Animation_8kudx"),
+&"loop": SubResource("Animation_4b8ea"),
+&"loop_2": SubResource("Animation_od0ns")
+}
+
+[sub_resource type="Animation" id="Animation_42nad"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteComponent:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, -200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteComponent2:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, -200)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteComponent3:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, -200)]
+}
+
+[sub_resource type="Animation" id="Animation_6j4m5"]
+resource_name = "loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteComponent:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5666667),
+"transitions": PackedFloat32Array(1.6817931, 4.924576),
+"update": 0,
+"values": [Vector2(5, -200), Vector2(5.515, -197.445)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteComponent2:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.66666675),
+"transitions": PackedFloat32Array(1.6817931, 4.924576),
+"update": 0,
+"values": [Vector2(5, -200), Vector2(5.515, -197.445)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteComponent3:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.23333333, 0.8000001),
+"transitions": PackedFloat32Array(1.6817931, 4.924576),
+"update": 0,
+"values": [Vector2(5, -200), Vector2(5.515, -197.445)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yl0sj"]
+_data = {
+&"RESET": SubResource("Animation_42nad"),
+&"loop": SubResource("Animation_6j4m5")
+}
+
+[node name="Beta Lucille" type="Control" unique_id=1715538023 node_paths=PackedStringArray("SpriteComp", "MainBeatComp") groups=["Enemies", "Unfriendly"]]
+custom_minimum_size = Vector2(175, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 200)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_rgx1k")
+SpriteComp = NodePath("SpriteComponent")
+MainBeatComp = NodePath("Main")
+DefaultOrientation = -1
+SpriteFlip = true
+
+[node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
+z_index = 5
+position = Vector2(134, 178)
+sprite_frames = SubResource("SpriteFrames_r66ml")
+frame = 1
+offset = Vector2(5, -200)
+script = ExtResource("3_pfaov")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent" unique_id=474523637]
+libraries/ = SubResource("AnimationLibrary_30s24")
+libraries/AnimationPlayerTweens = ExtResource("4_ye473")
+
+[node name="SpriteComponent2" type="AnimatedSprite2D" parent="." unique_id=1955603931]
+z_index = -2
+position = Vector2(137, 200)
+sprite_frames = SubResource("SpriteFrames_r66ml")
+frame = 2
+offset = Vector2(5, -200)
+script = ExtResource("3_pfaov")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent2" unique_id=526677624]
+libraries/ = SubResource("AnimationLibrary_30s24")
+libraries/AnimationPlayerTweens = ExtResource("4_ye473")
+
+[node name="SpriteComponent3" type="AnimatedSprite2D" parent="." unique_id=478507494]
+z_index = 1
+position = Vector2(137, 200)
+sprite_frames = SubResource("SpriteFrames_r66ml")
+offset = Vector2(5, -200)
+script = ExtResource("3_pfaov")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SpriteComponent3" unique_id=929687652]
+libraries/ = SubResource("AnimationLibrary_30s24")
+libraries/AnimationPlayerTweens = ExtResource("4_ye473")
+
+[node name="Main" parent="." unique_id=1557651122 instance=ExtResource("5_hn8ds")]
+z_index = 0
+layout_mode = 0
+offset_left = 100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 200.0
+
+[node name="GUIComponent" parent="Main" index="0" unique_id=2040536734]
+z_index = 99
+offset_left = 844.0
+offset_top = -560.0
+offset_right = 844.0
+offset_bottom = -560.0
+
+[node name="AudioManagerComponent" type="Node" parent="." unique_id=1277966778]
+script = ExtResource("6_r66ml")
+
+[node name="Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=2127358690]
+stream = ExtResource("7_ojgs6")
+volume_db = 2.0
+script = ExtResource("8_aupmd")
+
+[node name="Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=484378064]
+stream = ExtResource("9_77dq6")
+volume_db = -2.0
+script = ExtResource("8_aupmd")
+
+[node name="Secondary Cast" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=954127966]
+stream = ExtResource("10_32iqe")
+volume_db = 2.0
+script = ExtResource("8_aupmd")
+
+[node name="Secondary Ready" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=795365553]
+stream = ExtResource("10_32iqe")
+volume_db = 2.0
+script = ExtResource("8_aupmd")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="AudioManagerComponent" unique_id=325798852]
+stream = ExtResource("10_32iqe")
+volume_db = 2.0
+script = ExtResource("8_aupmd")
+
+[node name="BasicAIComponent" type="Node" parent="." unique_id=1667565099]
+script = ExtResource("13_4b8ea")
+metadata/_custom_type_script = "uid://cjjjf63dev2ro"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1794465064]
+libraries/ = SubResource("AnimationLibrary_yl0sj")
+autoplay = &"loop"
+
+[editable path="Main"]

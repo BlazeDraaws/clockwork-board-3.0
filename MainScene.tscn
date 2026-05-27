@@ -8,34 +8,87 @@
 [ext_resource type="PackedScene" uid="uid://dyt3n1i3v064m" path="res://Components/Specific/Hero_Bree.tscn" id="4_8s4c3"]
 [ext_resource type="Script" uid="uid://c36gaj3j7jpk0" path="res://Components/ComponentScripts/ControlerComponent.gd" id="4_hbc2u"]
 [ext_resource type="PackedScene" uid="uid://mciaosaynkbm" path="res://Components/DebugBeatCompRow.tscn" id="4_rf2cd"]
-[ext_resource type="PackedScene" uid="uid://ctf8awk7mlosa" path="res://Components/Specific/Template_Enemy.tscn" id="5_4mcbk"]
+[ext_resource type="PackedScene" uid="uid://ceeomod8ty343" path="res://Components/Specific/Boss_Lucipede.tscn" id="5_nm5af"]
 [ext_resource type="Script" uid="uid://ciojwwhxjqigs" path="res://Components/ComponentScripts/SceneAudioManagerComponent.gd" id="7_4mcbk"]
 [ext_resource type="Script" uid="uid://dg6wbj8nh3cts" path="res://Components/ComponentScripts/BeatManagerComponent2.0.gd" id="8_nm5af"]
 [ext_resource type="AudioStream" uid="uid://bytxb3dob205u" path="res://Assets/Audio/cast_default.ogg" id="9_mctxq"]
 [ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="10_mctxq"]
+[ext_resource type="Texture2D" uid="uid://cy6rdecfucg0v" path="res://Assets/Backgrounds/smear.png" id="15_8s4c3"]
+[ext_resource type="Texture2D" uid="uid://c6yhk8im81i4q" path="res://Assets/Backgrounds/centipede.png" id="16_3slyh"]
 [ext_resource type="Texture2D" uid="uid://dhhkk30nx43vf" path="res://Assets/Backgrounds/retrere.png" id="36_78ikg"]
+
+[sub_resource type="Animation" id="Animation_nm5af"]
+length = 2.0
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_8s4c3"]
+resource_name = "RESET_2"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0333333),
+"transitions": PackedFloat32Array(3.9999993, 2.7320802),
+"update": 0,
+"values": [Vector2(0, 19.33), Vector2(0.125, 26.13)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Heroes:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.33333334, 1.3666667),
+"transitions": PackedFloat32Array(3.9999993, 2.7320802),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0.125, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_x0cd2"]
+resource_name = "loop"
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8s4c3"]
+_data = {
+&"RESET": SubResource("Animation_nm5af"),
+&"RESET_2": SubResource("Animation_8s4c3"),
+&"loop": SubResource("Animation_x0cd2")
+}
 
 [node name="Node2D" type="Node2D" unique_id=1660286881]
 
 [node name="Heroes" type="CenterContainer" parent="." unique_id=1449699815]
-offset_left = 21.0
-offset_right = 432.0
-offset_bottom = 993.0
+offset_left = 0.08562879
+offset_top = 4.110182
+offset_right = 411.08563
+offset_bottom = 997.1101
 
 [node name="Container" type="VBoxContainer" parent="Heroes" unique_id=237926573]
 layout_mode = 2
 
 [node name="Lucille" parent="Heroes/Container" unique_id=1928447707 groups=["Friendly", "Players"] instance=ExtResource("1_mctxq")]
 layout_mode = 2
+DefaultOrientation = 1
+SpriteFlip = false
 
 [node name="Stantis" parent="Heroes/Container" unique_id=2142817664 groups=["Friendly", "Players"] instance=ExtResource("2_nm5af")]
 layout_mode = 2
+DefaultOrientation = 1
+SpriteFlip = false
 
 [node name="Agar" parent="Heroes/Container" unique_id=1238990284 groups=["Friendly", "Players"] instance=ExtResource("3_x0cd2")]
 layout_mode = 2
 
 [node name="Bree" parent="Heroes/Container" unique_id=251451380 groups=["Friendly", "Players"] instance=ExtResource("4_8s4c3")]
 layout_mode = 2
+DefaultOrientation = 1
+SpriteFlip = false
 
 [node name="Enemies" type="CenterContainer" parent="." unique_id=1416409893]
 offset_left = 1487.0
@@ -45,57 +98,46 @@ offset_bottom = 993.0
 [node name="SpawnSlots" type="Node2D" parent="Enemies" unique_id=1307852086]
 
 [node name="Slot1" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=757940708]
-position = Vector2(110, 600)
+position = Vector2(-302, 162)
 
 [node name="Slot2" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1359826570]
-position = Vector2(-69, 388)
+position = Vector2(-586, 170)
 
 [node name="Slot3" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1066607802]
-position = Vector2(-66, 816)
+position = Vector2(-571, 756)
 
 [node name="Slot4" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1212977115]
-position = Vector2(101, 191)
+position = Vector2(-669, 304)
 
 [node name="Slot5" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1538320237]
-position = Vector2(96, 996)
+position = Vector2(-651, 632)
 
 [node name="Slot6" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1834982358]
-position = Vector2(-373, 501)
+position = Vector2(-689, 439)
 
 [node name="Slot7" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1265605729]
-position = Vector2(-378, 702)
+position = Vector2(-474, 826)
 
 [node name="Slot8" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=1400986196]
-position = Vector2(-243, 298)
+position = Vector2(-440, 150)
 
 [node name="Slot9" type="Marker2D" parent="Enemies/SpawnSlots" unique_id=902785178]
-position = Vector2(-258, 908)
+position = Vector2(-458, 685)
 
 [node name="Container" type="Node2D" parent="Enemies" unique_id=1726297892]
+position = Vector2(0, 19.33)
 
-[node name="SAL" parent="Enemies/Container" unique_id=1715538023 instance=ExtResource("5_4mcbk")]
-offset_left = 201.5
-offset_top = 43.0
-offset_right = 376.5
-offset_bottom = 243.0
+[node name="Beta_Lucille" parent="Enemies/Container" unique_id=1715538023 instance=ExtResource("5_nm5af")]
+offset_left = -470.0
+offset_top = 493.0
+offset_right = -294.99963
+offset_bottom = 693.00006
+pivot_offset = Vector2(166.19817, 207.91612)
+SpriteFlip = false
 
-[node name="GEEKO" parent="Enemies/Container" unique_id=1064178158 instance=ExtResource("5_4mcbk")]
-offset_left = 203.5
-offset_top = 308.0
-offset_right = 378.5
-offset_bottom = 508.0
-
-[node name="MOCKING BIRD" parent="Enemies/Container" unique_id=1984115825 instance=ExtResource("5_4mcbk")]
-offset_left = 193.5
-offset_top = 549.0
-offset_right = 368.5
-offset_bottom = 749.0
-
-[node name="CRACKED MOCKING BIRD" parent="Enemies/Container" unique_id=1844720036 instance=ExtResource("5_4mcbk")]
-offset_left = 188.0
-offset_top = 771.0
-offset_right = 363.0
-offset_bottom = 971.0
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Enemies/Container/Beta_Lucille" unique_id=1940189590]
+libraries/ = SubResource("AnimationLibrary_8s4c3")
+autoplay = &"RESET_2"
 
 [node name="BeatManagerComponent" type="Node" parent="." unique_id=614451702]
 script = ExtResource("8_nm5af")
@@ -153,8 +195,51 @@ layout_mode = 2
 text = "next beat
 "
 
+[node name="Node2D" type="Node2D" parent="." unique_id=1516122398]
+z_index = -3
+position = Vector2(960, 0)
+
+[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=1951502818]
+scroll_scale = Vector2(10, 10)
+scroll_offset = Vector2(0, 540.03)
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-2000, 0)
+ignore_camera_scroll = true
+
+[node name="Smear" type="Sprite2D" parent="Node2D/Parallax2D" unique_id=1418998778]
+texture = ExtResource("15_8s4c3")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Node2D" unique_id=677972088]
+modulate = Color(0, 2.5366251, 1.900745, 1)
+scroll_offset = Vector2(699, 528)
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-1250, 0)
+
+[node name="Centipede2" type="Sprite2D" parent="Node2D/Parallax2D3" unique_id=2064620997]
+position = Vector2(-3, -380)
+texture = ExtResource("16_3slyh")
+
+[node name="Centipede" type="Sprite2D" parent="Node2D/Parallax2D3" unique_id=467125313]
+position = Vector2(-3, 427)
+texture = ExtResource("16_3slyh")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Node2D" unique_id=912901643]
+z_index = 7
+scroll_scale = Vector2(1.5, 1.5)
+scroll_offset = Vector2(0, 528)
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-1500, 0)
+
+[node name="Centipede2" type="Sprite2D" parent="Node2D/Parallax2D2" unique_id=886746469]
+position = Vector2(0, -489.03003)
+texture = ExtResource("16_3slyh")
+
+[node name="Centipede" type="Sprite2D" parent="Node2D/Parallax2D2" unique_id=124950418]
+position = Vector2(0, 531.97)
+texture = ExtResource("16_3slyh")
+
 [node name="Background" type="Sprite2D" parent="." unique_id=1057680770]
-modulate = Color(0.72156864, 0.3176471, 0.52591914, 1)
+modulate = Color(0.29205322, 0.515625, 0.45274544, 1)
 z_index = -15
 position = Vector2(943, 668)
 texture = ExtResource("36_78ikg")

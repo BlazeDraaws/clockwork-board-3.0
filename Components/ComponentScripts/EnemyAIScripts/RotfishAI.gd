@@ -9,23 +9,21 @@ extends BasicAIComponent
 @onready var animID
 @onready var beatamount : float = 10
 
-func on_ready() -> void:
+func _ready() -> void:
 	SpriteComp._PlayerAnim("Stage_1")
 	
 	MainBeatComp._setabsolutebeat(randi_range(6,10))
 	
 	animation_player.animation_finished.connect(animationfinish)
-	match randi_range(1,5):
+	match randi_range(1,4):
 		1: target = lucille
 		2: target = stantis
 		3: target = agar
 		4: target = bree
-		5: target = lottie
 		
 		
 
 func on_update(CurrentBeatComp):
-	print(CurrentBeatComp.beat)
 	if CurrentBeatComp.beat > 5.0:
 		SpriteComp._PlayerAnim("Stage_1")
 	elif CurrentBeatComp.beat > 4.0:
@@ -38,7 +36,12 @@ func on_update(CurrentBeatComp):
 		SpriteComp.rotation -= deg_to_rad(180)
 	elif CurrentBeatComp.beat <= 0:
 		animation_player.play("Attack")
-		
+		if randi_range(1,2) == 1:
+			print_game(name(self), " Missed!")
+			return
+		print_game(name(self), " drags down ", name(target))
+		$"../Cast_MUS".play()
+		target.hurt()
 		for Beatcomp in target.get_children():
 			if Beatcomp is BeatComponent:
 				BeatManagerComp._BeatOrder("_drag", 1, Beatcomp, true)

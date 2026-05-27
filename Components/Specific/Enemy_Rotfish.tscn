@@ -128,22 +128,17 @@ offset_left = 100.0
 offset_top = 200.0
 offset_right = 100.0
 offset_bottom = 200.0
+line = false
 
-[node name="LineComponent" parent="BeatComponent/GUIComponent" index="0"]
-visible = false
+[node name="GUIComponent" parent="BeatComponent" index="0" unique_id=2040536734]
+z_index = 70
+offset_left = -659.0
+offset_top = 113.0
+offset_right = -659.0
+offset_bottom = 113.0
 
-[node name="RingComponent" parent="BeatComponent/GUIComponent" index="1"]
-pivot_offset = Vector2(70.34, -156.69)
-
-[node name="DebugStatsComponent" parent="BeatComponent/GUIComponent" index="2"]
-visible = false
-
-[node name="ClefComponent" parent="BeatComponent/GUIComponent" index="3"]
-visible = false
-
-[node name="AIComponent" type="Node" parent="." unique_id=933867944 node_paths=PackedStringArray("EntityComp")]
+[node name="AIComponent" type="Node" parent="." unique_id=933867944]
 script = ExtResource("5_d6dyy")
-EntityComp = NodePath("..")
 
 [node name="Cast_MUS" type="AudioStreamPlayer" parent="." unique_id=312550108]
 stream = ExtResource("6_p32xj")

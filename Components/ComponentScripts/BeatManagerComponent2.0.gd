@@ -193,7 +193,7 @@ func _NextFreeBeat():
 	on_update_next()
 	
 	if LowestBeatComp == null:
-		return
+		LowestBeatCompValue = 1
 	
 	UndoComp.create_action("NextFreeBeat")
 	

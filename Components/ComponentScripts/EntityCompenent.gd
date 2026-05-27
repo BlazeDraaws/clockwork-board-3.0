@@ -44,7 +44,7 @@ func _down():
 
 func hurt():
 	SpriteComp._PlayerAnim("Hurt")
-	print(self.name, ": ow ive been hurt")
+	# print(self.name, ": ow ive been hurt")
 	await SpriteComp.AnimComp.animation_finished
 	SpriteComp.CurrentAnim = "Idle"
 	for child in get_children():

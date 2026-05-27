@@ -50,7 +50,6 @@ DefaultOrientation = -1
 SpriteFlip = true
 
 [node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=102129096]
-visible = false
 z_index = 1
 position = Vector2(137, 200)
 scale = Vector2(0.5, 0.5)
