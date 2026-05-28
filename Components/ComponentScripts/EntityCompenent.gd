@@ -13,6 +13,9 @@ class_name EntityComponent extends Node
 @onready var downedstate : bool
 @onready var clef : bool
 @onready var confused : bool = false
+
+const BeatCompScene = preload("uid://bgjfatmk16mx0")
+
 # history
 var range_history: Array = []
 var history_limit:= 30
@@ -44,7 +47,7 @@ func _down():
 
 func hurt():
 	SpriteComp._PlayerAnim("Hurt")
-	# print(self.name, ": ow ive been hurt")
+	print(self.name, ": ow ive been hurt")
 	await SpriteComp.AnimComp.animation_finished
 	SpriteComp.CurrentAnim = "Idle"
 	for child in get_children():
@@ -109,6 +112,28 @@ func sync(BeatCompChild : BeatComponent):
 		drag = MainBeatComp.drag
 	stack_nodes_vertically()
 
+func _newline(nameplate, beats, secondary = false, carry_over_stats = false):
+	
+	# summon gui progress bar
+	var NewBeatComp : BeatComponent = BeatCompScene.instantiate()
+	
+	# add its variables, value, name, etc
+	NewBeatComp.position.y = MainBeatComp.position.y + 20
+	NewBeatComp.position.x = MainBeatComp.position.x 
+	NewBeatComp.name = nameplate
+	NewBeatComp.Secondary = secondary
+	if carry_over_stats: # this might be broken
+		NewBeatComp.beat = beats + MainBeatComp.drag
+		NewBeatComp.speed = MainBeatComp.speed
+	else:
+		NewBeatComp.beat = beats
+	NewBeatComp.temp = true
+	add_child(NewBeatComp)
+	DebugComp.register_beat(self, NewBeatComp)
+	stack_nodes_vertically()
+	return NewBeatComp
+
+
 func get_beat_children():
 	var result = []
 	for child in get_children():
@@ -116,7 +141,6 @@ func get_beat_children():
 			result.append(child)
 
 	return result
-
 
 
 func stack_nodes_vertically(nodes: Array = get_beat_children(), spacing: float = 20.0):

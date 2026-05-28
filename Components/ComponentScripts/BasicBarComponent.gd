@@ -3,6 +3,8 @@ class_name BarComponent extends TextureProgressBar
 var color_base: Color
 var newvalue : float = 0
 var dragopacity : float = 1
+var has_emitted_depleted = false
+signal depleted
 
 @onready var SpriteAnim : AnimationPlayer = $"../../../SpriteComponent/AnimationPlayer"
 @export var DynamicColour : bool = true
@@ -51,6 +53,16 @@ func _physics_process(delta: float) -> void:
 		value = lerp(value, newvalue, delta*8)
 	else:
 		value = lerp(value, newvalue, delta*4)
+	
+	# Check for depletion
+	if value <= 5 and not has_emitted_depleted:
+		has_emitted_depleted = true
+		depleted.emit()
+
+	# Reset if bar goes back above zero (optional)
+	elif value > 0.01:
+		has_emitted_depleted = false
+
 
 func _tint_node(node: Node, color: Color) -> void:
 	if node.ColorOverride: #if node colour can be overridden

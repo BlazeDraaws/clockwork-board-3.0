@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://bytxb3dob205u" path="res://Assets/Audio/cast_default.ogg" id="7_xba4p"]
 [ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_jf8hr"]
 [ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_mah4y"]
+[ext_resource type="Script" uid="uid://d4dysxfltwm8q" path="res://Components/ComponentScripts/DebugComponentScripts/ActionSetComponent.gd" id="11_jf8hr"]
+[ext_resource type="Script" uid="uid://b2u1hgil2wgpq" path="res://NonComponentScripts/Action.gd" id="12_mah4y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8wjc8"]
 animations = [{
@@ -41,6 +43,79 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_d5xm3")
 }
+
+[sub_resource type="Resource" id="Resource_7qw1q"]
+script = ExtResource("12_mah4y")
+name = "Fungiform Fling"
+Beat_Cost = 3
+Tempo_Cost = 6
+Narration = "launches himself towards an enemy!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_k3fq0"]
+script = ExtResource("12_mah4y")
+name = "Evasive Kick"
+Beat_Cost = 2
+Tempo_Cost = 4
+Narration = "kicks evasively!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_cehvh"]
+script = ExtResource("12_mah4y")
+name = "Now you die"
+Beat_Cost = 2
+Tempo_Cost = 1
+Narration = "chain attacks an enemy!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_4u8lp"]
+script = ExtResource("12_mah4y")
+name = "Feinting Punch"
+Beat_Cost = 4
+Tempo_Cost = 7
+Narration = "attempts to fake out an enemy!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_d8dfg"]
+script = ExtResource("12_mah4y")
+name = "Twisting Blade"
+Beat_Cost = 2
+Tempo_Cost = 5
+Narration = "uses the TWISTING BLADE."
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_sbjos"]
+script = ExtResource("12_mah4y")
+name = "Instigator"
+Beat_Cost = 3
+Tempo_Cost = 2
+Narration = "instigates two confused enemies to attack eachother!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_h33k0"]
+script = ExtResource("12_mah4y")
+name = "Now you see me"
+Beat_Cost = 4
+Tempo_Cost = 7
+Narration = "pre-empted an attack!"
+main = false
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_8f4nd"]
+script = ExtResource("12_mah4y")
+name = "Deep Grief"
+Beat_Cost = 99
+Tempo_Cost = 4
+Narration = "has sent a poison attack that has gone off!"
+main = false
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_dv0op"]
+script = ExtResource("12_mah4y")
+name = "TWISTGRAVE"
+Beat_Cost = 99
+Narration = "attempts to end this fight. (TWISTGRAVE)"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
 
 [node name="Agar" type="Control" unique_id=1928447707 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
 custom_minimum_size = Vector2(175, 200)
@@ -127,6 +202,10 @@ script = ExtResource("8_jf8hr")
 stream = ExtResource("7_sa5yc")
 volume_db = 2.0
 script = ExtResource("8_jf8hr")
+
+[node name="ActionSetComponent" type="Node" parent="." unique_id=1820394792]
+script = ExtResource("11_jf8hr")
+moves = Array[ExtResource("12_mah4y")]([SubResource("Resource_7qw1q"), SubResource("Resource_k3fq0"), SubResource("Resource_cehvh"), SubResource("Resource_4u8lp"), SubResource("Resource_d8dfg"), SubResource("Resource_sbjos"), SubResource("Resource_h33k0"), SubResource("Resource_8f4nd"), SubResource("Resource_dv0op")])
 
 [editable path="Main"]
 [editable path="Secondary"]

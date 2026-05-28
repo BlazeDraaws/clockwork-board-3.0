@@ -3,16 +3,16 @@ class_name GUIComponent extends Node
 @export var BeatComp : BeatComponent
 const LINE_COMPONENT = preload("uid://41gfk3tasqsy")
 const RING_COMPONENT = preload("uid://5tvmldk0wneg")
-
+var bar
 
 func _addGUI(line):
 	
 	if line:
-		var node = LINE_COMPONENT.instantiate()
-		add_child(node)
+		bar = LINE_COMPONENT.instantiate()
+		add_child(bar)
 	else:
-		var node = RING_COMPONENT.instantiate()
-		add_child(node)
+		bar = RING_COMPONENT.instantiate()
+		add_child(bar)
 	_update()
 	
 

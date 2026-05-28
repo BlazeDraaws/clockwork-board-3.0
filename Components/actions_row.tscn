@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bg1l6dtr3amo7"]
+
+[ext_resource type="Script" uid="uid://dchg6b42nhhs1" path="res://Components/DebugActionsCompRow.gd" id="1_dp5bu"]
+
+[node name="ActionComp Row" type="VBoxContainer" unique_id=298221552]
+offset_right = 96.0
+offset_bottom = 23.0
+script = ExtResource("1_dp5bu")
+
+[node name="Label" type="Label" parent="." unique_id=484078566]
+layout_mode = 2
+text = "Moves"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=901119657]
+layout_mode = 2
+columns = 2

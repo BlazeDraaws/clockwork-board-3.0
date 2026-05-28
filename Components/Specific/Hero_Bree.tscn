@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="7_gv1of"]
 [ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_n7w5r"]
 [ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_2ifyn"]
+[ext_resource type="Script" uid="uid://d4dysxfltwm8q" path="res://Components/ComponentScripts/DebugComponentScripts/ActionSetComponent.gd" id="11_n7w5r"]
+[ext_resource type="Script" uid="uid://b2u1hgil2wgpq" path="res://NonComponentScripts/Action.gd" id="12_2ifyn"]
 
 [sub_resource type="Animation" id="Animation_d5xm3"]
 length = 0.001
@@ -30,6 +32,62 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_d5xm3")
 }
+
+[sub_resource type="Resource" id="Resource_r3ujd"]
+script = ExtResource("12_2ifyn")
+name = "Percussive Pebbles"
+Beat_Cost = 4
+Tempo_Cost = 3
+Narration = "spews rocks at the enemy!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_sd2q3"]
+script = ExtResource("12_2ifyn")
+name = "Thaw"
+Beat_Cost = 8
+Tempo_Cost = 5
+Narration = "thaws out the enemy!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_6ec2m"]
+script = ExtResource("12_2ifyn")
+name = "A Trill-ion Knocks (click twice))"
+Beat_Cost = 2
+Tempo_Cost = 1
+Narration = "sends half a trillion knocks!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_c8qlo"]
+script = ExtResource("12_2ifyn")
+name = "Miner-wall"
+Beat_Cost = 2
+Tempo_Cost = 1
+Narration = "boosts someones health!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_xrc1h"]
+script = ExtResource("12_2ifyn")
+name = "Freeze"
+Beat_Cost = 3
+Tempo_Cost = 2
+Narration = "traps an enemy!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_1n1u2"]
+script = ExtResource("12_2ifyn")
+name = "Gode"
+Beat_Cost = 6
+Tempo_Cost = 4
+Narration = "has finished goading!"
+main = false
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_t6rpg"]
+script = ExtResource("12_2ifyn")
+name = "Brick By Brick"
+Tempo_Cost = 5
+Narration = "heals herself, brick by brick!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
 
 [node name="Bree" type="Control" unique_id=1928447707 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
 custom_minimum_size = Vector2(175, 200)
@@ -119,6 +177,10 @@ script = ExtResource("8_n7w5r")
 stream = ExtResource("7_gv1of")
 volume_db = 2.0
 script = ExtResource("8_n7w5r")
+
+[node name="ActionSetComponent" type="Node" parent="." unique_id=1718822210]
+script = ExtResource("11_n7w5r")
+moves = Array[ExtResource("12_2ifyn")]([SubResource("Resource_r3ujd"), SubResource("Resource_sd2q3"), SubResource("Resource_6ec2m"), SubResource("Resource_c8qlo"), SubResource("Resource_xrc1h"), SubResource("Resource_1n1u2"), SubResource("Resource_t6rpg")])
 
 [editable path="Main"]
 [editable path="Secondary"]

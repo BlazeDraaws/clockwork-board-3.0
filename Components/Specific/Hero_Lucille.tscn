@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://c6qe3fuuhlvwe" path="res://Assets/Audio/ready_secondary.ogg" id="7_y7ycg"]
 [ext_resource type="Script" uid="uid://b1x5kyeytd0rg" path="res://Components/ComponentScripts/AudioComponent.gd" id="8_bm0s6"]
 [ext_resource type="AudioStream" uid="uid://d2efth6mkq4di" path="res://Assets/Audio/ready_default.ogg" id="9_olw8j"]
+[ext_resource type="Script" uid="uid://d4dysxfltwm8q" path="res://Components/ComponentScripts/DebugComponentScripts/ActionSetComponent.gd" id="11_8cydv"]
+[ext_resource type="Script" uid="uid://b2u1hgil2wgpq" path="res://NonComponentScripts/Action.gd" id="12_bm0s6"]
 
 [sub_resource type="Animation" id="Animation_d5xm3"]
 length = 0.001
@@ -31,6 +33,64 @@ _data = {
 &"RESET": SubResource("Animation_d5xm3")
 }
 
+[sub_resource type="Resource" id="Resource_olw8j"]
+script = ExtResource("12_bm0s6")
+name = "Light Attack"
+Beat_Cost = 2
+Tempo_Cost = 2
+Narration = "does a LIGHT ATTACK"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_bm0s6"]
+script = ExtResource("12_bm0s6")
+name = "Standard Attack"
+Beat_Cost = 4
+Tempo_Cost = 3
+Narration = "does a STANDARD ATTACK"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_6idqt"]
+script = ExtResource("12_bm0s6")
+name = "Heavy Attack"
+Beat_Cost = 6
+Tempo_Cost = 4
+Narration = "does a HEAVY ATTACK"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_gbee5"]
+script = ExtResource("12_bm0s6")
+name = "Charge_heal.exe"
+Tempo_Cost = 5
+Narration = "heals someone!"
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_x3krk"]
+script = ExtResource("12_bm0s6")
+name = "Song_1.ogg (HP)"
+Beat_Cost = 6
+Tempo_Cost = 4
+Narration = "Heals everyone! on cast, and at the end!"
+main = false
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_1hmg0"]
+script = ExtResource("12_bm0s6")
+name = "Song_2.mp3 (TP))"
+Beat_Cost = 4
+Tempo_Cost = 5
+Narration = "Energizes everyone! 1d4 on cast, 1d10 at end"
+main = false
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
+[sub_resource type="Resource" id="Resource_u11vs"]
+script = ExtResource("12_bm0s6")
+name = "Song_3.wav (Nullify Tempo Cost))"
+Beat_Cost = 2
+Tempo_Cost = 8
+Narration = "Nullifies Tempo Costs!"
+main = false
+metadata/_custom_type_script = "uid://b2u1hgil2wgpq"
+
 [node name="Lucille" type="Control" unique_id=1928447707 node_paths=PackedStringArray("SpriteComp", "MainBeatComp")]
 custom_minimum_size = Vector2(175, 200)
 layout_mode = 3
@@ -45,8 +105,6 @@ size_flags_vertical = 4
 script = ExtResource("1_dx7pt")
 SpriteComp = NodePath("SpriteComponent")
 MainBeatComp = NodePath("Main")
-DefaultOrientation = null
-SpriteFlip = null
 close = false
 
 [node name="SpriteComponent" type="AnimatedSprite2D" parent="." unique_id=183838993]
@@ -118,6 +176,10 @@ script = ExtResource("8_bm0s6")
 stream = ExtResource("7_y7ycg")
 volume_db = 2.0
 script = ExtResource("8_bm0s6")
+
+[node name="ActionSetComponent" type="Node" parent="." unique_id=50722692]
+script = ExtResource("11_8cydv")
+moves = Array[ExtResource("12_bm0s6")]([SubResource("Resource_olw8j"), SubResource("Resource_bm0s6"), SubResource("Resource_6idqt"), SubResource("Resource_gbee5"), SubResource("Resource_x3krk"), SubResource("Resource_1hmg0"), SubResource("Resource_u11vs")])
 
 [editable path="Main"]
 [editable path="Secondary"]
